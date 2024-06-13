@@ -1,0 +1,225 @@
+:root{
+    --light: #FAF6EE;
+    --dark: ;
+    --red: #D85A30;
+    --yellow: #EFC334;
+    --blue: #0C6AA2;
+    --blueDark: #1F4F9F;
+    --green: #2CA58D;
+    --orange: #FF8C00;
+
+    --edgeWhiteSpace: 5em;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+html{
+    line-height: 1.95em;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, li{
+    margin: 1em 0 0.25em;
+}
+
+h1, h2 {
+    font-size: 2.5em;
+    line-height: 1.25em;
+    max-width: 60ch;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+h4, h5, h6, p, blockquote, li{
+    line-height: 1.35em;
+}
+
+a{
+    color: black;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.serif{
+    font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+.lokaltByraa{
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+body{
+    background-color: var(--light);
+}
+
+/* header start */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end
+}
+
+#logo{
+    width: 10em;
+    margin: 2em 2em;
+    animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+/* header end */
+
+/* footer start  */
+footer{
+    background-color: var(--red);
+    min-height: 15em;
+    padding: var(--edgeWhiteSpace);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+}
+
+footer *{
+    font-size: 1.15rem;
+    color: white;
+}
+
+footer div:nth-child(odd){
+    max-width: 27ch;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: start;
+    justify-items: start;
+}
+
+footer div:nth-child(even) {
+    max-width: 23ch;
+}
+
+.taKontakt{
+    padding: 1rem 1.25em;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+/* footer end */
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 2200px;
+    padding: 0 var(--edgeWhiteSpace);
+}
+
+.section{
+    margin-bottom: 6em;
+}
+
+.metoder{
+    font-size: 1.9em;
+    margin-left: 1em;
+}
+
+.metoder li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    line-height: 1.15em;
+}
+
+.metodeIkon{
+    height: 2em;
+}
+
+/* prosjektkomponent start */
+.prosjekterGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em 2em;
+}
+
+.prosjekterGrid a{
+    width: 100%;
+    text-decoration: none;
+}
+
+.prosjekterGrid a:nth-child(1){
+    background-color: var(--orange);
+}
+
+.prosjekterGrid a:nth-child(2){
+    background-color: var(--green);
+}
+
+.prosjekterGrid a:nth-child(3){
+    background-color: var(--red)
+}
+
+.prosjekterGrid a:nth-child(4){
+    background-color: var(--blue)
+}
+
+.prosjekterGrid a img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.prosjekterGrid a div{
+    padding: 1em 1.25em;
+}
+
+.prosjekterGrid *{
+    margin: 0;
+}
+
+.prosjekterGrid h3{
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+.prosjekterGrid p{
+    font-size: 1.25em;
+}
+
+/* prosjektkomponent end */
+
+/* steder komponent start */
+
+.steder{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0em;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: end;
+}
+
+.steder h2{
+    max-width: 22ch;
+}
+
+.steder li{
+    font-size: 1.5em;
+    line-height: 0.25em;
+    list-style: disc;
+    margin-left: 2ch;
+}
+
+.steder img{
+    max-width: 100%;
+    max-height: 85svh;
+}
