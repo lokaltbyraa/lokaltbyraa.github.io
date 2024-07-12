@@ -48,6 +48,10 @@ strong{
     font-weight: bold;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .serif{
     font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
@@ -95,7 +99,7 @@ footer{
 }
 
 footer *{
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: white;
 }
 
