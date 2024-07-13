@@ -126,32 +126,3 @@ body{
     max-width: 100%;
     max-height: 85svh;
 }
-
-/* ansatte start  */
-.ansatte{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2em;
-    justify-items: center;
-    margin-top: 4em;
-}
-
-.ansatte img{
-    max-height: 20em;
-    width: auto;
-    max-width: 17em;
-    border-radius: 1em;
-    margin-bottom: 0.5em;
-}
-
-.ansatte *{
-    margin: 0.25em 0 0 0;
-}
-
-.ansatte h3{
-    font-size: 1.9em;
-}
-
-.ansatte p{
-    font-size: 1.5em;
-}
