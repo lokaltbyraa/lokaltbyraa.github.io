@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import LokaltByraaLogo from '../images/LokaltByraaLogo.png';
+---
+
+<header>
+    <a href="/" aria-label="Hjem">
+        <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo"/>
+    </a>
+    
+</header>
+
+<style>
+    header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end
+}
+
+#logo{
+    width: 10em;
+    height: auto;
+    margin: 2em 2em;
+    animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+</style>

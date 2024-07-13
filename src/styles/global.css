@@ -65,65 +65,6 @@ body{
     background-color: var(--light);
 }
 
-/* header start */
-header{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end
-}
-
-#logo{
-    width: 10em;
-    margin: 2em 2em;
-    animation: rotation 60s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-/* header end */
-
-/* footer start  */
-footer{
-    background-color: var(--red);
-    min-height: 15em;
-    padding: var(--edgeWhiteSpace);
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
-}
-
-footer *{
-    font-size: 1.25rem;
-    color: white;
-}
-
-footer div:nth-child(odd){
-    max-width: 27ch;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
-    align-items: start;
-    justify-items: start;
-}
-
-footer div:nth-child(even) {
-    max-width: 23ch;
-}
-
-.taKontakt{
-    padding: 1rem 1.25em;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-}
-/* footer end */
-
 .wrapper{
     margin: 0 auto;
     max-width: 2200px;
@@ -153,54 +94,7 @@ footer div:nth-child(even) {
 }
 
 /* prosjektkomponent start */
-.prosjekterGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5em 2em;
-}
 
-.prosjekterGrid a{
-    width: 100%;
-    text-decoration: none;
-}
-
-.prosjekterGrid a:nth-child(1){
-    background-color: var(--orange);
-}
-
-.prosjekterGrid a:nth-child(2){
-    background-color: var(--green);
-}
-
-.prosjekterGrid a:nth-child(3){
-    background-color: var(--red)
-}
-
-.prosjekterGrid a:nth-child(4){
-    background-color: var(--blue)
-}
-
-.prosjekterGrid a img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.prosjekterGrid a div{
-    padding: 1em 1.25em;
-}
-
-.prosjekterGrid *{
-    margin: 0;
-}
-
-.prosjekterGrid h3{
-    font-weight: bold;
-    margin-bottom: 0.25em;
-}
-
-.prosjekterGrid p{
-    font-size: 1.25em;
-}
 
 /* prosjektkomponent end */
 

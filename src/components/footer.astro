@@ -1,0 +1,75 @@
+---
+
+---
+
+<footer>
+    <div>
+        <h2>Har du en idé til et prosjekt eller en utfordring å jobbe med?</h2>
+
+        <h2>Eller vil du  bare bli bedre kjent med oss?</h2>
+            
+        <!-- Mangler å legge inn diagonal pil e.l. -->
+        <a href="" class="taKontakt">Ta kontakt!</a>
+    </div>
+
+    <div>
+        <ul>
+            <li>
+                <span class="bold">Lokalt Byrå AS</span>
+                <br>
+                Org nr. 917 847 630
+            </li>
+            <li>
+                <span class="bold">Hovedkontor</span>
+                <br>
+                Larsvollen 17, 9046 Oteren
+            </li>
+            <li>
+                <span class="bold">Distriktskontor</span>
+                <br>
+                Torgata 10, 0181 Oslo
+            </li>
+            <li>
+                <a href="mailto:hei@lokaltbyraa.no">hei@lokaltbyraa.no</a><br>
+                Tlf: 95 46 33 68	
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style>
+    footer{
+    background-color: var(--red);
+    min-height: 15em;
+    padding: var(--edgeWhiteSpace);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+}
+
+footer *{
+    font-size: 1.25rem;
+    color: white;
+}
+
+footer div:nth-child(odd){
+    max-width: 27ch;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: start;
+    justify-items: start;
+}
+
+footer div:nth-child(even) {
+    max-width: 23ch;
+}
+
+.taKontakt {
+    padding: 1rem 1.25em;
+    background-color: white;
+    color: black !important;
+    text-decoration: none;
+}
+
+</style>

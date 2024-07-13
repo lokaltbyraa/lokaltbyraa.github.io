@@ -1,0 +1,86 @@
+<div class="prosjekterGrid">
+
+    <a href="">
+        <img src="img/nettside.jpg" alt="">
+        <div>
+            <h3>Folkeverksted for bo- og blilyst</h3>
+            <p>Gamvik Handel, Distriktssenteret og Kommunal- og distriktsdepatementet</p>
+        </div>
+    </a>
+
+    <a href="">
+        <img src="img/nettside.jpg" alt="">
+        <div>
+            <h3>Fra utbygger- til innbyggerstyrt kommune</h3>
+            <p>Kragerø kommune, Design og Arkitektur Norge og Nordic Edge</p>
+        </div>
+    </a>
+
+    <a href="">
+        <img src="img/nettside.jpg" alt="">
+        <div>
+            <h3>Oppsummerende prosjekttittel</h3>
+            <p>Eksempel kommune</p>
+        </div>
+    </a>
+
+    <a href="">
+        <img src="img/nettside.jpg" alt="">
+        <div>
+            <h3>Oppsummerende prosjekttittel</h3>
+            <p>Eksempel kommune</p>
+        </div>
+    </a>
+
+</div>
+
+<style>
+    .prosjekterGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em 2em;
+    }   
+
+    .prosjekterGrid a{
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .prosjekterGrid a:nth-child(1){
+        background-color: var(--orange);
+    }
+
+    .prosjekterGrid a:nth-child(2){
+        background-color: var(--green);
+    }
+
+    .prosjekterGrid a:nth-child(3){
+        background-color: var(--red)
+    }
+
+    .prosjekterGrid a:nth-child(4){
+        background-color: var(--blue)
+    }
+
+    .prosjekterGrid a img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .prosjekterGrid a div{
+        padding: 1em 1.25em;
+    }
+
+    .prosjekterGrid *{
+        margin: 0;
+    }
+
+    .prosjekterGrid h3{
+        font-weight: bold;
+        margin-bottom: 0.25em;
+    }
+
+    .prosjekterGrid p{
+        font-size: 1.25em;
+    }
+</style>
