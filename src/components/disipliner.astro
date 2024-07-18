@@ -1,0 +1,20 @@
+---
+import Item from './item.astro';
+import DefaultIcon from '../images/defaultIcon.png';
+
+const disiplinerData = [
+    {title: 'Strategisk design:', body: 'Metoder for å utrede og forstå utfordringer gjennom testing ', iconSrc: DefaultIcon, iconAlt: 'Alt'},
+    {title: 'Tjenestedesign:', body: 'Metoder for å løse utfordringer med utgangspunkt i brukernes behov ', iconSrc: DefaultIcon, iconAlt: 'Alt'},
+    {title: 'Systemorientert design:', body: 'Metoder for å jobbe med komplekse og sammensatte utfordringer', iconSrc: DefaultIcon, iconAlt: 'Alt'},
+    {title: 'Interaksjonsdesign:', body: 'Metoder for å jobbe med digitale flater, data og brukeropplevelse', iconSrc: DefaultIcon, iconAlt: 'Alt'}
+];
+---
+
+<ul class="">
+
+    {disiplinerData.map(disiplin =>(
+        <Item title={disiplin.title} body={disiplin.body} iconSrc={disiplin.iconSrc} iconAlt={disiplin.iconAlt} />
+    ))}
+
+
+</ul>

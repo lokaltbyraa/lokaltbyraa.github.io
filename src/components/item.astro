@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import DefaultIcon from '../images/defaultIcon.png';
+
+export interface Props {
+    title?: string;
+    body?: string;
+    iconSrc?: string;
+    iconAlt?: string;
+}
+
+const { title = "title", body = "body", iconSrc = DefaultIcon, iconAlt = "Alt text" } = Astro.props as Props;
+
+---
+
+
+<li>
+    <Image src={iconSrc} alt={iconAlt} />
+        
+    <span>
+        <strong>{title}</strong>
+        {body}
+    </span>
+</li>
+
+
+<style>
+    *{
+    font-size: 1.9rem;
+    }
+
+    li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        line-height: 1.15rem;
+        margin-left: 2rem;
+}
+
+    img {
+        height: 4rem;
+        width: auto;
+    }
+
+</style>

@@ -8,6 +8,8 @@ import Layout from '../layouts/Layout.astro';
 import ProjectsGrid from '../components/projectsGrid.astro';
 import Steder from '../components/steder.astro';
 import Ansatte from '../components/ansatte.astro';
+import Metoder from '../components/metoder.astro';
+import Disipliner from '../components/disipliner.astro';
 
 ---
 <Layout title="Lokalt Byrå: Strategisk design for bærekraftige lokalsamfunn">
@@ -25,32 +27,8 @@ import Ansatte from '../components/ansatte.astro';
 				Dette gjør vi gjennom å:
 			</h2>
 
-			<ul class="metoder">
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
+			<Metoder /> 
 
-					<span>
-						<strong>Bli godt kjent med folk og steder</strong> for å forstå behov, ønsker og drømmer
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Arbeide iherdig med idéer</strong> som begeistrer og har merverdi for samfunnet
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Teste tidlig, enkelt og ofte</strong> for å lære fra den virkelige verden
-					</span>
-				</li>
-
-			</ul>
 		</div>
 
 		<div class="section">
@@ -67,40 +45,8 @@ import Ansatte from '../components/ansatte.astro';
 				Verktøykassa vår består blant annet av
 			</h2>
 
-			<ul class="metoder">
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
+			<Disipliner />
 
-					<span>
-						<strong>Strategisk design:</strong> Metoder for å utrede og forstå utfordringer gjennom testing
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Tjenestedesign:</strong> Metoder for å løse utfordringer med utgangspunkt i brukernes behov
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Systemorientert design:</strong> Metoder for å jobbe med komplekse og sammensatte utfordringer
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Interaksjonsdesign:</strong> Metoder for å jobbe med digitale flater, data og brukeropplevelse
-					</span>
-				</li>
-
-			</ul>
 		</div>
 
 		<div class="section">
