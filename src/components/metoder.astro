@@ -1,19 +1,26 @@
 ---
-import Item from '../components/item.astro';
+import { Image } from 'astro:assets';
 import DefaultIcon from '../images/defaultIcon.png';
+import GlennHeadshot from '../images/ansatt_glenn.jpg';
 
 const metoderData = [
-    {title: ' Bli godt kjent med folk og steder', body: 'for å forstå behov, ønsker og drømmer', iconSrc: DefaultIcon, iconAlt: 'Alt'},
-    {title: 'Arbeide iherdig med idéer', body: 'som begeistrer og har merverdi for samfunnet', iconSrc: DefaultIcon, iconAlt: 'Alt'},
-    {title: 'Teste tidlig, enkelt og ofte', body: 'for å lære fra den virkelige verden', iconSrc: DefaultIcon, iconAlt: 'Alt'}
+    {title: ' Bli godt kjent med folk og steder', body: 'for å forstå behov, ønsker og drømmer', iconAlt: 'Alt', iconsrc: DefaultIcon},
+    {title: ' Bli godt kjent med folk og steder', body: 'for å forstå behov, ønsker og drømmer', iconAlt: 'Alt', iconsrc: DefaultIcon},
+    {title: ' Bli godt kjent med folk og steder', body: 'for å forstå behov, ønsker og drømmer', iconAlt: 'Alt', iconsrc: DefaultIcon}
 ];
 ---
 
 <ul class="">
 
     {metoderData.map(metode =>(
-        <Item title={metode.title} body={metode.body} iconSrc={metode.iconSrc} iconAlt={metode.iconAlt} />
-    ))}
-
+        <div>
+            <Image src={metode.iconsrc} alt="aa" width={600} quality={80}/>
+                    <span>
+                        <strong>{metode.title}</strong>
+                        {metode.body}
+        </span>
+        </div>
+        
+     ))}
 
 </ul>
