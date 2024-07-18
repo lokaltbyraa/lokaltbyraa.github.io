@@ -3,10 +3,10 @@ import { Image } from 'astro:assets';
 import DefaultIcon from '../images/defaultIcon.png';
 
 export interface Props {
-    title?: string;
-    body?: string;
-    iconSrc?: string;
-    iconAlt?: string;
+    title: string;
+    body: string;
+    iconSrc: string;
+    iconAlt: string;
 }
 
 const { title = "title", body = "body", iconSrc = DefaultIcon, iconAlt = "Alt text" } = Astro.props as Props;
@@ -15,6 +15,9 @@ const { title = "title", body = "body", iconSrc = DefaultIcon, iconAlt = "Alt te
 
 
 <li>
+    
+    <!-- <Image src={ansatt.headshot} alt={"Bilde av "+ansatt.navn} width={600} quality={80}/> -->
+
     <Image src={iconSrc} alt={iconAlt} />
         
     <span>
