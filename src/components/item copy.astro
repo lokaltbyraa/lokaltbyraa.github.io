@@ -1,22 +1,22 @@
 ---
 //import ImageMetadata type to help define the type of the images variable.
-import type { ImageMetadata } from 'astro';
+// import type { ImageMetadata } from 'astro';
 
 //imports Image component
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 
-interface Props {
-    title: string;
-    body: string;
-    imagePath: string;
-    altText: string;
-}
+// interface Props {
+//     title: string;
+//     body: string;
+//     imagePath: string;
+//     altText: string;
+// }
 
-const { title, body, imagePath, altText } = Astro.props;
+// const { title, body, imagePath, altText } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
 
-if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+// if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 
 //use the import.meta.glob function which returns an object of all of the image paths inside the assets folder.
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/icons/*.{jpeg,jpg,png,gif}');
@@ -32,15 +32,15 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 // import DefaultIcon from '../images/defaultIcon.png';
 
 ---
-
+<!-- 
 <li>
-    <!-- Inside the src attribute, pass in the images object and use bracket notation for the image path. Then make sure to invoke the glob function. -->
+    Inside the src attribute, pass in the images object and use bracket notation for the image path. Then make sure to invoke the glob function.
     <Image src={images[imagePath]()} alt={altText} />
     <span>
         <strong>{title}</strong>
         {body}
     </span>
-</li>
+</li> -->
 
 
 <!-- <li>
@@ -56,7 +56,7 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 </li> -->
 
 
-<style>
+<!-- <style>
     *{
     font-size: 1.9rem;
     }
@@ -75,4 +75,4 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
         width: auto;
     }
 
-</style>
+</style> -->

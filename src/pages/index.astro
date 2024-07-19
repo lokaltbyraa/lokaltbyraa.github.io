@@ -12,14 +12,18 @@ import Metoder from '../components/metoder.astro';
 import Disipliner from '../components/disipliner.astro';
 
 import Item from '../components/item.astro';
-import Icon from '../assets/avatar-1.jpg';
 
 ---
 <Layout title="Lokalt Byrå: Strategisk design for bærekraftige lokalsamfunn">
 
 	<div class="wrapper">
 
-		<Item  altText="A headshot of Priya against a brick wall background." name="Priya" age={25} imagePath={Icon} />
+		<Item 
+		imagePath="../assets/avatar-1.jpg"
+		altText="A headshot of Priya against a brick wall background."
+		name="Priya"
+		age={25}
+		 />
 
 		<div class="section">
 			<h1>
