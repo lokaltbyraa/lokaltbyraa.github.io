@@ -1,49 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import DefaultIcon from '../images/defaultIcon.png';
 
-export interface Props {
-    title: string;
-    body: string;
-    iconSrc: string;
-    iconAlt: string;
+import { Image } from 'astro:assets';
+import Icon from '../assets/avatar-1.jpg';
+
+interface Props {
+   imagePath: string;
+   name: string;
+   age: number;
 }
 
-const { title = "title", body = "body", iconSrc = DefaultIcon, iconAlt = "Alt text" } = Astro.props as Props;
+const { imagePath, name, age } = Astro.props as Props;
 
+// const images = {
+//   '/src/assets/avatar-1.jpg': () => import('/src/assets/avatar-1.jpg'),
+//   '/src/assets/avatar-2.png': () => import('/src/assets/avatar-2.png')
+// }
+
+//const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
+
+//if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
 
-
-<li>
-    
-    <!-- <Image src={ansatt.headshot} alt={"Bilde av "+ansatt.navn} width={600} quality={80}/> -->
-
-    <Image src={iconSrc} alt={iconAlt}/>
-        
-    <span>
-        <strong>{title}</strong>
-        {body}
-    </span>
-</li>
-
-
-<style>
-    *{
-    font-size: 1.9rem;
-    }
-
-    li{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-        line-height: 1.15rem;
-        margin-left: 2rem;
-}
-
-    img {
-        height: 4rem;
-        width: auto;
-    }
-
-</style>
+<h2>{name}</h2>
+<p>Age: {age}</p>
+<Image src={Icon} alt="Alt text" />
