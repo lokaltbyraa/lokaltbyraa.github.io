@@ -19,13 +19,6 @@ import Item from '../components/item.astro';
 
 	<div class="wrapper">
 
-		<Item 
-		title='Testing'
-		body='dynamically loading images'
-		imagePath="/src/assets/avatar-1.jpg"
-		altText="A headshot of Priya against a brick wall background."
-		 />
-
 		<div class="section">
 			<h1>
 				<span class="serif lokaltByraa">Lokalt Byrå</span> bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.
@@ -33,97 +26,26 @@ import Item from '../components/item.astro';
 		</div>
 
 		<div class="section">
-			<h2>
-				Dette gjør vi gjennom å:
-			</h2>
-
+			<h2>Dette gjør vi gjennom å:</h2>
 			<Metoder/>
-
-			<ul class="metoder">
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Bli godt kjent med folk og steder</strong> for å forstå behov, ønsker og drømmer
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Arbeide iherdig med idéer</strong> som begeistrer og har merverdi for samfunnet
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Teste tidlig, enkelt og ofte</strong> for å lære fra den virkelige verden
-					</span>
-				</li>
-
 			</ul>
-
 		</div>
 
 		<div class="section">
 			<h2>Utvalgte prosjekter</h2>
-			
 			<ProjectsGrid />
-
 		</div>
 
 		<Steder/>
 
 		<div class="section">
-			<h2>
-				Verktøykassa vår består blant annet av
-			</h2>
-
-			<ul class="metoder">
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Strategisk design:</strong> Metoder for å utrede og forstå utfordringer gjennom testing
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Tjenestedesign:</strong> Metoder for å løse utfordringer med utgangspunkt i brukernes behov
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Systemorientert design:</strong> Metoder for å jobbe med komplekse og sammensatte utfordringer
-					</span>
-				</li>
-
-				<li>
-					<img src="./img/kartlegging.png" alt="" class="metodeIkon">
-
-					<span>
-						<strong>Interaksjonsdesign:</strong> Metoder for å jobbe med digitale flater, data og brukeropplevelse
-					</span>
-				</li>
-
-			</ul>
-
+			<h2>Verktøykassa vår består blant annet av</h2>
+			<Disipliner />
 		</div>
 
 		<div class="section">
 			<h2>Vi starta Lokalt Byrå for å utvikle morgendagens måte å jobbe med bærekraftig samfunnsutivkling</h2>
-
 			<Ansatte/>
-			
 		</div>	
 	
 	</div>
