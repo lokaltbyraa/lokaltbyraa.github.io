@@ -1,4 +1,28 @@
+---
+import ProjectCard from "./projectCard.astro"
+
+const prosjekter = await Astro.glob('../prosjekter/*.md')
+---
+
 <div class="prosjekterGrid">
+
+    <!-- <ProjectCard 
+    tittel="Test"
+    oppdragsgiver="Testere"
+    nøkkelord="Design"
+    imagePath=/src/images/projects/nettside.jpg
+    altText="Alt"
+    /> -->
+
+    {prosjekter.map(prosjekt =>(
+        <ProjectCard 
+        tittel={prosjekt.frontmatter.tittel}
+        oppdragsgiver={prosjekt.frontmatter.oppdragsgiver}
+        nøkkelord={prosjekt.frontmatter.nøkkelord}
+        imagePath={prosjekt.frontmatter.previewImage}
+        altText={prosjekt.frontmatter.altText}
+        />
+    ))}
 
     <a href="">
         <img src="img/nettside.jpg" alt="">

@@ -1,0 +1,52 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    tittel: string;
+    oppdragsgiver: string;
+    nøkkelord: string;
+    imagePath: string;
+    altText: string;
+}
+
+const { tittel, oppdragsgiver, nøkkelord, imagePath, altText} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+---
+
+<a href="">
+    <span>{nøkkelord}</span>
+    <Image src={images[imagePath]()} alt={altText} />
+    <div>
+        <h3>{tittel}</h3>
+        <p>{oppdragsgiver}</p>
+    </div>
+</a>
+
+<style>
+
+    a{
+        width: 100%;
+        text-decoration: none;
+    }
+
+    a img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    a div{
+        padding: 1em 1.25em;
+    }
+
+    h3{
+        font-weight: bold;
+        margin-bottom: 0.25em;
+    }
+
+    p{
+        font-size: 1.25em;
+    }
+
+</style>
