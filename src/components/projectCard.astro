@@ -5,17 +5,18 @@ import { Image } from 'astro:assets';
 interface Props {
     tittel: string;
     oppdragsgiver: string;
+    slug: string;
     nøkkelord: string;
     imagePath: string;
     altText: string;
 }
 
-const { tittel, oppdragsgiver, nøkkelord, imagePath, altText} = Astro.props;
+const { tittel, oppdragsgiver, slug, nøkkelord, imagePath, altText} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
 ---
 
-<a href="">
+<a href={slug}>
     <span>{nøkkelord}</span>
     <Image src={images[imagePath]()} alt={altText} />
     <div>

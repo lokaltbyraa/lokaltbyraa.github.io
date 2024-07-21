@@ -18,6 +18,7 @@ const prosjekter = await Astro.glob('../prosjekter/*.md')
         <ProjectCard 
         tittel={prosjekt.frontmatter.tittel}
         oppdragsgiver={prosjekt.frontmatter.oppdragsgiver}
+        slug={`/${prosjekt.frontmatter.slug}`}
         nøkkelord={prosjekt.frontmatter.nøkkelord}
         imagePath={prosjekt.frontmatter.previewImage}
         altText={prosjekt.frontmatter.altText}
