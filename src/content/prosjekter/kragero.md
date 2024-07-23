@@ -9,7 +9,8 @@ altText: "Alt"
 oppdragsgivere: Kragerø kommune, Telemark fylkeskommune, Design og Arkitektur Norge og Nordic Edge
 samarbeidspartnere: ['Vigleik Winje']
 tidspunkt: Høst 2023 til sommer 2024
-tags: ['organisasjonsutvikling', 'stedsutvikling', 'medvirkning']
+tags: ['Organisasjonsutvikling']
+rekkefølge: 1
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum sapien ex, et pulvinar velit tincidunt sed. Etiam rutrum porttitor erat, at aliquet turpis lacinia et. Cras in turpis odio. Vivamus pharetra enim sodales porttitor venenatis. Vivamus et ligula fringilla, tincidunt enim sed, feugiat eros. Nam rutrum lectus ut diam hendrerit tempor. Aenean sodales blandit lorem et dignissim. Maecenas ac turpis ultricies, porttitor diam vel, vestibulum lacus. Aenean tempus eros ipsum, at scelerisque nulla viverra ut. Praesent eu nibh non purus bibendum bibendum in ut neque. Fusce laoreet gravida enim quis facilisis. Curabitur aliquet aliquet mauris in fringilla. Donec sem orci, scelerisque nec erat eget, porttitor condimentum est. Aenean et odio maximus, iaculis eros ut, eleifend urna. Pellentesque nibh justo, ornare vitae metus vel, hendrerit rhoncus sapien.

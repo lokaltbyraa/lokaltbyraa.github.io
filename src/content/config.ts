@@ -10,6 +10,7 @@ const projectsCollection = defineCollection({
       samarbeidspartnere: z.array(z.string()),
       tidspunkt: z.string(),
       tags: z.array(z.string()),
+      rekkefølge: z.number(),
     }),
   });
 
