@@ -1,7 +1,12 @@
 ---
 import ProjectCard from "./projectCard.astro"
 
-const prosjekter = await Astro.glob('../prosjekter/*.md')
+import { getCollection } from "astro:content";
+import type { CollectionEntry, CollectionKey } from "astro:content";
+
+const alleProsjekter: CollectionEntry<'prosjekter'>[] = await getCollection('prosjekter');
+
+const prosjekter = await Astro.glob('../posts/*.md')
 ---
 
 <div class="prosjekterGrid">
@@ -14,7 +19,23 @@ const prosjekter = await Astro.glob('../prosjekter/*.md')
     altText="Alt"
     /> -->
 
-    {prosjekter.map(prosjekt =>(
+
+    {alleProsjekter.map(prosjekt =>(
+        <h3>{prosjekt.data.tittel}</h3>
+    ))}
+
+      {alleProsjekter.map(prosjekt =>(
+        <ProjectCard 
+        tittel={prosjekt.data.tittel}
+        oppdragsgiver={prosjekt.data.oppdragsgiver}
+        slug={`/${prosjekt.data.slug}`}
+        nøkkelord={prosjekt.data.tags}
+        imagePath={prosjekt.data.mainImage}
+        altText={prosjekt.data.altText}
+        />
+    ))}
+
+    <!-- {prosjekter.map(prosjekt =>(
         <ProjectCard 
         tittel={prosjekt.frontmatter.tittel}
         oppdragsgiver={prosjekt.frontmatter.oppdragsgiver}
@@ -23,9 +44,9 @@ const prosjekter = await Astro.glob('../prosjekter/*.md')
         imagePath={prosjekt.frontmatter.previewImage}
         altText={prosjekt.frontmatter.altText}
         />
-    ))}
+    ))} -->
 
-    <a href="">
+    <!-- <a href="">
         <img src="img/nettside.jpg" alt="">
         <div>
             <h3>Folkeverksted for bo- og blilyst</h3>
@@ -55,7 +76,7 @@ const prosjekter = await Astro.glob('../prosjekter/*.md')
             <h3>Oppsummerende prosjekttittel</h3>
             <p>Eksempel kommune</p>
         </div>
-    </a>
+    </a> -->
 
 </div>
 
