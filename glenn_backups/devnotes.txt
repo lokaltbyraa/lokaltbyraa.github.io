@@ -3,3 +3,13 @@ Rød logo: Gjør ordene transparente og fjern marginer
 Husk å fikse riktig optimalisering av bilder gjennom Image tag
 
 Sjek SEO av artikkelsider
+
+Markdown styling
+- Italic og bold italic fontfil
+- blockquotes
+- lists
+
+https://www.markdownguide.org/basic-syntax/
+
+Astro blog tutorial: https://youtu.be/XoIHKO6AkoM?si=W9xUmZpdmhaJfJFl 
+
