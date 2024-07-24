@@ -1,7 +1,5 @@
-sette opp github og github pages
-
 Rød logo: Gjør ordene transparente og fjern marginer
 
-bytte over til neue montreal
+Husk å fikse riktig optimalisering av bilder gjennom Image tag
 
-arno fra adobe fonts
+Sjek SEO av artikkelsider
