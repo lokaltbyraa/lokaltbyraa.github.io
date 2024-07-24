@@ -1,0 +1,26 @@
+---
+import '/src/styles/reset.css';
+import '/src/styles/global.css';
+
+import Layout from '../../layouts/Layout.astro';
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry, CollectionKey } from "astro:content";
+
+export async function getStaticPaths() {
+    const alleProsjekter: CollectionEntry<'prosjekter'>[] = await getCollection('prosjekter')
+
+    return alleProsjekter.map(prosjekt => ({
+        params: {
+            slug: prosjekt.slug
+        },
+        props: {prosjekt}
+    }));
+}
+
+const { prosjekt } = Astro.props;
+---
+
+<Layout title="Prosjekt test">
+    <h1>{prosjekt.data.tittel}</h1>
+</Layout>
