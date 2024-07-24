@@ -31,7 +31,7 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
         tittel={prosjekt.data.tittel}
         oppdragsgiver={prosjekt.data.oppdragsgiver}
         slug={'/prosjekter/' + prosjekt.slug}
-        nøkkelord={prosjekt.data.tags}
+        tags={prosjekt.data.tags}
         imagePath= {prosjekt.data.mainImage}
         altText={prosjekt.data.altText}
         />

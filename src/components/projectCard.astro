@@ -1,24 +1,26 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import Tags from '../components/tags.astro';
 
 interface Props {
     tittel: string;
     oppdragsgiver: string;
     slug: string;
-    nøkkelord: string;
+    tags: string[];
     imagePath: string;
     altText: string;
 }
 
-const { tittel, oppdragsgiver, slug, nøkkelord, imagePath, altText} = Astro.props;
+const { tittel, oppdragsgiver, slug, tags, imagePath, altText} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <a href={slug}>
-    <span>{nøkkelord}</span>
+
+    <Tags tags={tags}/>
     <Image src={images[imagePath]()} alt={altText} />
     <div>
         <h3>{tittel}</h3>
