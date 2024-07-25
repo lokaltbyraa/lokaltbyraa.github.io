@@ -6,7 +6,7 @@ const projectsCollection = defineCollection({
       sammendrag: z.string(),
       mainImage: z.string(),
       altText: z.string(),
-      oppdragsgivere: z.string(),
+      oppdragsgiver: z.string(),
       samarbeidspartnere: z.array(z.string()),
       tidspunkt: z.string(),
       tags: z.array(z.string()),

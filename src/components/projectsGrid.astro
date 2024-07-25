@@ -8,23 +8,9 @@ import type { CollectionEntry, CollectionKey } from "astro:content";
 
 const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('prosjekter')).sort((a:CollectionEntry<'prosjekter'>, b:CollectionEntry<'prosjekter'>) => a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
 
-// const prosjekter = await Astro.glob('../posts/*.md')
 ---
 
 <div class="prosjekterGrid">
-
-    <!-- <ProjectCard 
-    tittel="Test"
-    oppdragsgiver="Testere"
-    nøkkelord="Design"
-    imagePath=/src/images/projects/nettside.jpg
-    altText="Alt"
-    /> -->
-
-
-    <!-- {alleProsjekter.map(prosjekt =>(
-        <h3>{prosjekt.data.tittel}</h3>
-    ))} -->
 
       {alleProsjekter.map(prosjekt =>(
         <ProjectCard 
@@ -36,17 +22,6 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
         altText={prosjekt.data.altText}
         />
     ))}
-
-    <!-- {prosjekter.map(prosjekt =>(
-        <ProjectCard 
-        tittel={prosjekt.frontmatter.tittel}
-        oppdragsgiver={prosjekt.frontmatter.oppdragsgiver}
-        slug={`/${prosjekt.frontmatter.slug}`}
-        nøkkelord={prosjekt.frontmatter.nøkkelord}
-        imagePath={prosjekt.frontmatter.previewImage}
-        altText={prosjekt.frontmatter.altText}
-        />
-    ))} -->
 
     <!-- <a href="">
         <img src="img/nettside.jpg" alt="">

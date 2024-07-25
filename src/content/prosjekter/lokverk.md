@@ -7,7 +7,7 @@ sammendrag: Test av sammendrag
 mainImage: "/src/images/projects/nettside.jpg"
 altText: "Alt"
 
-oppdragsgivere: Gamvik Handel, Distriktssenteret og Kommunal- og distriktsdepartementet
+oppdragsgiver: Gamvik Handel, Distriktssenteret og Kommunal- og distriktsdepartementet
 samarbeidspartnere: ['Æra Strategic Innovation', 'Verte Langskap Arkitektur']
 tidspunkt: Vår og høst 2023
 tags: ['Sosialt entreprenørskap']
