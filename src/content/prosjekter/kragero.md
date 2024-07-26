@@ -40,4 +40,4 @@ In at ligula pretium quam dignissim tempus at et nisl. Nam dignissim sed nulla e
 
 Aenean hendrerit est velit, vel blandit mi ultricies non. Ut blandit ipsum eu hendrerit sagittis. Donec eu dignissim neque. Fusce vitae libero sed elit aliquet faucibus a et nisl. Curabitur lacinia in orci at placerat. Nullam lacinia eros eu justo vestibulum aliquet vitae quis orci. Vivamus magna justo, lobortis non nulla sit amet, sagittis dignissim ipsum. Nunc nec velit ut risus bibendum fringilla in id nibh. In nec diam consequat nisl feugiat mattis. Suspendisse volutpat mattis accumsan. Maecenas ligula felis, scelerisque ut ipsum vitae, fringilla malesuada urna. Cras tristique, turpis at varius eleifend, velit nunc ultricies turpis, fermentum laoreet lectus neque vel sem. Vivamus sed velit felis. Sed risus mauris, dignissim vitae eleifend sit amet, ultricies id lacus. Cras aliquet euismod interdum. 
 
-[Her kan du lese hele rapporten fra prosjektet ↗ ](https://duckduckgo.com)
+→ [Her kan du lese hele rapporten fra prosjektet.](https://duckduckgo.com)
