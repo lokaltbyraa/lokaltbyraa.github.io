@@ -20,8 +20,12 @@ p, h1, h2, h3, .projectWrapper div, .projectWrapper a{
 
 } */
 
-.projectWrapper a:hover{
+.projectWrapper a{
     color: var(--yellow);
+}
+
+.projectWrapper a:hover{
+    color: var(--red);
 }
 
 p {
