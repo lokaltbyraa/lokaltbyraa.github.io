@@ -1,0 +1,56 @@
+body{
+    background-color: var(--dark);
+    
+}
+
+.projectWrapper{
+    margin-bottom: 7rem;
+}
+p, h1, h2, h3, .projectWrapper div, .projectWrapper a{
+    margin: 1em auto;
+    max-width: 55rem;
+    color: white;
+}
+
+/* forsøk på å flytte underoverskiftene til venstre marg */
+/* h2 {
+    color: red;
+    font-size: 1.5em;
+    margin-top: 0;
+
+} */
+
+.projectWrapper a:hover{
+    color: var(--yellow);
+}
+
+p {
+    font-size: 1.5em;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 1.15em;
+}
+
+.projectMeta {
+    width: 100%;
+    background-color: gray;
+}
+
+p :has(img) {
+    border: 2px solid blue;
+    max-width: 70rem;
+}
+
+img{
+    height: auto;
+}
+.projectWrapper img {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}

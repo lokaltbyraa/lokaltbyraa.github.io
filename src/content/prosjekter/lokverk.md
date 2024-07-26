@@ -1,14 +1,14 @@
 ---
 tittel: Folkeverksted for bo- og blilyst
 slug: lokverk
-prosjektnummer: 2
 sammendrag: Test av sammendrag
 
 mainImage: "/src/images/projects/nettside.jpg"
 altText: "Alt"
 
-oppdragsgiver: Gamvik Handel, Distriktssenteret og Kommunal- og distriktsdepartementet
-samarbeidspartnere: ['Æra Strategic Innovation', 'Verte Langskap Arkitektur']
+oppdragsgiver: ['Gamvik Handel', 'Distriktssenteret', 'Kommunal- og distriktsdepartementet']
+samarbeidspartner: ['Æra Strategic Innovation', 'Verte Langskap Arkitektur']
+leveranser: ['Innsikt', 'Kulturendring', 'Pilotering']
 tidspunkt: Vår og høst 2023
 tags: ['Sosialt entreprenørskap']
 rekkefølge: 2

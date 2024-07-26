@@ -1,6 +1,9 @@
 ---
 import '/src/styles/reset.css';
 import '/src/styles/global.css';
+import '/src/styles/project.css';
+
+import { capitalize } from '../../utils';
 
 import Layout from '../../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
@@ -36,6 +39,42 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
         <h1>{prosjekt.data.tittel}</h1>
 
         <div class="projectMeta">
+            <h2 class="hidden">Om prosjektet</h2>
+
+            <div>
+                <h3>Oppdragsgiver</h3>
+                <ul>
+                    {prosjekt.data.oppdragsgiver.map((oppdragsgiver: string, index: number) => (
+                        <li>{capitalize(oppdragsgiver)}</li>
+                       ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Leveranser</h3>
+                <ul>
+                    {prosjekt.data.leveranser.map((leveranser: string, index: number) => (
+                        <li>{capitalize(leveranser)}</li>
+                       ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Samarbeidspartner</h3>
+                <ul>
+                    {prosjekt.data.samarbeidspartner.map((samarbeidspartner: string, index: number) => (
+                        <li>{capitalize(samarbeidspartner)}</li>
+                       ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Tidspunkt</h3>
+                <ul>
+                    <li>{prosjekt.data.tidspunkt}</li>
+                </ul>
+            </div>
+
 
         </div>
 
@@ -43,65 +82,3 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
     </div>
 
 </Layout>
-
-<style is:global>
-
-    body{
-        background-color: var(--dark);
-        
-    }
-
-    .projectWrapper{
-        margin-bottom: 7rem;
-    }
-    p, h1, h2, h3, .projectWrapper div, .projectWrapper a{
-        margin: 1em auto;
-        max-width: 55rem;
-        color: white;
-    }
-
-    /* forsøk på å flytte underoverskiftene til venstre marg */
-    /* h2 {
-        color: red;
-        font-size: 1.5em;
-        margin-top: 0;
-
-    } */
-
-    .projectWrapper a:hover{
-        color: var(--yellow);
-    }
-
-    p {
-        font-size: 1.5em;
-    }
-
-    h1{
-        font-size: 3em;
-    }
-
-    h2{
-        font-size: 1.15em;
-    }
-
-    .projectMeta {
-        width: 100%;
-        height: 20em;
-        background-color: gray;
-    }
-
-    p :has(img) {
-        border: 2px solid blue;
-        max-width: 70rem;
-    }
-
-    img{
-        height: auto;
-    }
-    .projectWrapper img {
-        max-width: 70rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-</style>

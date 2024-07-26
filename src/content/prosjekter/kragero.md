@@ -6,8 +6,9 @@ sammendrag: Test av sammendrag
 mainImage: "/src/images/projects/nettside.jpg"
 altText: "Alt"
 
-oppdragsgiver: Kragerø kommune, Telemark fylkeskommune, Design og Arkitektur Norge og Nordic Edge
-samarbeidspartnere: ['Vigleik Winje']
+oppdragsgiver: ['Kragerø kommune', 'Telemark fylkeskommune', 'Design og Arkitektur Norge', 'Nordic Edge']
+samarbeidspartner: ['Vigleik Winje']
+leveranser: ['Innsikt', 'Kulturendring', 'Pilotering']
 tidspunkt: Høst 2023 til sommer 2024
 tags: ['Organisasjonsutvikling', 'Medvirkning']
 rekkefølge: 1
