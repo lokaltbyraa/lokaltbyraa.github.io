@@ -9,8 +9,7 @@ import Layout from '../../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
 
 import { getCollection } from "astro:content";
-import type { CollectionEntry, CollectionKey } from "astro:content";
-import ProjectCard from '../../components/projectCard.astro';
+import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
     const alleProsjekter: CollectionEntry<'prosjekter'>[] = await getCollection('prosjekter')

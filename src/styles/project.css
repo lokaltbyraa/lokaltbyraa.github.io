@@ -1,15 +1,50 @@
+:root{
+    --contentWidthSmall: 35rem;
+    --contentWidthMedium: 55rem;
+    --contentWidthLarge: 75rem;
+}
+
 body{
     background-color: var(--dark);
-    
+}
+
+*{ 
+    color: white;
 }
 
 .projectWrapper{
     margin-bottom: 7rem;
 }
-p, h1, h2, h3, .projectWrapper div, .projectWrapper a{
+
+p, h1, h2, h3, .projectMeta, .projectWrapper a{
     margin: 1em auto;
+    max-width: var(--contentWidthMedium);
+}
+
+/* p:not(:has(img)) {
     max-width: 55rem;
-    color: white;
+}
+
+.projectWrapper img, p:has(img){
+    max-width: 75rem;
+    margin: 1em auto;
+} */
+
+img, .imageDiv{
+    height: auto;
+    margin: 1em auto;
+}
+
+.S {
+    max-width: var(--contentWidthSmall);
+}
+
+.M {
+    max-width: var(--contentWidthMedium);
+}
+
+.L {
+    max-width: var(--contentWidthLarge);
 }
 
 /* forsøk på å flytte underoverskiftene til venstre marg */
@@ -50,11 +85,8 @@ p :has(img) {
     max-width: 70rem;
 }
 
-img{
-    height: auto;
-}
-.projectWrapper img {
+/* .projectWrapper img {
     max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
-}
+} */

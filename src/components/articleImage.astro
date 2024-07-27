@@ -1,0 +1,26 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { capitalize } from '../utils';
+
+interface Props {
+    imagePath: string;
+    altText: string;
+    caption: string;
+    sizeSML: string;
+}
+
+const { imagePath, altText, caption, sizeSML} = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
+if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+---
+
+<div class={"imageDiv "+ capitalize(sizeSML)}>
+    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} />
+    <span>{caption}</span>
+</div>
+
+<style>
+
+</style>
