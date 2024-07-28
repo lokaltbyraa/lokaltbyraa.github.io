@@ -6,11 +6,11 @@ import { capitalize } from '../utils';
 interface Props {
     imagePath: string;
     altText: string;
-    caption: string;
-    sizeSML: string;
+    caption?: string;
+    sizeSML? : string;
 }
 
-const { imagePath, altText, caption, sizeSML} = Astro.props;
+const { imagePath, altText, caption, sizeSML = "M"} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);

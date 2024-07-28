@@ -15,6 +15,7 @@ rekkefølge: 1
 ---
 
 import ArticleImage from '/src/components/articleImage.astro';
+import ImageGrid from '/src/components/imageGrid.astro';
 
 
 ## Prosjektet i et nøtteskall 
@@ -25,14 +26,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum sapien 
     imagePath="nettside.jpg"
     altText="Alt"
     caption="Test av large image component"
-    sizeSML="s"
+    sizeSML="m"
 />
 
 ## Bakgrunn
 
 Sed quis orci rutrum, dapibus nibh ut, aliquet erat. Mauris euismod nibh nec felis rutrum ultricies. Etiam luctus, ligula eget facilisis tincidunt, nisi felis semper mauris, at luctus felis turpis sed risus. Morbi fringilla dignissim ex, ut lobortis lacus scelerisque varius. Maecenas sed purus fringilla nibh pellentesque eleifend at non sem. Quisque tempor egestas neque ac molestie. Nulla lacus arcu, aliquet id tincidunt quis, efficitur sit amet ante. Proin commodo tempus iaculis. Etiam eros ex, commodo ut semper sed, mollis ac diam. Maecenas sollicitudin massa id odio dictum dictum.
 
-![Bilde av Lokalt Byrå på jobb.](../../images/projects/nettside.jpg)
+<ImageGrid>
+
+    <ArticleImage 
+    imagePath="nettside.jpg"
+    altText="Alt"
+    caption="Bilde 1 til test av image grid"
+    sizeSML="m"
+    />
+
+    <ArticleImage 
+    imagePath="nettside.jpg"
+    altText="Alt"
+    caption="Bilde 2 til test av image grid"
+    sizeSML="m"
+    />
+
+    <ArticleImage 
+    imagePath="nettside.jpg"
+    altText="Alt"
+    caption="Bilde 2 til test av image grid"
+    sizeSML="m"
+    />
+
+</ImageGrid>
 
 ## Tilnærming
 
