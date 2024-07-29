@@ -1,0 +1,31 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { capitalize } from '../utils';
+
+interface Props {
+    sitat: string;
+    kilde: string;
+    imagePath: string;
+    altText: string;
+    sizeSML? : string;
+}
+
+const { sitat, kilde, imagePath, altText, sizeSML = "M"} = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
+if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+---
+<div>
+    <blockquote>
+        <p>
+            {sitat}
+        </p>
+    </blockquote>
+    <cite>– {kilde}</cite>
+    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} />
+</div>
+
+<style>
+    
+</style>
