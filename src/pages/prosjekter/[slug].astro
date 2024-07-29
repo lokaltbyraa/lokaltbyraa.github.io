@@ -30,7 +30,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/project
 if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImage}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
 ---
 
-<Layout title="Prosjekt test">
+<Layout title="Prosjekt test" homeButton={true}>
 
     <div class="heroSection">
         <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} />

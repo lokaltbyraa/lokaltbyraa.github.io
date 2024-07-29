@@ -1,20 +1,57 @@
 ---
 import { Image } from 'astro:assets';
 import LokaltByraaLogo from '../images/LokaltByraaLogo.png';
+
+export interface Props {
+  homeButton?: boolean;
+}
+
+const { homeButton = false } = Astro.props as Props;
+
+// const hidden = "hidden";
 ---
 
 <header>
+  <a href="/" class={`text ${homeButton && 'show'}`}>
+    <span class="">← Hjem</span>
+
+    
+
+  </a>
     <a href="/" aria-label="Hjem">
         <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo" width={300}/>
     </a>
-    
+
 </header>
 
 <style>
     header{
     width: 100%;
     display: flex;
-    justify-content: flex-end
+    justify-content: space-between;
+}
+
+.text span{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.1em;
+  display: none;
+  margin: 2rem 2rem;
+  font-size: 1.5rem;
+  text-shadow: 0px var(--shadowOffset) 0.3em rgba(0, 0, 0, 0.4);
+}
+
+.show span{
+  /* color: red !important;
+  background-color: red; */
+  display: inline-block !important;
+}
+
+.text span:hover{
+  color: var(--yellow);
+  border-color: var(--yellow);
 }
 
 #logo{
