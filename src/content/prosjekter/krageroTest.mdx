@@ -16,6 +16,8 @@ rekkefølge: 1
 
 import ArticleImage from '/src/components/articleImage.astro';
 import ImageGrid from '/src/components/imageGrid.astro';
+import Blockquote from '/src/components/blockquote.astro';
+
 
 
 ## Prosjektet i et nøtteskall 
@@ -26,6 +28,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum sapien 
     imagePath="nettside.jpg"
     altText="Alt"
     caption="Test av large image component"
+    sizeSML="m"
+/>
+
+***
+
+<Blockquote
+    sitat="I den tradisjonelle distriktspolitikken har intensjonen primært vært å møte utfordringene med tiltak for næringsutvikling og jobbskaping. Utvalget mener at utfordringene er mer sammensatte, og at de følgelig må møtes med et langt bredere spekter av tiltak. Tilgang til gode tjenester er viktig for alle, men krever andre løsninger i områder med spredt bosetting. Ikke minst handler det om hvordan vi kan sørge for gode helse-, pleie- og omsorgstjenester til en aldrende befolkning i områder der eldres andel av befolkningen kanskje blir oppmot dobbel så stor som i landet for øvrig."
+
+    kilde="NOU (2020) Det handler om Norge – Utredning om konsekvenser av demografiutfordringer i distriktene"
+    
+    imagePath="nettside.jpg"
+    imageFilter="0.4"
+    altText="Alt"
     sizeSML="m"
 />
 
@@ -55,12 +70,14 @@ Sed quis orci rutrum, dapibus nibh ut, aliquet erat. Mauris euismod nibh nec fel
 
 Mauris in nibh massa. Suspendisse magna dolor, mollis eget diam eget, dictum feugiat lorem. Mauris euismod vitae nunc a scelerisque. Fusce dolor nisi, varius eu euismod ut, luctus sit amet lacus. Vestibulum in sem nec mauris vehicula feugiat vehicula nec augue. Duis vitae augue lacus. Vestibulum eleifend vel diam et hendrerit. Integer aliquet orci ex, nec aliquam elit ultrices vel. Quisque malesuada justo metus, nec eleifend odio volutpat et. Nullam finibus nec quam eget facilisis. Etiam sed ornare lacus. Etiam aliquam augue lectus, eu rhoncus lorem viverra a. Vivamus tristique odio a felis finibus, eu dignissim nunc bibendum. Nam malesuada quam id est molestie efficitur. Duis nunc quam, pharetra ut ornare eu, gravida et lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<ArticleImage 
+<Blockquote
+    sitat="Det e sju år siden æ har hatt en or'ntlig fæst!"
+    kilde="Sindre, 7 år"
     imagePath="nettside.jpg"
+    imageFilter="0.7"
     altText="Alt"
-    caption="Bilde 2 til test av image grid"
     sizeSML="m"
-    />
+/>
 
 ## Leveranse
 

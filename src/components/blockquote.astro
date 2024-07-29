@@ -7,25 +7,92 @@ interface Props {
     sitat: string;
     kilde: string;
     imagePath: string;
+    imageFilter?: string;
     altText: string;
     sizeSML? : string;
 }
 
-const { sitat, kilde, imagePath, altText, sizeSML = "M"} = Astro.props;
+const { sitat, kilde, imagePath, imageFilter="0.7", altText, sizeSML = "M"} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
 ---
-<div>
-    <blockquote>
-        <p>
-            {sitat}
-        </p>
-    </blockquote>
-    <cite>– {kilde}</cite>
-    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} />
+<div class="blockquoteWrapper">
+    <div>
+        <blockquote>
+            <p>
+                {sitat}
+            </p>
+        </blockquote>
+        <cite><span>–</span>{kilde}</cite>
+    </div>
+    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} style={"filter:brightness(" + imageFilter + ");"}/>
+
+
+    <!-- <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} style="filter:brightness(0.5);"/> -->
 </div>
 
 <style>
-    
+    .blockquoteWrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        justify-content: center;  
+        align-content: center;
+        /* background-color: red; */
+    }
+
+    .blockquoteWrapper *{
+        /* display: block; */
+        margin: 0 auto;
+    }
+
+    .blockquoteWrapper div{
+        z-index: 1;
+        grid-area: 1/1/1/1;
+        height: min-content;
+        place-self: center;
+        max-width: var(--contentWidthMedium);;
+    }
+
+    .blockquoteWrapper div *{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    blockquote p{
+        font-family: "arno-pro", serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 2.5rem;
+        line-height: 1.2em;
+        padding-top: 1em;
+    }
+
+    cite{
+        font-size: 1.35rem;
+        line-height: 1.35em;
+        width: fit-content;
+        max-width: 40ch;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        gap: 1ch;
+    }
+
+    blockquote p, cite {
+        text-shadow: 0px var(--shadowOffset) var(--blurRadius) var(--shadowColor);
+    }
+
+    img{
+        height: auto;
+        max-height: 85svh;
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+        grid-area: 1/1/1/1;
+        max-width: var(--contentWidthLarge);
+    }
+
 </style>
