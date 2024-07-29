@@ -78,11 +78,6 @@ p, h1, h2, h3, .projectMeta, .projectWrapper a{
     margin: 1em auto;
 } */
 
-.imageDiv{
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .projectWrapper img{
     height: auto;
 }
