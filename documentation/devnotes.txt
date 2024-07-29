@@ -1,4 +1,4 @@
-Rød logo: Gjør ordene transparente og fjern marginer
+Rød header logo: Gjør ordene transparente og fjern marginer. Legg inn som svg
 
 Husk å fikse riktig optimalisering av bilder gjennom Image tag
 
@@ -13,3 +13,4 @@ https://www.markdownguide.org/basic-syntax/
 
 Astro blog tutorial: https://youtu.be/XoIHKO6AkoM?si=W9xUmZpdmhaJfJFl 
 
+Komponent for kontakt med rett ansatt per prosjekt for å høre mer.

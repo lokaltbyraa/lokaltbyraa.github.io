@@ -2,11 +2,58 @@
     --contentWidthSmall: 35rem;
     --contentWidthMedium: 55rem;
     --contentWidthLarge: 75rem;
-    --contentWidthXL: 95rem;
+    --contentWidthXL: 150rem;
+    --shadowColor: rgba(0,0,0,1);
+    --blurRadius: 2rem;
+    --shadowOffset: 0.1rem;
 }
 
 body{
     background-color: var(--dark);
+}
+
+header {
+   /* background-color: red !important; */
+   position: fixed;
+   z-index: 10;
+}
+
+.heroSection, .heroSection img {
+    max-height: 90svh;
+}
+
+.heroSection {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-bottom: 5svh;
+}
+
+.heroSection img{
+    object-fit: cover;
+    grid-area: 1/1/1/1;
+    z-index: 0;
+}
+
+.heroSection h1{
+    grid-area: 1/1/1/1;
+    align-self: end;
+    z-index: 2;
+    font-size: 4rem;
+    text-shadow: 0px var(--shadowOffset) var(--blurRadius) var(--shadowColor),
+    0px var(--shadowOffset) var(--blurRadius) var(--shadowColor);
+    margin-bottom: 0.5em;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    max-width: 34ch;
+}
+
+.overlay{
+    grid-area: 1/1/1/1;
+    z-index: 1;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.3) 9%, rgba(0,0,0,0) 30%);
+    width: 100%;
+    height: 100%;
 }
 
 *{ 
@@ -31,9 +78,13 @@ p, h1, h2, h3, .projectMeta, .projectWrapper a{
     margin: 1em auto;
 } */
 
-img, .imageDiv{
+.imageDiv{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.projectWrapper img{
     height: auto;
-    margin: 1em auto;
 }
 
 .S {
@@ -76,6 +127,11 @@ h2, h3{
     font-size: 1.15rem;
 }
 
+hr{
+    color: rgba(0,0,0,0);
+    margin: 4rem 0;
+}
+
 .projectMeta {
     width: 100%;
     /* background-color: gray; */
@@ -97,10 +153,10 @@ h2, h3{
     display: inline-block;
 }
 
-p :has(img) {
+/* p :has(img) {
     border: 2px solid blue;
     max-width: 70rem;
-}
+} */
 
 /* .projectWrapper img {
     max-width: 70rem;

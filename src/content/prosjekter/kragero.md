@@ -1,5 +1,5 @@
 ---
-tittel: Fra utbygger- til innbyggerstyrt kommune
+tittel: Fra utbygger- til innbyggerstyrt kommune md
 slug: kragero
 sammendrag: Test av sammendrag
 

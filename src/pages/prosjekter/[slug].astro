@@ -32,10 +32,15 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
 
 <Layout title="Prosjekt test">
 
-    <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} />
-
-    <div class="projectWrapper">
+    <div class="heroSection">
+        <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} />
         <h1 class="serif">{prosjekt.data.tittel}</h1>
+        <div class="overlay"></div>        
+    </div>
+
+    
+    <div class="projectWrapper">
+       
 
         <div class="projectMeta">
             <h2 class="hidden">Om prosjektet</h2>
