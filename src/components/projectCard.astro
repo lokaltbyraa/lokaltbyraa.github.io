@@ -23,7 +23,7 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 
     <Tags tags={tags}/>
     <Image src={images[imagePath]()} alt={altText} />
-    <div>
+    <div class="projectAbout">
         <h3>{tittel}</h3>
         <p>
             {oppdragsgiver.slice(0, -1).map((oppdragsgiver: string, index: number) => (
@@ -38,6 +38,9 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 
 <style>
 
+    :root{
+        --color: yellow;
+    }
     a{
         width: 100%;
         text-decoration: none;
@@ -46,19 +49,31 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
     a img{
         width: 100%;
         object-fit: cover;
+        height: auto;
+        margin: 0;
+        z-index: 2;
     }
 
     a div{
-        padding: 1em 1.25em;
+        padding: 0.01em 1.25em 1.5em;
+        /* background-color: blue; */
+        margin-top: -0.2rem;
+        z-index: 1;
     }
 
     h3{
         font-weight: bold;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.1em;
     }
 
     p{
+        margin-top: 0.5em;
         font-size: 1.25em;
+        line-height: 1.25em;
+    }
+
+    .projectAbout{
+        background-color: var(--color);
     }
 
 </style>

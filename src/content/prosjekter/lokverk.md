@@ -10,7 +10,7 @@ oppdragsgiver: ['Gamvik Handel', 'Distriktssenteret', 'Kommunal- og distriktsdep
 samarbeidspartner: ['Æra Strategic Innovation', 'Verte Langskap Arkitektur']
 leveranser: ['Innsikt', 'Kulturendring', 'Pilotering']
 tidspunkt: Vår og høst 2023
-tags: ['Sosialt entreprenørskap']
+tags: ['Sosialt entreprenørskap', 'Prototyping']
 rekkefølge: 2
 ---
 

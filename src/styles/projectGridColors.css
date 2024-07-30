@@ -1,0 +1,15 @@
+.prosjekterGrid a:nth-child(1) {
+    --color: var(--orange);
+}
+
+.prosjekterGrid a:nth-child(2) {
+    --color: var(--green);
+}
+
+.prosjekterGrid a:nth-child(3) {
+    --color: var(--red);
+}
+
+.prosjekterGrid a:nth-child(4) {
+    --color: var(--blue);
+}  

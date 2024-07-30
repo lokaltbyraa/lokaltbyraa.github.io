@@ -1,5 +1,6 @@
 ---
 import { capitalize } from '../utils';
+import '../styles/projectGridColors.css';
 
 const { tags } = Astro.props;
 
@@ -11,6 +12,19 @@ interface Props {
 
 <div class="">
     {tags.map((tag: string, index: number) => (
-     <span class="">{capitalize(tag)}</span>
+     <span class="tags">{capitalize(tag)}</span>
     ))}
    </div>
+
+<style>
+
+  span {
+    background-color: var(--color);
+    margin: 0 0.35rem 0.35rem 0;
+    padding: 0.5em 0.6em 0.6em;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+</style>

@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "./projectCard.astro"
+import '../styles/projectGridColors.css';
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry, CollectionKey } from "astro:content";
@@ -23,38 +24,6 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
         />
     ))}
 
-    <!-- <a href="">
-        <img src="img/nettside.jpg" alt="">
-        <div>
-            <h3>Folkeverksted for bo- og blilyst</h3>
-            <p>Gamvik Handel, Distriktssenteret og Kommunal- og distriktsdepatementet</p>
-        </div>
-    </a>
-
-    <a href="">
-        <img src="img/nettside.jpg" alt="">
-        <div>
-            <h3>Fra utbygger- til innbyggerstyrt kommune</h3>
-            <p>Kragerø kommune, Design og Arkitektur Norge og Nordic Edge</p>
-        </div>
-    </a>
-
-    <a href="">
-        <img src="img/nettside.jpg" alt="">
-        <div>
-            <h3>Oppsummerende prosjekttittel</h3>
-            <p>Eksempel kommune</p>
-        </div>
-    </a>
-
-    <a href="">
-        <img src="img/nettside.jpg" alt="">
-        <div>
-            <h3>Oppsummerende prosjekttittel</h3>
-            <p>Eksempel kommune</p>
-        </div>
-    </a> -->
-
 </div>
 
 <style>
@@ -62,6 +31,7 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5em 2em;
+    margin-top: 1em;
     }   
 
     .prosjekterGrid a{
@@ -73,7 +43,7 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
         background-color: var(--orange);
     }
 
-    .prosjekterGrid a:nth-child(2){
+    .prosjekterGrid a:nth-child(2) {
         background-color: var(--green);
     }
 
