@@ -1,0 +1,38 @@
+---
+// import { getCollection } from 'astro:content';
+
+// const { kontaktperson } = Astro.props;
+// const { navn, stilling, epost, telefon, src, altText } = kontaktperson.data;
+
+// type Props = {
+//   entry: CollectionEntry<"ansatte">;
+// };
+
+
+
+
+import type { ImageMetadata } from 'astro';
+import { Image } from "astro:assets";
+import { getCollection, getEntry } from 'astro:content';
+
+const ansatte = await getCollection('ansatte');
+
+interface Props {
+    kontaktperson: string;
+}
+
+const { kontaktperson } = Astro.props;
+
+// const { data: ansattData } = await getEntry('ansatte', kontaktperson );
+
+// const { navn, stilling } = ansattData.data;
+
+
+
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
+// if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+---
+
+<div>
+    <p></p>
+</div>

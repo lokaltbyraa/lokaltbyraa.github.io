@@ -11,6 +11,10 @@ Markdown styling
 
 https://www.markdownguide.org/basic-syntax/
 
-Astro blog tutorial: https://youtu.be/XoIHKO6AkoM?si=W9xUmZpdmhaJfJFl 
+Astro blog tutorial: https://youtu.be/XoIHKO6AkoM?si=W9xUmZpdmhaJfJFl / https://www.youtube.com/watch?v=Oi9z5gfIHJs
+
+Content collections tutorial: https://www.youtube.com/watch?v=Fcw4c3wzm7I 
+
+Sjekke ut image type i content config per tutorial
 
 Komponent for kontakt med rett ansatt per prosjekt for å høre mer.
