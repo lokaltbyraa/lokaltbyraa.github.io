@@ -1,34 +1,52 @@
 ---
+// CSS files
 import '/src/styles/reset.css';
 import '/src/styles/global.css';
 import '/src/styles/project.css';
 
+// Function to capitalize text strings
 import { capitalize } from '../../utils';
 
+// Astro components and layouts
 import Layout from '../../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
-import Kontaktperson from '../../components/kontaktperson.astro';
 
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+// Content collection imports
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import { getEntries } from "astro:content";
+
+// Accessing data from projects content collection and creating routes to project pages based on slug in markdown files
 
 export async function getStaticPaths() {
-    const alleProsjekter: CollectionEntry<'prosjekter'>[] = await getCollection('prosjekter')
+  const alleProsjekter = await getCollection("prosjekter");
 
-    return alleProsjekter.map(prosjekt => ({
-        params: {
-            slug: prosjekt.slug
-        },
-        props: {prosjekt}
-    }));
+  return alleProsjekter.map((prosjekt) => ({
+    params: { slug: prosjekt.slug },
+    props: { prosjekt },
+  }));
 }
 
+type Props = {
+  prosjekt: CollectionEntry<"prosjekter">;
+};
+
 const { prosjekt } = Astro.props;
-
 const { Content } = await prosjekt.render();
+const { data: ansatteData } = await getEntry("ansatte", prosjekt.data.vårKontaktperson.id);
 
+// const ansatt = prosjekt.data.vårKontaktperson;
+
+// Importing project images from subfolder in images folder
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImage}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+
+// Accessing data from Ansatte content collection
+// type Props = {
+//   entry: CollectionEntry<"ansatte">;
+// };
+
+// const { data: ansatteData } = await getEntry("ansatte", prosjekt.data.vårKontaktperson);
+
 ---
 
 <Layout title="Prosjekt test" homeButton={true}>
@@ -85,7 +103,18 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
 
         <Content/>
 
-        <Kontaktperson kontaktperson={prosjekt.data.vårKontaktperson} />
+        <div class="kontaktperson">
+            <div class="kontakt">
+                <h2>Vil du høre mer?<br>Send meg en epost, da vel!</h2>
+                <div>
+                    <h3>{ansatteData.navn}</h3>
+                    <p id="stilling">{ansatteData.stilling}</p>
+                    <p id="epost"><a href={"mailto:"+ansatteData.epost}>{ansatteData.epost}</a></p>
+                </div>
+            </div>
+            <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={600} quality={80}/>
+        </div>
+
     </div>
 
 </Layout>

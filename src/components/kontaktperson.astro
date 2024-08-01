@@ -1,4 +1,17 @@
 ---
+import { Image } from "astro:assets";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+type Props = {
+  kontaktperson: CollectionEntry<"ansatte">;
+};
+
+const { kontaktperson } = Astro.props;
+const { navn, stilling, epost  } = kontaktperson.data;
+
+// const { data: ansatteData } = await getEntry("ansatte", ansatt.id);
+
+
 // import { getCollection } from 'astro:content';
 
 // const { kontaktperson } = Astro.props;
@@ -15,26 +28,28 @@
 // import { Image } from "astro:assets";
 // import { getCollection, getEntry } from 'astro:content';
 
-// const ansatte = await getCollection('ansatte');
+// // const ansatte = await getCollection('ansatte');
 
 // interface Props {
-//     kontaktperson: string;
+//     kontaktperson: object;
 // }
 
 // const { kontaktperson } = Astro.props;
 
-
-
 // const { data: ansattData } = await getEntry('ansatte', kontaktperson );
 
 // const { navn, stilling } = ansattData.data;
-
-
 
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 // if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <div>
-    <p></p>
+    <h2>Ta gjerne kontakt for å lære mer</h2>
+    <div>
+        <!-- <h3>{navn}</h3>
+        <p>{stilling}</p> -->
+        <!-- <p><a href={"mailto:"+epost}>{epost}</a></p> -->
+    </div>
+    <!-- <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={600} quality={80}/> -->
 </div>

@@ -148,3 +148,61 @@ hr{
     margin-left: auto;
     margin-right: auto;
 } */
+
+.kontaktperson {
+    background-color: var(--light);
+    max-width: var(--contentWidthSmall);
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 2.5rem 3rem;
+    gap: 2.5rem;
+    align-content: stretch;
+    /* align-items: center; */
+}
+
+.kontaktperson *{
+    color: black;
+    margin: 0;
+}
+
+.kontaktperson img {
+    grid-column: 1;
+    grid-row: 1;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.kontaktperson h2 {
+    font-weight: normal;
+    font-size: 1.65rem;
+    line-height: 1.3em;
+    margin-top: 0.5em;
+}
+
+.kontaktperson h3 {
+    font-size: 2rem;
+    margin: 0.5em 0 0.2em
+    
+}
+
+.kontaktperson p {
+    font-size: 1.15rem;
+} 
+
+.kontaktperson a{
+    color: var(--red);
+}
+
+.kontaktperson a:hover{
+    color: var(--blueDark);
+}
+
+.kontakt {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+}
+
