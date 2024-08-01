@@ -1,26 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 
-import GlennHeadshot from '../images/ansatt_glenn.jpg';
-import NikolaiHeadshot from '../images/ansatt_nikolai.jpg';
-import TobiasHeadshot from '../images/ansatt_tobias.jpg';
-
-const ansatteData = [
-    {navn: 'Glenn Sæstad', stilling: 'Daglig leder og strategisk designer', epost:'glenn@lokaltbyraa.no', headshot: GlennHeadshot},
-    {navn: 'Nikolai Sabel', stilling: 'Stategisk designer', epost:'nikolai@lokaltbyraa.no',headshot: NikolaiHeadshot},
-    {navn: 'Tobias Mangersnes', stilling: 'Strategisk designer', epost:'tobias@lokaltbyraa.no', headshot: TobiasHeadshot}
-];
+import { getCollection } from "astro:content";
+const alleAnsatte = await getCollection("ansatte");
 
 ---
 
 <div class="ansatte">
 
-    {ansatteData.map(ansatt =>(
+    {alleAnsatte.map(ansatt =>(
        <div>
-        <Image src={ansatt.headshot} alt={"Bilde av "+ansatt.navn} width={600} quality={80}/>
-        <h3>{ansatt.navn}</h3>
-        <p>{ansatt.stilling}</p>
-        <p><a href={"mailto:"+ansatt.epost}>{ansatt.epost}</a></p>
+        <Image src={ansatt.data.headshot.src} alt={"Bilde av "+ansatt.data.headshot.altText} width={600} quality={80}/>
+        {/* <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} /> */}
+        <h3>{ansatt.data.navn}</h3>
+        <p>{ansatt.data.stilling}</p>
+        <p><a href={"mailto:"+ansatt.data.epost}>{ansatt.data.epost}</a></p>
     </div> 
     ))}
 

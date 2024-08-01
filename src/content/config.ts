@@ -41,16 +41,18 @@ const projectsCollection = defineCollection({
 });
 
 const ansatte = defineCollection({
-  schema: z.object({
-    navn: z.string(),
-    stilling: z.string(),
-    epost: z.string(),
-    telefon: z.number(),
-    headshot: z.object({
-      src: z.string(),
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      navn: z.string(),
+      stilling: z.string(),
+      epost: z.string(),
+      telefon: z.number(),
+      headshot: z.object({
+      src: image(),
       altText: z.string(),
     }),
-  })
+})
 });
 
 export const collections = {

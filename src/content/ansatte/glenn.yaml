@@ -4,5 +4,5 @@ epost: glenn@lokaltbyraa.no
 telefon: 95463368
 
 headshot:
-  src: "glenn.jpg"
+  src: "./glenn.jpg"
   altText: Bilde av Glenn Sæstad

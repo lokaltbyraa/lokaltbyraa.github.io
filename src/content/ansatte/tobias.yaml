@@ -4,5 +4,5 @@ epost: tobias@lokaltbyraa.no
 telefon: 47155036
 
 headshot:
-  src: "tobias.jpg"
+  src: "./tobias.jpg"
   altText: Bilde av Tobias Mangersnes

@@ -4,5 +4,5 @@ epost: nikolai@lokaltbyraa.no
 telefon: 95284407
 
 headshot:
-  src: "nikolai.jpg"
-  altText: Bilde av Tobias Mangersnes
+  src: "./nikolai.jpg"
+  altText: Bilde av Nikolai Sabel
