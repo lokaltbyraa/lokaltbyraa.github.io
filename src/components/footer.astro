@@ -1,5 +1,7 @@
 ---
 
+import Arrow from '../components/arrow.astro';
+
 ---
 
 <footer>
@@ -9,7 +11,7 @@
         <h2>Eller vil du  bare bli bedre kjent med oss?</h2>
             
         <!-- Mangler å legge inn diagonal pil e.l. -->
-        <a href="" class="taKontakt">Ta kontakt!</a>
+        <a href="" class="taKontakt">Ta kontakt! <Arrow direction='upRight'/> </a>
     </div>
 
     <div>
@@ -70,10 +72,16 @@ footer div:nth-child(even) {
     background-color: white;
     color: black !important;
     text-decoration: none;
+    --arrowColor: black;
+    display: flex !important;
+    flex-direction: row;
+    gap: 0.25ch;
+    align-items: center;
 }
 
 a:hover{
     color: var(--blue) !important;
+    --arrowColor: var(--blue)
 }
 
 </style>

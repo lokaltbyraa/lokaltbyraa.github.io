@@ -64,7 +64,7 @@ header {
     margin-bottom: 7rem;
 }
 
-p, h1, h2, h3, .projectMeta, .projectWrapper a{
+p, h1, h2, h3, .projectMeta, .projectWrapper a, .outLink{
     margin: 1em auto;
     max-width: var(--contentWidthMedium);
 }
@@ -95,13 +95,17 @@ p, h1, h2, h3, .projectMeta, .projectWrapper a{
 
 .projectWrapper a{
     color: var(--yellow);
+    --arrowColor: var(--yellow);
+    --linkColor: var(--yellow);
 }
 
 .projectWrapper a:hover{
     color: var(--red);
+    --arrowColor: var(--red);
+    --linkColor: var(--red);
 }
 
-p, .projectMeta li {
+p, .projectMeta li, .outLink {
     font-size: 2rem;
 }
 

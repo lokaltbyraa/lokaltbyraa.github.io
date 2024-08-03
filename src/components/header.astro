@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import LokaltByraaLogo from '../images/LokaltByraaLogo.png';
+import Arrow from '../components/arrow.astro';
 
 export interface Props {
   homeButton?: boolean;
@@ -13,9 +14,7 @@ const { homeButton = false } = Astro.props as Props;
 
 <header>
   <a href="/" class={`text ${homeButton && 'show'}`}>
-    <span class="">← Hjem</span>
-
-    
+    <span class=""> <Arrow direction='left'/> Hjem</span>
 
   </a>
     <a href="/" aria-label="Hjem">
@@ -31,8 +30,13 @@ const { homeButton = false } = Astro.props as Props;
     justify-content: space-between;
 }
 
+a{
+  text-decoration: none;
+}
+
 .text span{
   color: white;
+  --arrowColor: white;
   text-decoration: none;
   margin-bottom: 0.5em;
   border-bottom: 1px solid white;
@@ -44,13 +48,15 @@ const { homeButton = false } = Astro.props as Props;
 }
 
 .show span{
-  /* color: red !important;
-  background-color: red; */
-  display: inline-block !important;
+  display: flex !important;
+  flex-direction: row;
+  gap: 0.25ch;
+  align-items: center;
 }
 
 .text span:hover{
   color: var(--yellow);
+  --arrowColor: var(--yellow);
   border-color: var(--yellow);
 }
 

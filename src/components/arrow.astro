@@ -1,0 +1,25 @@
+---
+export interface Props {
+  direction: string;
+}
+
+const { direction } = Astro.props as Props;
+const { default: innerHTML } = await import(`/src/images/icons/arrows/${direction}.svg?raw`);
+
+---
+
+<div arria-label:"Arrow icon" >
+    <Fragment set:html={innerHTML} />
+</div>
+
+<style>
+    div {
+    display: inline-block;
+    height: 1.35ch;
+    aspect-ratio: 1/1;
+    }
+
+    /* div *{
+        height: 100%;
+    } */
+</style>

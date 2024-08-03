@@ -1,0 +1,35 @@
+---
+import Arrow from './arrow.astro'
+
+export interface Props {
+  text: string;
+  url: URL;
+  ekstern?: boolean;
+}
+
+const { text, url, ekstern=false } = Astro.props as Props;
+
+---
+<div class="outLink">
+
+  {!ekstern && <Arrow direction='right'/>}
+
+    <!-- {ekstern && <Arrow direction='right'/>} -->
+    <a href={url}>{text} {ekstern && <Arrow direction='upRight'/>} </a>
+</div>
+
+<style>
+
+  div{
+    --arrowColor: var(--linkColor);
+  }
+
+  a{
+    display: inline;
+    text-decoration: none;
+    border-bottom: 0.06em solid var(--linkColor);
+    color: var(--linkColor);
+    line-height: 1.4em;
+  }
+
+</style>
