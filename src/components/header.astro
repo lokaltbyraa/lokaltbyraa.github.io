@@ -2,6 +2,9 @@
 import { Image } from 'astro:assets';
 import LokaltByraaLogo from '../images/LokaltByraaLogo.png';
 import Arrow from '../components/arrow.astro';
+import LbLogo from '../components/lbLogo.astro';
+
+import '../styles/headerLogoPlacement.css';
 
 export interface Props {
   homeButton?: boolean;
@@ -18,7 +21,8 @@ const { homeButton = false } = Astro.props as Props;
 
   </a>
     <a href="/" aria-label="Hjem">
-        <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo" width={300}/>
+        <LbLogo rotation={true}/>
+        <!-- <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo" width={300}/> -->
     </a>
 
 </header>
@@ -60,19 +64,11 @@ a{
   border-color: var(--yellow);
 }
 
-#logo{
+.logo{
     width: 10em;
     height: auto;
     margin: 2em 2em;
-    animation: rotation 60s infinite linear;
+    fill: blue;
 }
 
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
 </style>

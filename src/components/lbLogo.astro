@@ -1,0 +1,43 @@
+---
+export interface Props {
+  rotation?: boolean;
+}
+
+const { rotation=false } = Astro.props as Props;
+
+const { default: innerHTML } = await import(`/src/images/icons/lbLogo.svg?raw`);
+
+---
+
+<div class={`logo ${rotation && 'rotation'}`} arria-label:"Logo" >
+    <Fragment set:html={innerHTML} id="logo"/>
+</div>
+
+<style>
+    div {
+    display: inline-block;
+    height: 10rem;
+    aspect-ratio: 1/1;
+    /* fill: yellow; */
+    /* --logoPrimary: yellow !important; */
+    }
+
+    svg{
+      fill: yellow;
+    }
+
+    .rotation{
+        animation: rotation 60s infinite linear;
+    }
+   
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+    
+</style>
