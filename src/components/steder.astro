@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 
-import Norge from '../images/norge.png';
+// import Norge from '../images/norge.png';
+import Norge from '../components/norge.astro';
 
 const steder = [
     'Gamvik',
@@ -20,7 +21,7 @@ const steder = [
     'Larvik',
     'Stavanger',
     'Kvitsøy',
-    'Kragerø'
+    'Kragerø',
 ];
 
 const kontorData = [
@@ -52,7 +53,9 @@ const kontorData = [
         
     </div>
 
-    <Image src={Norge} alt="Kart over Norge med alle stedene vi har jobbet og holder til på.">
+    <Norge steder={steder}/>
+
+    <!-- <Image src={Norge} alt="Kart over Norge med alle stedene vi har jobbet og holder til på."> -->
 </div>
 
 <style>
