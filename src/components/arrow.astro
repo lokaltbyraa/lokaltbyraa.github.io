@@ -4,7 +4,7 @@ export interface Props {
 }
 
 const { direction } = Astro.props as Props;
-const { default: innerHTML } = await import(`/src/images/icons/arrows/${direction}.svg?raw`);
+const { default: innerHTML } = await import(`../images/icons/arrows/${direction}.svg?raw`);
 
 ---
 
