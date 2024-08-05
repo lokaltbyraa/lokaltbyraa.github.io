@@ -1,45 +1,45 @@
 # Hello!
 
-## 🚀 Project Structure
+## About
 
-Inside of your Astro project, you'll see the following folders and files:
+## To-dos
+- Short term
+    - Adjust styling for small screens
+        - Header
+        - Project page
+    - Font files
+        - Neue Montreal italic, bold italic and medium weight
+    - Markdown styling
+        - Lists
+    - Hand drawn icons
+- Medium term
+    - Image optimization using image component with defined sizes
+    - SEO optimization
+        - Data in head
+        - Favicon
+        - Open graph previews
+- Long term
+    - Student page
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Recently completed
+    - Replaced PNG vector graphics with SVG files
+        - Logo
+        - Arrow icons
+        - Map of Norway using IDs to color relevant municipalities
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Guides, tutorials and docs
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Astro
 
-Any static assets, like images, can be placed in the `public/` directory.
+Astro blog tutorial: https://youtu.be/XoIHKO6AkoM?si=W9xUmZpdmhaJfJFl / https://www.youtube.com/watch?v=Oi9z5gfIHJs
 
-## 🧞 Commands
+Content collections tutorial: https://www.youtube.com/watch?v=Fcw4c3wzm7I 
 
-All commands are run from the root of the project, from a terminal:
+### Markdown
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+General markdown: https://www.markdownguide.org/basic-syntax/
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Some best practices: https://www.ssw.com.au/rules/best-practices-for-frontmatter-in-markdown/
 
 ## Markdown cheat sheet
 
