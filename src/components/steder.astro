@@ -36,14 +36,14 @@ const kontorData = [
     <div>
         <h2>Vi har jobba over hele landet – fra nord til sør!</h2>
 
-        <ul>
+        <ul class="kunder">
             {steder.map(sted =>(
                 <li>{sted}</li>
              ))}
         </ul>
 
         <h2>Her holder vi til</h2>
-        <ul>
+        <ul class="kontor">
 
             {kontorData.map(kontor =>(
                 <li>{kontor.sted} – {kontor.type}</li>
@@ -84,5 +84,13 @@ const kontorData = [
     .steder img{
         max-width: 100%;
         max-height: 85svh;
+    }
+
+    .kunder li::marker{
+        color: var(--red);
+    }
+
+    .kontor li::marker{
+        color: var(--blue);
     }
 </style>
