@@ -45,6 +45,25 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
         li{
         margin-left: 0rem;
         }  
+    }  
+
+    @media (width <= 450px ) {
+        li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1.5em 0;
+        }  
+
+        img {
+        height: 6rem;
+        width: auto;
+        }
+
+        strong{
+            display: block;
+        }
     }   
 
 </style>
