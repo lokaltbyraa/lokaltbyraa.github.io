@@ -25,6 +25,7 @@
     --orange: #FF8C00;
 
     --edgeWhiteSpace: 5em;
+    --edgeWhiteSpaceSmall: 1rem;
 
     font-family: 'Neue Montreal', 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
@@ -113,4 +114,12 @@ body{
 .metodeIkon{
     height: 2em;
     width: auto;
+}
+
+@media (width <= 810px ) {
+
+    .wrapper{
+        padding: 0 var(--edgeWhiteSpaceSmall);
+    }
+
 }

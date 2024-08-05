@@ -76,5 +76,12 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('pr
     .prosjekterGrid p{
         font-size: 1.25em;
     }
+
+    @media (width <= 810px ) {
+        .prosjekterGrid{
+        grid-template-columns: 1fr;
+        gap: 1em;
+        }  
+    }   
     
 </style>
