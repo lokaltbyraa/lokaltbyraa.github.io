@@ -3,7 +3,7 @@
 ## About
 
 ## To-dos
-- Short term
+- **SHORT TERM**
     - Adjust styling for small screens
         - Header
         - Project page
@@ -12,16 +12,16 @@
     - Markdown styling
         - Lists
     - Hand drawn icons
-- Medium term
+- **MEDIUM TERM**
     - Image optimization using image component with defined sizes
     - SEO optimization
         - Data in head
         - Favicon
         - Open graph previews
-- Long term
+- **LONG TERM**
     - Student page
 
-- Recently completed
+- **RECENTLY COMPLETED**
     - Replaced PNG vector graphics with SVG files
         - Logo
         - Arrow icons
