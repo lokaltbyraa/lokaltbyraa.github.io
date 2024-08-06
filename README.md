@@ -22,6 +22,8 @@
     - Favicon
     - Open graph previews
 
+- Go through projects and evaluate if frontloading text might make it more understandable and engaging.
+
 ### Long term
 - Student page
 - More projects
