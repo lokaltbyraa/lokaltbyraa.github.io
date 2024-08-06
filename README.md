@@ -3,7 +3,9 @@
 ## About
 
 ## To-dos
-- **SHORT TERM**
+
+### Short term
+
     - Adjust styling for small screens
         - Header
         - Project page
@@ -12,14 +14,24 @@
     - Markdown styling
         - Lists
     - Hand drawn icons
-- **MEDIUM TERM**
+
+### Medium term
     - Image optimization using image component with defined sizes
     - SEO optimization
         - Data in head
         - Favicon
         - Open graph previews
-- **LONG TERM**
+
+### Long term
     - Student page
+    - More projects
+        - Karmøy
+        - Stavanger
+        - Storfjord+
+        - Nye sider
+        - Hjemmebane
+        - Oslo Living Lab
+        - DSP for SDG
 
 - **RECENTLY COMPLETED**
     - Replaced PNG vector graphics with SVG files
