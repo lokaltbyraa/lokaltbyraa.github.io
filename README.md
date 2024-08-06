@@ -18,6 +18,7 @@
 
 ### Medium term
 - Image optimization using image component with defined sizes
+- Estimated reading time for projects on home page project grid
 - SEO optimization
     - Data in head
     - Favicon
