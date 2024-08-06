@@ -14,6 +14,7 @@
 - Markdown styling
     - Lists
 - Hand drawn icons
+- Norway map: Thinner stroke and fill page width completely.
 
 ### Medium term
 - Image optimization using image component with defined sizes
@@ -57,10 +58,8 @@ General markdown: https://www.markdownguide.org/basic-syntax/
 
 Some best practices: https://www.ssw.com.au/rules/best-practices-for-frontmatter-in-markdown/
 
-## Markdown cheat sheet
-
 <details>
-  <summary>View</summary>
+  <summary>## Markdown cheat sheet</summary>
 
   ```
 
