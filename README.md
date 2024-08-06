@@ -6,38 +6,40 @@
 
 ### Short term
 
-    - Adjust styling for small screens
-        - Header
-        - Project page
-    - Font files
-        - Neue Montreal italic, bold italic and medium weight
-    - Markdown styling
-        - Lists
-    - Hand drawn icons
+- Adjust styling for small screens
+    - Header
+    - Project page
+- Font files
+    - Neue Montreal italic, bold italic and medium weight
+- Markdown styling
+    - Lists
+- Hand drawn icons
 
 ### Medium term
-    - Image optimization using image component with defined sizes
-    - SEO optimization
-        - Data in head
-        - Favicon
-        - Open graph previews
+- Image optimization using image component with defined sizes
+- SEO optimization
+    - Data in head
+    - Favicon
+    - Open graph previews
 
 ### Long term
-    - Student page
-    - More projects
-        - Karmøy
-        - Stavanger
-        - Storfjord+
-        - Nye sider
-        - Hjemmebane
-        - Oslo Living Lab
-        - DSP for SDG
+- Student page
+- More projects
+    - Karmøy
+    - Stavanger
+    - Storfjord+
+    - Nye sider
+    - Hjemmebane
+    - Oslo Living Lab
+    - DSP for SDG
 
-- **RECENTLY COMPLETED**
-    - Replaced PNG vector graphics with SVG files
-        - Logo
-        - Arrow icons
-        - Map of Norway using IDs to color relevant municipalities
+### Recently completed
+- Styling for narrow screens
+    - Home page
+- Replaced PNG vector graphics with SVG files
+    - Logo
+    - Arrow icons
+    - Map of Norway using IDs to color relevant municipalities
 
 ## Guides, tutorials and docs
 
