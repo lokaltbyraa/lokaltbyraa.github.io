@@ -2,14 +2,22 @@
 
 interface Props {
     src: string;
+    imagePlaceholder: string;
 }
 
-const { src } = Astro.props;
+const { src, imagePlaceholder } = Astro.props;
 
 ---
 
 <div class="videoContainer">
-    <video src={"/public/video/" + src } controls></video>
+    <video
+        src={"/public/video/" + src }
+        controls
+        preload="none"
+        poster={"/public/video/" + imagePlaceholder }
+        >
+        
+    </video>
 </div>
 
 
