@@ -2,7 +2,12 @@
 import { Image } from 'astro:assets';
 
 import { getCollection } from "astro:content";
-const alleAnsatte = await getCollection("ansatte");
+import type { CollectionEntry } from "astro:content";
+
+// const alleAnsatte = await getCollection("ansatte");
+
+const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte')).sort((a:CollectionEntry<'ansatte'>, b:CollectionEntry<'ansatte'>) => a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
+
 
 ---
 

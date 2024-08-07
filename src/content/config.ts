@@ -48,10 +48,12 @@ const ansatte = defineCollection({
       stilling: z.string(),
       epost: z.string(),
       telefon: z.number(),
+      rekkefølge: z.number(),
+
       headshot: z.object({
       src: image(),
       altText: z.string(),
-    }),
+      }),
 })
 });
 
