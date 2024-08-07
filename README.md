@@ -15,6 +15,7 @@
     - Lists
 - Hand drawn icons
 - Norway map: Thinner stroke and fill page width completely.
+-Review scaling of map and corresponding text on larger screens.
 
 ### Medium term
 - Image optimization using image component with defined sizes
