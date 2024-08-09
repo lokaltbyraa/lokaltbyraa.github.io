@@ -127,9 +127,13 @@ body{
 @media (width <= 450px ) {
     
     h1, h2 {
-        font-size: 2em;
+        font-size: 1.75em;
         line-height: 1.25em;
         max-width: 60ch;
+    }
+
+    h3{
+        font-size: 1.4em;
     }
 
 }   
