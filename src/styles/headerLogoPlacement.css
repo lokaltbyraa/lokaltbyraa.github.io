@@ -3,3 +3,11 @@
     height: auto;
     margin: 3rem 3rem 0 0;
 }
+
+
+@media (width <= 450px ) {
+    .logo{
+        width: 6rem;
+        margin: 1rem 2rem 0 0;
+    }
+}   
