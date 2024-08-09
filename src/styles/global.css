@@ -31,9 +31,6 @@
     font-size: 16px;
 }
 
-body{
-    overflow: hidden;
-}
 
 .hidden{
     display: none;
@@ -96,6 +93,7 @@ body{
     margin: 0 auto;
     max-width: 2200px;
     padding: 0 var(--edgeWhiteSpace);
+    overflow: hidden;
 }
 
 .section{
