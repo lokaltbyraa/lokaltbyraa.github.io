@@ -127,6 +127,10 @@ body{
 }
 
 @media (width <= 450px ) {
+
+    .wrapper{
+        margin-top: 4em;
+    }
     
     h1, h2 {
         font-size: 1.75em;
