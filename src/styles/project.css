@@ -233,12 +233,12 @@ hr{
     }
 
     p, .projectMeta li, .outLink {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .content h2{
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-bottom: -0.25em;
         margin-top: 2em;
     }
@@ -246,5 +246,6 @@ hr{
     .heroSection h1{
         font-size: 2.5rem;
         max-width: none;
+        line-height: 1.15em;
     }
 }  
