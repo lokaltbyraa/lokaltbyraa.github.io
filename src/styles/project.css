@@ -109,6 +109,10 @@ p, .projectMeta li, .outLink {
     font-size: 2rem;
 }
 
+p {
+    line-height: 1.45em;
+}
+
 h1{
     font-size: 3em;
 }
@@ -141,17 +145,6 @@ hr{
     padding-bottom: 0.2em;
     display: inline-block;
 }
-
-/* p :has(img) {
-    border: 2px solid blue;
-    max-width: 70rem;
-} */
-
-/* .projectWrapper img {
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 .kontaktperson {
     background-color: var(--light);
@@ -210,3 +203,55 @@ hr{
     align-content: space-between;
 }
 
+
+@media (width <= 1050px ) {
+    .projectWrapper{
+        margin-left: var(--edgeWhiteSpaceSmall);
+        margin-right: var(--edgeWhiteSpaceSmall);
+    }
+
+    .heroSection h1{
+        grid-area: 1/1/1/1;
+        align-self: end;
+        z-index: 2;
+        font-size: 4rem;
+        margin-bottom: 0.5em;
+        margin-left: var(--edgeWhiteSpaceSmall);
+        margin-right: var(--edgeWhiteSpaceSmall);
+        max-width: 34ch;
+    }
+}  
+
+@media (width <= 810px ) {
+    .projectMeta {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem 1.5rem;
+        margin-bottom: 4em;
+    }
+
+    /* .projectMeta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem 3rem;
+    } */
+}  
+
+@media (width <= 650px ) {
+    .projectMeta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    p, .projectMeta li, .outLink {
+        font-size: 1.4rem;
+    }
+
+    .content h2{
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: -0.5em;
+        margin-top: 2em;
+    }
+}  
