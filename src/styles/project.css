@@ -228,6 +228,12 @@ hr{
 }  
 
 @media (width <= 650px ) {
+
+    .projectWrapper{
+        margin-left: var(--edgeWhiteSpaceXS);
+        margin-right: var(--edgeWhiteSpaceXS);
+    }
+
     .projectMeta {
         grid-template-columns: 1fr 1fr;
     }
@@ -247,5 +253,7 @@ hr{
         font-size: 2.5rem;
         max-width: none;
         line-height: 1.15em;
+        margin-left: var(--edgeWhiteSpaceXS);
+        margin-right: var(--edgeWhiteSpaceXS);
     }
 }  
