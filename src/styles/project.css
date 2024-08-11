@@ -245,12 +245,12 @@ hr{
     }
 
     p, .projectMeta li, .outLink {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .content h2{
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: -0.5em;
         margin-top: 2em;
     }
