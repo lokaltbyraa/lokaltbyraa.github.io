@@ -72,10 +72,23 @@ a{
 
 @media (width <= 450px ) {
   .text span{
-  margin: 2rem 1rem;
-  text-shadow: 0px var(--shadowOffset) var(--blurRadius) var(--shadowColor),
-  0px var(--shadowOffset) var(--blurRadius) var(--shadowColor);
-}
+  margin: 1.5rem 0.5rem;
+  text-shadow: none;
+  background-color: white;
+  color: black;
+  --arrowColor: black;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  font-size: 1.1rem;
+  border: none;
+  }
+
+  .text span:hover{
+    background-color: var(--red);
+    color: black;
+    --arrowColor: black;
+  }
+
 }   
 
 </style>
