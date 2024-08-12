@@ -14,16 +14,12 @@ const { default: innerHTML } = await import(`../images/icons/lbLogo.svg?raw`);
 </div>
 
 <style>
-    div {
+    .logo {
     display: inline-block;
     height: 10rem;
+    width: 10rem;
     aspect-ratio: 1/1;
-    /* fill: yellow; */
-    /* --logoPrimary: yellow !important; */
-    }
-
-    svg{
-      fill: yellow;
+    margin: 3rem 3rem 0 0;
     }
 
     .rotation{
@@ -39,5 +35,13 @@ const { default: innerHTML } = await import(`../images/icons/lbLogo.svg?raw`);
       transform: rotate(359deg);
     }
   }
+
+  @media (width <= 450px ) {
+    .logo{
+        width: 7.5rem;
+        height: 7.5rem;
+        margin: 1rem 1rem 0 0;
+    }
+}  
     
 </style>

@@ -256,4 +256,9 @@ hr{
         margin-left: var(--edgeWhiteSpaceXS);
         margin-right: var(--edgeWhiteSpaceXS);
     }
+
+    .logo{
+        width: 5.5rem !important;
+        height: 5.5rem !important;
+    }
 }  
