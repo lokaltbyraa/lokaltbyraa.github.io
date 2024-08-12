@@ -42,5 +42,13 @@ const { src, imagePlaceholder } = Astro.props;
         margin: auto auto;
     }
 
+    @media (width <= 540px ) {
+        .videoContainer, video {
+        width: 100%;
+        max-height: none;
+    }
+
+    }  
+
 
 </style>
