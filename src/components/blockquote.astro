@@ -52,7 +52,9 @@ if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}
         z-index: 1;
         grid-area: 1/1/1/1;
         place-self: center;
-        max-width: var(--contentWidthMedium);;
+        max-width: var(--contentWidthMedium);
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .blockquoteWrapper .text *{
@@ -102,5 +104,47 @@ if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}
         object-fit: cover;
         z-index: 0;
     }
+
+    @media (width <= 980px ) {
+
+        .blockquoteWrapper{
+            width: 100%;
+            max-width: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        img{
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blockquoteWrapper .text{
+            margin-left: var(--edgeWhiteSpaceXS);
+            margin-right: var(--edgeWhiteSpaceXS);
+        }
+
+        blockquote p{
+            padding-top: 0rem;
+            font-size: 1.6rem;
+        }
+
+        .text{
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        cite{
+            font-size: 1rem;
+            /* display: inline; */
+        }
+
+        /* cite span{
+            padding-right: 0.5ch;
+        } */
+
+    }  
 
 </style>
