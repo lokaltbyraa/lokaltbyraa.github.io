@@ -35,4 +35,25 @@
         grid-template-columns: repeat(5, 1fr)
     }
 
+    @media (width <= 980px ) {
+        .outerMargin{
+        margin: 3rem 0em 2em;
+        }
+
+        .imageGrid{
+        max-width: var(--contentWidthMedium);
+        }
+    }
+
+    @media (width <= 650px ) {
+        .outerMargin{
+        margin: 3rem 0em 2em;
+        }
+
+        .imageGrid{
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+
 </style>
