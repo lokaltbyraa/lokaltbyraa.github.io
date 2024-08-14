@@ -278,13 +278,10 @@ hr{
 
     .kontaktperson {
         grid-template-columns: 1fr;
-        padding: 2.5rem 3rem;
         gap: 0.5rem;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
         width: min-content;
         min-width: 24ch;
+        padding: 1.5rem 2.5rem;
     }
 
     .kontaktperson img{
