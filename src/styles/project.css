@@ -124,6 +124,8 @@ h2, h3{
 hr{
     color: rgba(0,0,0,0);
     margin: 4rem 0;
+    border: none;
+    border-color: rgba(0,0,0,0);
 }
 
 .projectMeta {
