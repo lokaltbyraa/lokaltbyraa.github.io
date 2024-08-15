@@ -48,7 +48,11 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
 
 ---
 
-<Layout title="Prosjekt test" homeButton={true}>
+<Layout
+    title={prosjekt.data.tittel}
+    homeButton={true}
+    description={prosjekt.data.sammendrag}
+    >
 
     <div class="heroSection">
         <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} />

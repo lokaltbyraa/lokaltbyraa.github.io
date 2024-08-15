@@ -1,45 +1,54 @@
 ---
 
 import '../styles/global.css';
-import { SITE_TITLE, SITE_DESCRIPTION} from '../siteConstants';
+import { SITE_TITLE, SITE_AUTHOR } from '../siteConstants';
 
 import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 
 export interface Props{
 	title: string;
+  description: string;
   homeButton?: boolean;
 }
 
-const { title = 'Lokalt Byrå', homeButton } = Astro.props as Props;
+const { title = 'Lokalt Byrå', homeButton, description } = Astro.props as Props;
 
 ---
 
 <html lang="no" dir="ltr">
   <head>
 
+    <!-- static stuff -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>{SITE_TITLE} – {title}</title>
-    <!-- <title>Lokalt Byrå: Strategisk design for bærekraftige lokalsamfunn</title> -->
-
-    <meta name="description" content={SITE_DESCRIPTION}>
-    <meta name="author" content="Lokalt Byrå">
-
     <meta name=”robots” content="index, follow">
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- dynamic stuff -->
+	  <title>{SITE_TITLE} – {title}</title>
+
+    <!-- fonts and css -->
+    <link href='../fonts/NeueMontreal-Regular.woff2' rel='stylesheet' type='text/css'>
+    <link href='../fonts/NeueMontreal-Bold.woff2' rel='stylesheet' type='text/css'>
+    <link href='../fonts/NeueMontreal-Italic.woff2' rel='stylesheet' type='text/css'>
+    <link href='../fonts/NeueMontreal-BoldItalic.woff2' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.typekit.net/ghz0qsf.css">
+
+    <meta name="description" content={description}>
+    <meta name="author" content={SITE_AUTHOR}>
 
     <meta property="og:title" content={SITE_TITLE} – {title}/>
     <meta property="og:type" content="website"/>
-    <meta property="og:description" content={SITE_DESCRIPTION}/>
+    <meta property="og:description" content={description}/>
     <meta property="og:url"content="https://lokaltbyraa.no" />
     <meta property="og:image" content="/LokaltByraaOpenGraph.jpg"/>
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="website">
-    <meta name="twitter:creator" content="Lokalt Byrå">
+    <meta name="twitter:creator" content={SITE_AUTHOR}>
     <meta name="twitter:title" content={SITE_TITLE} – {title}>
-    <meta name="twitter:description" content={SITE_DESCRIPTION}>
+    <meta name="twitter:description" content={description}>
     <meta name="twitter:image" content="/LokaltByraaTwitter.jpg">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -49,12 +58,6 @@ const { title = 'Lokalt Byrå', homeButton } = Astro.props as Props;
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5c5c5c">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
-
-	<link href='../fonts/NeueMontreal-Regular.woff2' rel='stylesheet' type='text/css'>
-	<link href='../fonts/NeueMontreal-Bold.woff2' rel='stylesheet' type='text/css'>
-  <link href='../fonts/NeueMontreal-Italic.woff2' rel='stylesheet' type='text/css'>
-	<link href='../fonts/NeueMontreal-BoldItalic.woff2' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://use.typekit.net/ghz0qsf.css">
 
   </head>
 
