@@ -39,11 +39,8 @@
 
 ### Recently completed
 - Styling for narrow screens
-    - Home page
 - Replaced PNG vector graphics with SVG files
-    - Logo
-    - Arrow icons
-    - Map of Norway using IDs to color relevant municipalities
+- Hand drawn icons
 
 ## Guides, tutorials and docs
 
