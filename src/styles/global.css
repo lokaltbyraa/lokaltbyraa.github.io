@@ -12,6 +12,20 @@
     font-weight: bold;
   }
 
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('../fonts/NeueMontreal-Italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('../fonts/NeueMontreal-BoldItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: bold;
+  }
+
 
 :root{
     --light: #FAF6EE;
