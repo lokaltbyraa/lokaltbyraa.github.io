@@ -6,15 +6,11 @@
 
 ### Short term
 
-- Adjust styling for small screens
-    - Header
-    - Project page
+- Draw icons
+    - Methods
+    - Disciplines
 - Font files
     - Neue Montreal italic, bold italic and medium weight
-- Markdown styling
-    - Lists
-- Hand drawn icons
-- Norway map: Thinner stroke and fill page width completely.
 - Review scaling of map and corresponding text on larger screens.
 
 ### Medium term
@@ -24,7 +20,9 @@
     - Data in head
     - Favicon
     - Open graph previews
-- Fix LB logo in header moving to the left on project pages
+-  Expand color system with shades and tints
+- Markdown styling
+    - Lists
 
 - Go through projects and evaluate if frontloading text might make it more understandable and engaging.
 
