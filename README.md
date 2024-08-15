@@ -6,9 +6,6 @@
 
 ### Short term
 
-- Draw icons
-    - Methods
-    - Disciplines
 - Font files
     - Neue Montreal italic, bold italic and medium weight
 - Review scaling of map and corresponding text on larger screens.
