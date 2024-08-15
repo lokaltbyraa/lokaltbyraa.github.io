@@ -5,20 +5,18 @@
 ## To-dos
 
 ### Short term
-
 - Review scaling of map and corresponding text on larger screens.
-
-### Medium term
-- Image optimization using image component with defined sizes
-- Estimated reading time for projects on home page project grid
 - SEO optimization
     - Data in head
     - Favicon
     - Open graph previews
 -  Expand color system with shades and tints
+
+### Medium term
+- Image optimization using image component with defined sizes
+- Estimated reading time for projects on home page project grid
 - Markdown styling
     - Lists
-
 - Go through projects and evaluate if frontloading text might make it more understandable and engaging.
 
 ### Long term
@@ -31,6 +29,7 @@
     - Hjemmebane
     - Oslo Living Lab
     - DSP for SDG
+- Fix warning ts(6133): 'index' is declared but its value is never read.
 
 ### Recently completed
 - Styling for narrow screens
