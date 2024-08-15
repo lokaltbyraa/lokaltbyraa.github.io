@@ -15,7 +15,7 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 ---
 
 <li>
-    <Image src={images[imagePath]()} alt={altText} />
+    <Image src={images[imagePath]()} alt={altText} width={200} quality={80} />
     <span>
         <strong>{title}</strong>
         {body}
