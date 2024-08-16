@@ -17,6 +17,7 @@ const steder = [
     'Aurland',
     'Hemsedal',
     'Øygarden',
+    'Rollag',
     'Oslo',
     'Asker',
     'Karmøy',
@@ -120,11 +121,10 @@ const kontorData = [
     }
 
     .kart {
-        max-width: 50svw;
-        height: 100%;
-        max-height: 95svh;
-        width: 1200px;
-        /* border: 2px solid red; */
+        width: 50svw;
+        max-width: 1200px;
+        height: 95svh;
+        max-height: 1000px;
         grid-column: 1 / 3;
         grid-row: 1 / 5;
         justify-self: end;
@@ -146,7 +146,6 @@ const kontorData = [
         height: 100%;
         max-height: 90svh;
         width: 1200px;
-        /* border: 2px solid red; */
     }
     }  
 
@@ -193,9 +192,6 @@ const kontorData = [
         }
 
         .steder li{
-        /* font-size: 1.5em;
-        line-height: 0.25em;
-        list-style: disc; */
         margin: 0;
         line-height: 1.25em;
         list-style-position: inside;
@@ -216,4 +212,11 @@ const kontorData = [
 
 
     } 
+
+    @media (width > 1700px ) {
+        .steder {
+        max-width: 1400px;
+    }
+    } 
+
 </style>
