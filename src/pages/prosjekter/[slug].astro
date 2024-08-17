@@ -57,7 +57,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
     >
 
     <div class="heroSection">
-        <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} />
+        <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} width={2600} quality={100}/>
         <h1 class="serif">{prosjekt.data.tittel}</h1>
         <div class="overlay"></div>        
     </div>
@@ -118,7 +118,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
                     <p id="epost"><a href={"mailto:"+ansatteData.epost}>{ansatteData.epost}</a></p>
                 </div>
             </div>
-            <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={600} quality={80}/>
+            <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={250} quality={80}/>
         </div>
 
     </div>

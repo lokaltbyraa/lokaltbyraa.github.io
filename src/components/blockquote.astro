@@ -26,12 +26,8 @@ if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}
     </div>
     
     <div class="imageWrapper">
-        <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} style={"filter:brightness(" + imageFilter + ");"}/>
+        <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} width={1200} quality={80} style={"filter:brightness(" + imageFilter + ");"}/>
     </div>
-
-    
-
-    <!-- <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} style="filter:brightness(0.5);"/> -->
 </div>
 
 <style>

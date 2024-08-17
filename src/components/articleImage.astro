@@ -2,7 +2,6 @@
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 import { capitalize } from '../utils';
-
 interface Props {
     imagePath: string;
     altText: string;
@@ -14,10 +13,32 @@ const { imagePath, altText, caption, sizeSML = "M"} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images["/src/images/projects/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
+
+//set optimized image size based on passed sizeSML property
+let imageWidth: number;
+
+switch(sizeSML.toLowerCase()) {
+    case 's':
+        imageWidth = 650;
+        break;
+    case 'm':
+        imageWidth = 880;
+        break;
+    case 'l':
+        imageWidth = 1200;
+        break;
+    case 'xl':
+        imageWidth = 2600;
+        break;
+    default:
+        imageWidth = 900; // Default to 900 if none of the cases match
+        break;
+}
+
 ---
 
 <div class={"imageDiv "+ capitalize(sizeSML)}>
-    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} />
+    <Image src={images["/src/images/projects/" + imagePath]()} alt={altText} width={imageWidth} quality={80}/>
     <span>{caption}</span>
 </div>
 

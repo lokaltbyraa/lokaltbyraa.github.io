@@ -15,7 +15,7 @@ const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte'
 
     {alleAnsatte.map(ansatt =>(
        <div>
-        <Image src={ansatt.data.headshot.src} alt={"Bilde av "+ansatt.data.headshot.altText} width={600} quality={80}/>
+        <Image src={ansatt.data.headshot.src} alt={"Bilde av "+ansatt.data.headshot.altText} width={400} quality={80}/>
         {/* <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} /> */}
         <h3>{ansatt.data.navn}</h3>
         <p>{ansatt.data.stilling}</p>
