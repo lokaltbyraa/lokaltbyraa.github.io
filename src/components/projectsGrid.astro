@@ -1,14 +1,25 @@
 ---
 import ProjectCard from "./projectCard.astro"
 import '../styles/projectGridColors.css';
+// import { formatProjects } from '../utils';
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 // const alleProsjekter: CollectionEntry<'prosjekter'>[] = await getCollection('prosjekter');
 
-const alleProsjekter: CollectionEntry<'prosjekter'>[] = (await getCollection('prosjekter')).sort((a:CollectionEntry<'prosjekter'>, b:CollectionEntry<'prosjekter'>) => a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
+const alleProsjekter: CollectionEntry<'prosjekter'>[]
+    = (await getCollection('prosjekter', ({ data }) => {
+        return import.meta.env.PROD ? data.utkast !== true : true;
+    })).sort((a:CollectionEntry<'prosjekter'>, b:CollectionEntry<'prosjekter'>) =>
 
+    a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
+
+// const publishedBlogEntries = await getCollection('prosjekter', ({ data }) => {
+//   return data.utkast !== true;
+// });
+
+// const formattedProjects = formatProjects(alleProsjekter)
 ---
 
 <div class="prosjekterGrid">

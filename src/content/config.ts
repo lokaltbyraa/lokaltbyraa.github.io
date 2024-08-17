@@ -37,6 +37,7 @@ const projectsCollection = defineCollection({
     tags: z.array(z.string()),
     rekkefølge: z.number(),
     vårKontaktperson: reference('ansatte'),
+    utkast: z.boolean().optional(),
   })
 });
 

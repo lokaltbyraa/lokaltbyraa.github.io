@@ -5,12 +5,10 @@
 ## To-dos
 
 ### Short term
-- Review scaling of map and corresponding text on larger screens.
 - SEO optimization
-    - Data in head
-    - Favicon
     - Open graph previews
 -  Expand color system with shades and tints
+- Draft option
 
 ### Medium term
 - Image optimization using image component with defined sizes
@@ -32,6 +30,7 @@
 - Fix warning ts(6133): 'index' is declared but its value is never read.
 
 ### Recently completed
+- Fixed map scaling in large screens
 - Styling for narrow screens
 - Replaced PNG vector graphics with SVG files
 - Hand drawn icons
