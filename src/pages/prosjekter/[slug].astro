@@ -17,7 +17,9 @@ import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 // Accessing data from projects content collection and creating routes to project pages based on slug in markdown files
 
 export async function getStaticPaths() {
-  const alleProsjekter = await getCollection("prosjekter");
+  const alleProsjekter = await getCollection('prosjekter', ({ data }) => {
+    return import.meta.env.PROD ? data.utkast !== true : true;
+});
 
   return alleProsjekter.map((prosjekt) => ({
     params: { slug: prosjekt.slug },
