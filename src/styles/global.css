@@ -31,11 +31,14 @@
     --light: #FAF6EE;
     --beige: #F4E4D6;
     --dark: #121212;
-    --red: #D85A30;
+    /* --red: #D85A30; */
+    --red: #EC5E2F;
     --yellow: #EFC334;
-    --blue: #0C6AA2;
+    /* --blue: #0C6AA2; */
+    --blue: #009BF5;
     --blueDark: #1F4F9F;
-    --green: #2CA58D;
+    /* --green: #2CA58D; */
+    --green: #2DA990;
     --orange: #FF8C00;
 
     --edgeWhiteSpace: 5em;

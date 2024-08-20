@@ -4,6 +4,7 @@
     <style>
       .logoCircle {
         fill: var(--logoPrimary, #da5926);
+        --logoPrimary: #EC5E2F;
       }
 
       .logoCircle, .logoLetters {

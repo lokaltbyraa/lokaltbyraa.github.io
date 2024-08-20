@@ -7,11 +7,8 @@
 ### Short term
 - SEO optimization
     - Open graph previews
--  Expand color system with shades and tints
-- Draft option
 
 ### Medium term
-- Image optimization using image component with defined sizes
 - Estimated reading time for projects on home page project grid
 - Markdown styling
     - Lists
@@ -28,8 +25,12 @@
     - Oslo Living Lab
     - DSP for SDG
 - Fix warning ts(6133): 'index' is declared but its value is never read.
+-  Expand color system with shades and tints
 
 ### Recently completed
+- Adjusted colors for text contrast
+- Draft option
+- Image optimization
 - Fixed map scaling in large screens
 - Styling for narrow screens
 - Replaced PNG vector graphics with SVG files
