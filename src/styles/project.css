@@ -106,7 +106,7 @@ p, h1, h2, h3, .projectMeta, .projectWrapper a, .outLink{
 }
 
 p, .projectMeta li, .outLink {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 p {
@@ -119,7 +119,7 @@ h1{
 
 .projectWrapper h2{
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-bottom: -0.25em;
 }
 
@@ -129,7 +129,7 @@ h3{
 
 hr{
     color: rgba(0,0,0,0);
-    margin: 4rem 0;
+    margin: 3rem 0;
     border: none;
     border-color: rgba(0,0,0,0);
 }
