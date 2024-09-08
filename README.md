@@ -7,7 +7,12 @@
 ### Short term
 - SEO optimization
     - Open graph previews
-
+- Explainer
+    - Click pointer
+    - transition out only?
+    - fix centering for  large screens
+        - Set Abbr as relative
+        
 ### Medium term
 - Estimated reading time for projects on home page project grid
 - Markdown styling
