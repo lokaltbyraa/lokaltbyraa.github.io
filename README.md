@@ -27,6 +27,7 @@
 
 ### Long term
 - Student page
+    - Could this be combined with a bit about "larger conversations", i.e. metode for metode, partnerskap for kjedelig innovasjon and so on? Could be nice to feature some of that on the page as well.
 - More projects
     - Karmøy
     - Stavanger
