@@ -4,6 +4,12 @@
 
 ## To-dos
 
+### Tobias
+- Add a picture in Kragerø Case copy.
+- Add a picture in Gamvik Case copy.
+- Add picture of placing activities in activityhouse for Øygarden Case copy.
+
+
 ### Short term
 - SEO optimization
     - Open graph previews
