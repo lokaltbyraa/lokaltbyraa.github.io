@@ -5,8 +5,11 @@
 ## To-dos
 
 ### Tobias
-- Add a picture in Kragerø Case copy.
 - Add a picture in Gamvik Case copy.
+    - Drawing of building
+    - Model
+    - Family disco
+    - Fourth picture?
 - Add picture of placing activities in activityhouse for Øygarden Case copy.
 
 
