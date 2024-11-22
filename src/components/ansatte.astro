@@ -20,6 +20,7 @@ const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte'
         <h3>{ansatt.data.navn}</h3>
         <p>{ansatt.data.stilling}</p>
         <p><a href={"mailto:"+ansatt.data.epost}>{ansatt.data.epost}</a></p>
+        <p><a href={"tel:+47"+ansatt.data.telefon}>+47 {ansatt.data.telefon}</a></p>
     </div> 
     ))}
 
@@ -53,7 +54,7 @@ const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte'
 }
 
 .ansatte *{
-    margin: 0.25em 0 0 0;
+    margin: 0 0 0.2em 0;
 }
 
 .ansatte h3{
@@ -62,6 +63,11 @@ const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte'
 
 .ansatte p{
     font-size: 1.5em;
+    margin-bottom: 0.05em;
+}
+
+.ansatte div :nth-child(3) {
+    margin-bottom: 0.75em;
 }
 
 a:hover{
