@@ -28,7 +28,7 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[]
         <ProjectCard 
         tittel={prosjekt.data.tittel}
         oppdragsgiver={prosjekt.data.oppdragsgiver}
-        slug={'/prosjekter/' + prosjekt.slug}
+        slug={'/prosjekter/' + prosjekt.id}
         tags={prosjekt.data.tags}
         imagePath= {prosjekt.data.mainImage}
         altText={prosjekt.data.altText}

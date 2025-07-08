@@ -12,30 +12,41 @@ import Layout from '../../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
 
 // Content collection imports
-import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { getEntry, render } from 'astro:content';
+
 
 // Accessing data from projects content collection and creating routes to project pages based on slug in markdown files
-
 export async function getStaticPaths() {
   const alleProsjekter = await getCollection('prosjekter', ({ data }) => {
     return import.meta.env.PROD ? data.utkast !== true : true;
 });
 
   return alleProsjekter.map((prosjekt) => ({
-    params: { slug: prosjekt.slug },
+    params: { slug: prosjekt.id },
     props: { prosjekt },
   }));
 }
 
 type Props = {
-  prosjekt: CollectionEntry<"prosjekter">;
+  prosjekt: CollectionEntry<'prosjekter'>;
 };
 
 const { prosjekt } = Astro.props;
-const { Content } = await prosjekt.render();
-const { data: ansatteData } = await getEntry("ansatte", prosjekt.data.vårKontaktperson.id);
+const { Content } = await render(prosjekt);
 
-// const ansatt = prosjekt.data.vårKontaktperson;
+
+
+//V4 function for destructuring ansatte data
+// const ansatteData = await getEntry('ansatte', prosjekt.data.kontaktperson.id);
+
+//const navn = await getEntry(ansatteData.data.navn);
+
+// const kontaktperson = prosjekt.data.kontaktperson.id;
+
+const kontaktpersonData = prosjekt.data.kontaktperson
+  ? await getEntry(prosjekt.data.kontaktperson.collection, prosjekt.data.kontaktperson.id)
+  : null;
 
 // Importing project images from subfolder in images folder
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
@@ -109,7 +120,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
         <Content/>
         </div>
 
-        <div class="kontaktperson">
+        <!-- <div class="kontaktperson">
             <div class="kontakt">
                 <h2>Vil du høre mer?<br>Send meg en epost, da vel!</h2>
                 <div>
@@ -119,7 +130,27 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
                 </div>
             </div>
             <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={250} quality={80}/>
+        </div> -->
+
+        {kontaktpersonData && <p>{kontaktpersonData.data.navn}</p> }
+
+        
+            {kontaktpersonData && 
+            
+            <p>{kontaktpersonData.data.navn}</p>
+
+            <div class="kontaktperson">
+            <div class="kontakt">
+                <h2>Vil du høre mer?<br>Send meg en epost, da vel!</h2>
+                <div>
+                    <h3>{kontaktpersonData.data.navn}</h3>
+                    <p id="stilling">{kontaktpersonData.data.stilling}</p>
+                    <p id="epost"><a href={"mailto:"+kontaktpersonData.data.epost}>{kontaktpersonData.data.epost}</a></p>
+                </div>
+            </div>
+            <Image src={kontaktpersonData.data.headshot} alt={"Bilde av "+kontaktpersonData.data.altText} width={250} quality={80}/>
         </div>
+            }
 
     </div>
 

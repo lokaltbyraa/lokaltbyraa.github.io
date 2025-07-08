@@ -1,0 +1,32 @@
+[
+    {
+      "id": "glenn",
+      "navn": "Glenn Sæstad",
+      "stilling": "Strategisk designer og medeier",
+      "epost": "glenn@lokaltbyraa.no",
+      "telefon": 95463368,
+      "rekkefølge": 1,
+      "headshot": "./glenn.jpg",
+      "altText": "Bilde av Glenn Sæstad"
+    },
+    {
+      "id": "tobias",
+      "navn": "Tobias Mangersnes",
+      "stilling": "Strategisk designer og medeier",
+      "epost": "tobias@lokaltbyraa.no",
+      "telefon": 47155036,
+      "rekkefølge": 2,
+      "headshot": "./tobias.jpg",
+      "altText": "Bilde av Tobias Mangersnes"
+    },
+    {
+      "id": "nikolai",
+      "navn": "Nikolai Sabel",
+      "stilling": "Strategisk designer og daglig leder",
+      "epost": "nikolai@lokaltbyraa.no",
+      "telefon": 95284407,
+      "rekkefølge": 3,
+      "headshot": "./nikolai.jpg",
+      "altText": "Bilde av Nikolai Sabel"
+    }
+  ]

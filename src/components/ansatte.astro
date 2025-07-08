@@ -9,18 +9,33 @@ import type { CollectionEntry } from "astro:content";
 const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte')).sort((a:CollectionEntry<'ansatte'>, b:CollectionEntry<'ansatte'>) => a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
 
 
+
+const formatPhoneNumber = (phone: number) => {
+  // Format phone number as "123   45   67" with larger spaces
+  const largeSpace = '\u2003'; // Em space (visually larger than a regular space)
+  return phone.toString().replace(/(\d{3})(\d{2})(\d{2})/, `$1${largeSpace}$2${largeSpace}$3`);
+};
+
+// Preprocess the data to include formatted phone numbers
+const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
+  ...ansatt,
+  data: {
+    ...ansatt.data,
+    formattedPhone: formatPhoneNumber(ansatt.data.telefon),
+  },
+}));
 ---
 
 <div class="ansatte">
 
-    {alleAnsatte.map(ansatt =>(
+    {ansatteWithFormattedPhone.map(ansatt =>(
        <div>
-        <Image src={ansatt.data.headshot.src} alt={"Bilde av "+ansatt.data.headshot.altText} width={400} quality={80}/>
+        <Image src={ansatt.data.headshot} alt={"Bilde av "+ansatt.data.altText} width={400} quality={80}/>
         {/* <Image src={images[prosjekt.data.mainImage]()} alt={prosjekt.data.altText} /> */}
         <h3>{ansatt.data.navn}</h3>
         <p>{ansatt.data.stilling}</p>
         <p><a href={"mailto:"+ansatt.data.epost}>{ansatt.data.epost}</a></p>
-        <p><a href={"tel:+47"+ansatt.data.telefon}>+47 {ansatt.data.telefon}</a></p>
+        <p><a href={"tel:+47"+ansatt.data.telefon}>+47 {ansatt.data.formattedPhone}</a></p>
     </div> 
     ))}
 
