@@ -1,0 +1,28 @@
+---
+import '../styles/reset.css';
+import '../styles/global.css';
+import '../styles/cv.css';
+
+import Layout from '../layouts/Layout.astro';
+
+import * as CV from '../content/cv.mdx';
+import {Content as CVText} from '../content/cv.mdx';
+---
+
+<Layout
+	title="Strategisk design for bærekraftige lokalsamfunn"
+	description='Lokalt Byrå bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.'
+	homeButton={true}
+    >
+
+    <div class="wrapper">
+        <div class="section">
+
+            <h1 class="serif">Om oss</h1>
+
+            <CVText />
+
+        </div>
+    </div>
+
+</Layout>

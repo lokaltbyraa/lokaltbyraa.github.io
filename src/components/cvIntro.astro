@@ -1,0 +1,103 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+import '../styles/reset.css';
+import '../styles/global.css';
+import '../styles/cv.css';
+
+interface Props {
+    navn: string;
+    stilling: string;
+    brødtekst: string;
+    epost: string;
+    tlf: string;
+    imagePath: string;
+    altText: string;
+}
+
+const { navn, stilling, brødtekst, epost, tlf, imagePath, altText } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
+if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/content/ansatte/*.{jpeg,jpg,png,gif}"`);
+
+
+---
+
+<div class="grid">
+    <div class="txtDiv">
+        <h1>{navn}</h1>
+        <h2>{stilling}</h2>
+        <p>{brødtekst}</p>
+
+        <p>
+            <a href={"mailto:"+epost}>{epost}</a><br>
+            <a href={"tel:+47"+tlf}>{"+47 "+tlf}</a>
+        </p>
+    </div>
+
+    <div class="imgDiv">
+        <Image src={images["/src/content/ansatte/" + imagePath]()} alt={altText} width=600 quality={80}/>
+    </div>
+</div>
+
+<style>
+
+    img{
+    height: 100%;
+    width: 22ch;
+    /* aspect-ratio: 1/1; */
+    object-fit: cover;
+    border-radius: 0%;
+    object-position: center bottom;
+    }
+
+    .grid{
+        margin-top: 8em;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2em;
+        /* align-items: center; */
+    }
+
+    h1{
+        font-size: 2.5em;
+        margin: 0;
+        line-height: 0.9;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 600px) {
+    
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .txtDiv{
+        grid-row: 2;
+    }
+
+    .imgDiv{
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    img{
+        width: 100%;
+        max-width: 45ch;
+        aspect-ratio: 1/1;
+        object-position: center;
+    }
+
+    }
+    
+  }
+
+</style>

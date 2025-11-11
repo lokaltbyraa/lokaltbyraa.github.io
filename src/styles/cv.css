@@ -1,0 +1,64 @@
+:root {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.wrapper{
+    max-width: 63ch;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-top: 1px solid black;
+}
+
+
+td{
+    padding-bottom: 0.85em;
+    text-align: left;
+}
+
+th{
+    display: none;
+}
+
+table td:nth-child(odd){
+    width: 9ch;
+    padding-right: 0.75ch;
+}
+
+
+table {
+    line-height: 1.2;
+}
+
+@media screen and (max-width: 600px) {
+    
+    table tr {
+      display: block;
+    }
+    
+    table td {
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    table td:nth-child(odd){
+        width: 100%;
+        padding-right: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.1em;
+    }
+
+    table td:nth-child(even){
+        padding-bottom: 0.55em;
+    }
+    
+  }
