@@ -4,7 +4,7 @@
 import Norge from '../components/norge.astro';
 
 const steder = [
-    'Finnmark fylke',
+    'Finnmark fylkeskommune',
     'Gamvik',
     'Skjervøy',
     'Kvænangen',
@@ -47,9 +47,13 @@ const kontorData = [
         <h2 class="viHar">Vi har jobba over hele landet <em>– fra nord til sør!</em></h2>
 
         <ul class="kunder">
-            {steder.map(sted =>(
-                <li>{sted}</li>
-             ))}
+            {steder.map((sted, i) => (
+                <li>
+                    {i === 0 ? <>
+                        {sted.split(' ')[0]}<br id="ffkBreak"/> {sted.split(' ').slice(1).join(' ')}
+                    </> : sted}
+                </li>
+            ))}
         </ul>
 
         <h2 class="holderTil">Her holder vi til</h2>
@@ -66,8 +70,6 @@ const kontorData = [
             <Norge steder={steder}/>
         </div>
 
-    
-    <!-- <Image src={Norge} alt="Kart over Norge med alle stedene vi har jobbet og holder til på."> -->
 </div>
 
 <style>
@@ -91,9 +93,12 @@ const kontorData = [
 
     .steder li{
         font-size: 1.5em;
-        line-height: 0.25em;
+        line-height: 1.5em;
         list-style: disc;
         margin-left: 2ch;
+
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .kunder{
@@ -187,6 +192,10 @@ const kontorData = [
 
         .kunder{
             grid-row: 3;
+        }
+
+        #ffkBreak{
+            display: none;
         }
 
         .holderTil{
