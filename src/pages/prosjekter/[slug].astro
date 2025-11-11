@@ -120,28 +120,10 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
         <Content/>
         </div>
 
-        <!-- <div class="kontaktperson">
-            <div class="kontakt">
-                <h2>Vil du høre mer?<br>Send meg en epost, da vel!</h2>
-                <div>
-                    <h3>{ansatteData.navn}</h3>
-                    <p id="stilling">{ansatteData.stilling}</p>
-                    <p id="epost"><a href={"mailto:"+ansatteData.epost}>{ansatteData.epost}</a></p>
-                </div>
-            </div>
-            <Image src={ansatteData.headshot.src} alt={"Bilde av "+ansatteData.headshot.altText} width={250} quality={80}/>
-        </div> -->
-
-        {kontaktpersonData && <p>{kontaktpersonData.data.navn}</p> }
-
-        
-            {kontaktpersonData && 
-            
-            <p>{kontaktpersonData.data.navn}</p>
-
+        {kontaktpersonData && (
             <div class="kontaktperson">
             <div class="kontakt">
-                <h2>Vil du høre mer?<br>Send meg en epost, da vel!</h2>
+                <h2>Vil du høre mer?<br/>Send meg en epost, da vel!</h2>
                 <div>
                     <h3>{kontaktpersonData.data.navn}</h3>
                     <p id="stilling">{kontaktpersonData.data.stilling}</p>
@@ -150,7 +132,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
             </div>
             <Image src={kontaktpersonData.data.headshot} alt={"Bilde av "+kontaktpersonData.data.altText} width={250} quality={80}/>
         </div>
-            }
+            )}
 
     </div>
 
