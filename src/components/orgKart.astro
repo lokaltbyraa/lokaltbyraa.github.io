@@ -47,11 +47,31 @@
   </ul>
 </div>
 
+    <div class="tilArkiv">
+    <a href="">Se prosjektarkivet vårt</a>
+</div>
+
     <svg id="connections"></svg>
 
 </div>
 
 <style>
+
+    .tilArkiv{
+        display: inline-block;
+        background-color: var(--yellow);
+        padding: 1.75em;
+        grid-row: 5;
+        grid-column: 2/5;
+        max-width: 30ch;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .tilArkiv a{
+       text-decoration: none;
+       font-size: 1.25em;
+    }
 
     h2 span{
         border-bottom: 0.1em solid var(--orange);
@@ -62,6 +82,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin-top: 3em;
         position: relative;
+        width: 100%;
     }
 
     .top{
