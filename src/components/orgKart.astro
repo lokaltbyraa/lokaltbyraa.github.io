@@ -1,0 +1,296 @@
+
+<h2>Vi har erfaring på tvers av sektorer og ser <span>sammenhengene</span>. Her er tema og virksomhetsområder vi har jobbet med.</h2>
+
+<div class="section chart">
+
+    <div class="top">
+        <h3>Et miljømessig, sosialt og økonomisk bærekraftig samfunn</h3>
+    </div>
+
+    <div class="lineVertical"></div>
+
+   <div class="branch utvikling">
+  <div class="sektor"><h4>Utvikling og samfunn</h4></div>
+  <ul>
+    <li><span id="folkehelse">Folkehelse</span></li>
+    <li><span id="strategi">Strategi og tverrsektoriell ledelse</span></li>
+    <li><span id="plan">Plan og byggesak</span></li>
+    <li><span id="naering">Næringsutvikling</span></li>
+    <li><span id="digitalisering">Digitalisering</span></li>
+    <li><span id="stedsutvikling">Stedsutvikling og bolyst</span></li>
+    <li><span id="klimatilpasning">Klimatilpasning</span></li>
+  </ul>
+</div>
+
+<div class="branch helse">
+  <div class="sektor"><h4>Helse og velferd</h4></div>
+  <ul>
+    <li><span id="boligsosialt">Boligsosialt arbeid</span></li>
+    <li><span id="helsebygg">Helsebygg</span></li>
+    <li><span id="tjenesteinnovasjon">Tjenesteinnovasjon</span></li>
+    <li><span id="forebygging">Forebygging og tidlig innsats</span></li>
+    <li><span id="omradesatsing">Områdesatsing</span></li>
+  </ul>
+</div>
+
+<div class="branch kultur">
+  <div class="sektor"><h4>Kultur og oppvekst</h4></div>
+  <ul>
+    <li><span id="aktivitetshus">Aktivitetshus- og anlegg</span></li>
+    <li><span id="kulturhus">Kulturhus og bibliotek</span></li>
+    <li><span id="motesteder">Møtesteder</span></li>
+    <li><span id="frivillighet">Frivillighet og samskaping</span></li>
+    <li><span id="integrering">Integrering</span></li>
+    <li><span id="ungdom">Ungdomsmedvirkning</span></li>
+    <li><span id="foreldre">Foreldreinnvolvering</span></li>
+  </ul>
+</div>
+
+    <svg id="connections"></svg>
+
+</div>
+
+<style>
+
+    h2 span{
+        border-bottom: 0.1em solid var(--orange);
+    }
+
+    .chart{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 3em;
+        position: relative;
+    }
+
+    .top{
+           grid-row: 1;
+        grid-column: 1/7;
+        justify-self: center;
+    }
+
+    .lineVertical{
+        width: 3px;
+        height: 5ch;
+        background-color: black;
+        justify-self: center;
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .top h3{
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 1.25em;
+    margin: 0;
+    background-color: white;
+    max-width: 24ch;
+    border-radius: 0.75em;
+    line-height: 1.25em;
+    }
+
+    h4{
+        font-size: 1.5em;
+        border-bottom: 2.5px solid black;
+        display: inline-block;
+        padding-left: 1rem;
+    }
+
+    .branch{
+        grid-row: 3;
+        border-left: solid 2.5px black;
+        padding-left: 0ch;
+        align-self: start;
+        position: relative;
+    }
+
+    .utvikling{
+        grid-column: 1/3;
+    }
+
+    .helse{
+        grid-column: 3/5;
+    }
+
+    .kultur{
+        grid-column: 5/7;
+    }
+
+    .branch:nth-child(-n+2 of .branch){
+        border-top: 2.5px solid black;
+    }
+
+    .sektor{
+        position: relative;
+    }
+
+    .sektor::before {
+        content: "";            /* must have content for pseudo-element to render */
+        position: absolute;     
+        bottom: 0;              
+        left: -0.575rem;               
+        width: 1rem;          /* diameter of circle */
+        height: 1rem;         /* diameter of circle */
+        background-color: black;
+        border-radius: 50%;     /* makes it a perfect circle */
+    }
+
+    li{
+        position: relative;
+        padding-left: 1.25em;
+        /* width: min-content;     */
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;                    /* center vertically */
+        transform: translateY(-50%);
+        width: 1em;                  /* thickness of the line */
+        height: 2.5px;                 /* length of the line */
+        background-color: black;   /* color of the line */
+    }   
+
+    #connections {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: visible;
+        }
+
+    svg{
+        z-index: -1;
+    }
+
+</style>
+
+<script>
+function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange") {
+    const svg = document.getElementById("connections");
+    const el1 = document.getElementById(id1);
+    const el2 = document.getElementById(id2);
+
+    const r1 = el1.getBoundingClientRect();
+    const r2 = el2.getBoundingClientRect();
+    const wrapperRect = svg.parentElement.getBoundingClientRect();
+
+    // Color from CSS variable
+    const color = getComputedStyle(document.documentElement)
+        .getPropertyValue(cssVar)
+        .trim() || '#999';
+
+    // --- CURVE SETTINGS ---
+    const curveStrength = 0.3;
+    const minOffset = 350;
+    const emToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const gap = 1 * emToPx; // gap between span and line when connecting left
+    // -----------------------
+
+    function getPoint(rect, side) {
+        let x, y;
+        switch (side) {
+            case "left":
+                x = rect.left - wrapperRect.left; 
+                y = rect.top + rect.height / 2 - wrapperRect.top;
+                break;
+            case "right":
+                x = rect.left + rect.width - wrapperRect.left;
+                y = rect.top + rect.height / 2 - wrapperRect.top;
+                break;
+            case "top":
+                x = rect.left + rect.width / 2 - wrapperRect.left;
+                y = rect.top - wrapperRect.top;
+                break;
+            case "bottom":
+                x = rect.left + rect.width / 2 - wrapperRect.left;
+                y = rect.top + rect.height - wrapperRect.top;
+                break;
+            default:
+                x = rect.left + rect.width / 2 - wrapperRect.left;
+                y = rect.top + rect.height / 2 - wrapperRect.top;
+        }
+        return { x, y };
+    }
+
+    let p1 = getPoint(r1, side1);
+    let p2 = getPoint(r2, side2);
+
+    // If connecting to left side, move the endpoint left by 'gap' pixels
+    if (side2 === "left") {
+        p2.x -= gap;
+    }
+    // If connecting to right side, move the endpoint right by 'gap' pixels
+    if (side2 === "right") {
+        p2.x += gap;
+    }
+
+    const dx = Math.abs(p2.x - p1.x);
+    const dy = Math.abs(p2.y - p1.y);
+    const offsetX = Math.max(dx * curveStrength, minOffset / 2);
+    const offsetY = Math.max(dy * curveStrength, minOffset / 2);
+
+    let cx1, cy1, cx2, cy2;
+
+    // --- SAME-SIDE VERTICAL CONNECTION (flipped C) ---
+    if (side1 === side2 && (side1 === "left" || side1 === "right") && dy > dx) {
+        const horizontalOffset = Math.max(dy * curveStrength, minOffset);
+        cx1 = p1.x + (side1 === "right" ? horizontalOffset : -horizontalOffset);
+        cy1 = p1.y;
+        cx2 = p2.x + (side2 === "right" ? horizontalOffset : -horizontalOffset);
+        cy2 = p2.y;
+    }
+    // Horizontal connections
+    else if ((side1 === "left" || side1 === "right") && (side2 === "left" || side2 === "right")) {
+        if (p1.x < p2.x) {
+            cx1 = p1.x + offsetX;
+            cx2 = p2.x - offsetX;
+        } else {
+            cx1 = p1.x - offsetX;
+            cx2 = p2.x + offsetX;
+        }
+        cy1 = p1.y;
+        cy2 = p2.y;
+    }
+    // Vertical connections
+    else if ((side1 === "top" || side1 === "bottom") && (side2 === "top" || side2 === "bottom")) {
+        cy1 = p1.y + (side1 === "bottom" ? offsetY : -offsetY);
+        cy2 = p2.y + (side2 === "bottom" ? -offsetY : offsetY);
+        cx1 = p1.x;
+        cx2 = p2.x;
+    }
+    // Mixed connections
+    else {
+        cx1 = p1.x + (p1.x < p2.x ? offsetX : -offsetX);
+        cy1 = p1.y + (p1.y < p2.y ? offsetY : -offsetY);
+        cx2 = p2.x + (p1.x < p2.x ? -offsetX : offsetX);
+        cy2 = p2.y + (p1.y < p2.y ? -offsetY : offsetY);
+    }
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", `M ${p1.x} ${p1.y} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${p2.x} ${p2.y}`);
+    path.setAttribute("stroke", color);
+    path.setAttribute("stroke-width", "2");
+    path.setAttribute("fill", "none");
+    path.setAttribute("opacity", "0.7");
+
+    svg.appendChild(path);
+}
+
+function drawConnections() {
+    const svg = document.getElementById("connections");
+    svg.innerHTML = "";
+
+    connect("folkehelse", "digitalisering", "right", "right", "--orange");
+    connect("helsebygg", "motesteder", "right", "left", "--orange");
+    connect("strategi", "boligsosialt", "right", "left", "--orange");
+    connect("plan", "kulturhus", "right", "left", "--orange");
+}
+
+window.addEventListener("load", drawConnections);
+window.addEventListener("resize", drawConnections);
+window.addEventListener("scroll", drawConnections);
+</script>
