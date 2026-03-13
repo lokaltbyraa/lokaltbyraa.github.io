@@ -1,3 +1,8 @@
+---
+
+import Arrow from '../components/arrow.astro';
+
+---
 
 <h2>Vi har erfaring på tvers av sektorer og ser <span>sammenhengene</span>. Her er tema og virksomhetsområder vi har jobbet med.</h2>
 
@@ -48,7 +53,7 @@
 </div>
 
     <div class="tilArkiv">
-    <a href="">Se prosjektarkivet vårt</a>
+    <a href="">Se prosjektarkivet vårt <Arrow direction='right'/></a>
 </div>
 
     <svg id="connections"></svg>
@@ -60,17 +65,22 @@
     .tilArkiv{
         display: inline-block;
         background-color: var(--yellow);
-        padding: 1.75em;
+        padding: 1.5em;
         grid-row: 5;
         grid-column: 2/5;
         max-width: 30ch;
         text-align: center;
         justify-self: center;
+        --arrowColor: black;
     }
 
     .tilArkiv a{
        text-decoration: none;
        font-size: 1.25em;
+    }
+
+    .tilArkiv a:hover{
+        border-bottom: 0.075em solid black;
     }
 
     h2 span{
@@ -278,6 +288,12 @@
         .kultur{
             grid-column: 3;
             grid-row: 4;
+        }
+
+        .tilArkiv{
+            grid-row: 5;
+            grid-column: 1/4;
+            margin-top: 2em;
         }
 
 }
