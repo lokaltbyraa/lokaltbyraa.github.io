@@ -8,6 +8,7 @@
     </div>
 
     <div class="lineVertical"></div>
+    <div class="lineVertical"></div>
 
    <div class="branch utvikling">
   <div class="sektor"><h4>Utvikling og samfunn</h4></div>
@@ -78,6 +79,10 @@
         grid-column: 3;
     }
 
+    .lineVertical:nth-child(2){
+        display: none;
+    }
+
     .top h3{
     display: inline-block;
     text-align: center;
@@ -98,10 +103,39 @@
 
     .branch{
         grid-row: 3;
-        border-left: solid 2.5px black;
-        padding-left: 0ch;
         align-self: start;
         position: relative;
+    }
+
+    ul{
+        border-left: solid 2.5px black;
+        padding-left: 0ch;
+        margin-top: -1em;
+        padding-top: 0.5em;
+    }
+
+    .utvikling > ul, .utvikling h4{
+        border-color: var(--blueDark)
+    }
+
+    .utvikling > .sektor::before, .utvikling li::before {
+        background-color: var(--blueDark);
+    }
+
+    .helse > ul, .helse h4{
+        border-color: var(--red)
+    }
+
+    .helse > .sektor::before, .helse li::before {
+        background-color: var(--red);
+    }   
+
+    .kultur > ul, .kultur h4{
+        border-color: var(--green)
+    }
+
+    .kultur > .sektor::before, .kultur li::before {
+        background-color: var(--green);
     }
 
     .utvikling{
@@ -122,6 +156,8 @@
 
     .sektor{
         position: relative;
+        border-left: solid 2.5px black;
+        padding-left: 0ch;
     }
 
     .sektor::before {
@@ -138,6 +174,7 @@
     li{
         position: relative;
         padding-left: 1.25em;
+        font-size: 1.15em;
         /* width: min-content;     */
     }
 
@@ -166,6 +203,64 @@
         z-index: -1;
     }
 
+    @media (width <= 810px ) {
+
+        .chart{
+            grid-template-columns: 1.15fr 2em 1fr;
+        }
+
+        .lineVertical{
+           grid-column: 2;
+           background-color: transparent;
+        }
+
+        .lineVertical:nth-child(2){
+        display: block;
+        grid-column: 2;
+        grid-row: 2/5;
+        height: 55.5%;
+        width: 100%;
+        border-left: 2.5px solid black;
+        border-bottom: 2.5px solid black;
+        }
+
+        .utvikling{
+        grid-column: 1;
+        grid-row: 3/5;
+        }   
+
+        .helse{
+            grid-column: 3;
+            grid-row: 3;
+            border-top: 0px !important;
+        }
+
+        .helse .sektor, .kultur .sektor{
+            border: none;
+        }
+
+        .helse .sektor::before, .kultur .sektor::before {
+            left: -0.44rem;
+        }
+
+        .helse h4::before{
+            content: "";
+            position: absolute;
+            left: -2rem;
+            bottom: 0.25em;
+            width: 2rem;
+            height: 2.5px;
+            background-color: black;
+            z-index: -1;
+        }
+
+        .kultur{
+            grid-column: 3;
+            grid-row: 4;
+        }
+
+}
+
 </style>
 
 <script>
@@ -185,7 +280,7 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
 
     // --- CURVE SETTINGS ---
     const curveStrength = 0.3;
-    const minOffset = 350;
+    const minOffset = 300;
     const emToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
     const gap = 1 * emToPx; // gap between span and line when connecting left
     // -----------------------
