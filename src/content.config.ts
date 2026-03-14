@@ -1,5 +1,6 @@
 
-import { defineCollection, z, reference } from 'astro:content';
+import { defineCollection, reference } from 'astro:content';
+import { z } from 'astro/zod';
 import { file, glob } from 'astro/loaders';
 
 const projectsCollection = defineCollection({
