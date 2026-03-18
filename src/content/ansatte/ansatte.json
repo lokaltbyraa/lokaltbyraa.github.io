@@ -7,7 +7,10 @@
       "telefon": 95463368,
       "rekkefølge": 1,
       "headshot": "./glenn.jpg",
-      "altText": "Bilde av Glenn Sæstad"
+      "altText": "Bilde av Glenn Sæstad",
+      "bio": "Bio her",
+      "utdanning": ["Første utdanning", "Andre utdanning"],
+      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
     },
     {
       "id": "tobias",
@@ -17,7 +20,10 @@
       "telefon": 47155036,
       "rekkefølge": 2,
       "headshot": "./tobias.jpg",
-      "altText": "Bilde av Tobias Mangersnes"
+      "altText": "Bilde av Tobias Mangersnes",
+      "bio": "Bio her",
+      "utdanning": ["Første utdanning", "Andre utdanning"],
+      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
     },
     {
       "id": "nikolai",
@@ -27,6 +33,9 @@
       "telefon": 95284407,
       "rekkefølge": 3,
       "headshot": "./nikolai.jpg",
-      "altText": "Bilde av Nikolai Sabel"
+      "altText": "Bilde av Nikolai Sabel",
+      "bio": "Bio her",
+      "utdanning": ["Første utdanning", "Andre utdanning"],
+      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
     }
   ]

@@ -50,6 +50,9 @@ const ansatte = defineCollection({
       rekkefølge: z.number(),
       headshot: image(),
       altText: z.string(),
+      bio: z.string(),
+      utdanning: z.array(z.string()),
+      tidligereErfaring: z.array(z.string()),
     }),
 });
 
