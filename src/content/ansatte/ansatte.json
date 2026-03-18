@@ -6,11 +6,11 @@
       "epost": "glenn@lokaltbyraa.no",
       "telefon": 95463368,
       "rekkefølge": 1,
-      "headshot": "./glenn.jpg",
+      "headshot": "glenn.jpg",
       "altText": "Bilde av Glenn Sæstad",
       "bio": "Bio her",
-      "utdanning": ["Første utdanning", "Andre utdanning"],
-      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
+      "utdanning": ["Master i interaksjonsdesign, Arkitektur- og Designhøgskolen i Oslo"],
+      "tidligereErfaring": ["Smartbyrådgiver, Stavanger kommune", "Frilansarbeid, 2020-2022"]
     },
     {
       "id": "tobias",
@@ -19,23 +19,23 @@
       "epost": "tobias@lokaltbyraa.no",
       "telefon": 47155036,
       "rekkefølge": 2,
-      "headshot": "./tobias.jpg",
+      "headshot": "tobias.jpg",
       "altText": "Bilde av Tobias Mangersnes",
       "bio": "Bio her",
-      "utdanning": ["Første utdanning", "Andre utdanning"],
-      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
+      "utdanning": ["Master i strategisk design, Arkitektur- og Designhøgskolen i Oslo", "Bachelor i tjenestedesign, Høyskolen Kristiania"],
+      "tidligereErfaring": ["Rådgiver og designer, Asker kommune", "Styremedlem, KFUK-KFUM Norge", "Innholdsskaper, egen TikTok-profil"]
     },
     {
       "id": "nikolai",
       "navn": "Nikolai Sabel",
-      "stilling": "Strategisk designer og daglig leder",
+      "stilling": "Strategisk designer, medeier og daglig leder",
       "epost": "nikolai@lokaltbyraa.no",
       "telefon": 95284407,
       "rekkefølge": 3,
-      "headshot": "./nikolai.jpg",
+      "headshot": "nikolai.jpg",
       "altText": "Bilde av Nikolai Sabel",
-      "bio": "Bio her",
-      "utdanning": ["Første utdanning", "Andre utdanning"],
-      "tidligereErfaring": ["Første erfaring", "Andre erfaring"]
+      "bio": "Nikolai bor i ei lita bygd i Nord-Troms og har sin kjernekompetanse på tjenestedesign, innbyggermedvirkning og bruk av testing i strategiske designprosesser. I tillegg er han en god kommunikator og har lett for å engasjere og inkludere folk i prosesser på tvers av alder og erfaring. Nikolai er opptatt av møte folks behov med løsninger som funker i hverdagen og systemet det skal passe inn i. Han er særlig engasjert i å oversette det teoretiske designfaget til en mer folkelige tone. Her trekker han på erfarinen sin fra prestestudiet, ungdomsarbeid, arbeid med folk med rusutfordringer og møbelsnekker.",
+      "utdanning": ["Master i tjenestedesign, Arkitektur- og Designhøgskolen i Oslo", "Profesjonsstudie i teologi (330 av 360 stp.), MF vitenskapelig høyskole"],
+      "tidligereErfaring": ["Ungdomsarbeider, Kraftverket", "Arbeidsleder, Maritastifteklsen", "Møbeldesigner, Sabel AS"]
     }
   ]

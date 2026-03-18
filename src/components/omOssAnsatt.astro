@@ -8,18 +8,34 @@ import '../styles/global.css';
 interface Props {
     navn: string;
     stilling: string;
-    brødtekst: string;
+    bio: string;
     epost: string;
-    tlf: string;
-    imagePath: string;
+    tlf: number;
+    imagePath: ImageMetadata;
     altText: string;
+    utdanning: string[];
+    tidligereErfaring: string[];
 }
 
-const { navn, stilling, brødtekst, epost, tlf, imagePath, altText } = Astro.props;
+const {
+    navn,
+    stilling,
+    epost,
+    tlf,
+    imagePath,
+    altText,
+    bio,
+    utdanning = [],
+    tidligereErfaring = []
+    } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
-if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/content/ansatte/*.{jpeg,jpg,png,gif}"`);
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
+// if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/content/ansatte/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob('/src/content/ansatte/*.{jpg,jpeg,png,gif}');
+const imageModule = images[`/src/content/ansatte/${imagePath}`];
+if (!imageModule) throw new Error(`Image not found: ${imagePath}`);
 
+const resolvedImage = (await imageModule()).default;
 
 ---
 
@@ -27,16 +43,18 @@ if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}
     <div class="txtDiv">
         <h1>{navn}</h1>
         <h2>{stilling}</h2>
-        <p>{brødtekst}</p>
+        <p>{bio}</p>
         <h3>Utdanning</h3>
         <ul>
-            <li>Master i strategisk design, AHO</li>
-            <li>Bachelor i tjenestedeisign, Høyskolen Kristiana</li>
+            {utdanning.map((item) => (
+                <li>{item}</li>
+            ))}
         </ul>
         <h3>Tidligere erfaring</h3>
         <ul>
-            <li>Designer, Asker kommune</li>
-            <li>Styremedlem, KFUM-KFUK</li>
+            {tidligereErfaring.map((item) => (
+                <li>{item}</li>
+            ))}
         </ul>
 
         <p>
@@ -46,7 +64,9 @@ if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}
     </div>
 
     <div class="imgDiv">
-        <Image src={images["/src/content/ansatte/" + imagePath]()} alt={altText} width=600 quality={80}/>
+        <!-- <Image src={images["/src/content/ansatte/" + imagePath]()} alt={altText} width=600 quality={80}/> -->
+        <Image src={resolvedImage} alt={"Bilde av "+altText} width={400} quality={80}/>
+        
     </div>
 </div>
 

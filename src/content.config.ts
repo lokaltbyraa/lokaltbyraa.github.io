@@ -48,7 +48,7 @@ const ansatte = defineCollection({
       epost: z.string(),
       telefon: z.number(),
       rekkefølge: z.number(),
-      headshot: image(),
+      headshot: z.string(),
       altText: z.string(),
       bio: z.string(),
       utdanning: z.array(z.string()),
