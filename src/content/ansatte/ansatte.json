@@ -8,9 +8,9 @@
       "rekkefølge": 1,
       "headshot": "glenn.jpg",
       "altText": "Bilde av Glenn Sæstad",
-      "bio": "Bio her",
-      "utdanning": ["Master i interaksjonsdesign, Arkitektur- og Designhøgskolen i Oslo"],
-      "tidligereErfaring": ["Smartbyrådgiver, Stavanger kommune", "Frilansarbeid, 2020-2022"]
+      "bio": "Glenn driver Lokalt Byrå sitt distriktskontor lokalisert ved Youngstorget i Oslo. Han trives med å rydde opp i og bryte ned komplekse utfordringer til overkommelige steg. Masteroppgaven hans, DSP for SDG, om digitalisering av Norges pengesystem som virkemiddel for samfunnsutvikling sammen med Norges Bank gav han Desig og Arkitektur Norge sitt Nykommermerke og Hedederpris for fremragende bruk av design, samt Skiftprisen fra Skift - Næringslivets Klimaledere.",
+      "utdanning": ["Master i interaksjonsdesign, Arkitektur- og Designhøgskolen i Oslo, 2022", "Summer University: Design for Urban Agriculture, Technische Universität Berlin, 2018"],
+      "tidligereErfaring": ["Smartbyrådgiver, Stavanger kommune", "Universitetslektor i interaksjons- og tjenestedesign, Arkitektur- og designhøgskolen i Oslo", "Frilans tjeneste- og interaksjonsdesign, 2020-2022"]
     },
     {
       "id": "tobias",
@@ -21,8 +21,8 @@
       "rekkefølge": 2,
       "headshot": "tobias.jpg",
       "altText": "Bilde av Tobias Mangersnes",
-      "bio": "Bio her",
-      "utdanning": ["Master i strategisk design, Arkitektur- og Designhøgskolen i Oslo", "Bachelor i tjenestedesign, Høyskolen Kristiania"],
+      "bio": "Tobias har ofte nabolaget som utgangspunkt for arbeidet sitt, enten det er snakk om oppvekst og utdanning, helse og velferd, kultur eller integrering. Han er opptatt av hvordan å ivareta ansatte og ildsjeler som gjør sitt beste i møte med systemer som ikke alltid funker for sluttbrukere og samfunnsoppdraget. Tobias har også solid erfaring med å lykkes med kommunikasjon i digitale medier, og har bygd seg opp en følgerskare på TikTok med over 20 000 følgere, 500 000 reaksjoner og 4 millioner visninger.",
+      "utdanning": ["Master i strategisk design, Arkitektur- og Designhøgskolen i Oslo, 2023", "Bachelor i tjenestedesign, Høyskolen Kristiania, 2021"],
       "tidligereErfaring": ["Rådgiver og designer, Asker kommune", "Styremedlem, KFUK-KFUM Norge", "Innholdsskaper, egen TikTok-profil"]
     },
     {
@@ -35,7 +35,7 @@
       "headshot": "nikolai.jpg",
       "altText": "Bilde av Nikolai Sabel",
       "bio": "Nikolai bor i ei lita bygd i Nord-Troms og har sin kjernekompetanse på tjenestedesign, innbyggermedvirkning og bruk av testing i strategiske designprosesser. I tillegg er han en god kommunikator og har lett for å engasjere og inkludere folk i prosesser på tvers av alder og erfaring. Nikolai er opptatt av møte folks behov med løsninger som funker i hverdagen og systemet det skal passe inn i. Han er særlig engasjert i å oversette det teoretiske designfaget til en mer folkelige tone. Her trekker han på erfarinen sin fra prestestudiet, ungdomsarbeid, arbeid med folk med rusutfordringer og møbelsnekker.",
-      "utdanning": ["Master i tjenestedesign, Arkitektur- og Designhøgskolen i Oslo", "Profesjonsstudie i teologi (330 av 360 stp.), MF vitenskapelig høyskole"],
-      "tidligereErfaring": ["Ungdomsarbeider, Kraftverket", "Arbeidsleder, Maritastifteklsen", "Møbeldesigner, Sabel AS"]
+      "utdanning": ["Master i tjenestedesign, Arkitektur- og Designhøgskolen i Oslo, 2022", "Profesjonsstudie i teologi (330 av 360 stp.), MF vitenskapelig høyskole, 2015"],
+      "tidligereErfaring": ["Folkevalgt i Storfjord kommune", "Ungdomsarbeider, Kraftverket", "Arbeidsleder, Maritastiftelsen", "Møbeldesigner, Sabel AS"]
     }
   ]
