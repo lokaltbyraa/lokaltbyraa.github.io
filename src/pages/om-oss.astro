@@ -5,21 +5,12 @@ import '../styles/global.css';
 
 import Layout from '../layouts/Layout.astro';
 
-import ProjectsGrid from '../components/projectsGrid.astro';
-import Steder from '../components/steder.astro';
-import OrgKart from '../components/orgKart.astro';
-import Ansatte from '../components/ansatte.astro';
-import Metoder from '../components/metoder.astro';
-import Disipliner from '../components/disipliner.astro';
-// import Explainer from '../components/explainer.astro';
-
 import Prosjektarkiv from '../components/prosjektarkiv.astro';
 import OmOssAnsatt from '../components/omOssAnsatt.astro';
 
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { Image } from 'astro:assets';
 
 // const alleAnsatte = await getCollection("ansatte");
 
@@ -55,22 +46,25 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 		</div>
 
 		<div class="section">
-
+			<div class="ansatteGrid">
 				{ansatteWithFormattedPhone.map(ansatt =>(
-					<div>
-						<OmOssAnsatt
-							navn={ansatt.data.navn}
-							stilling={ansatt.data.stilling}
-							bio={ansatt.data.bio}
-							epost={ansatt.data.epost}
-							tlf={ansatt.data.telefon}
-							imagePath={ansatt.data.headshot}
-							altText={ansatt.data.altText}
-							utdanning={ansatt.data.utdanning}
-							tidligereErfaring={ansatt.data.tidligereErfaring}
-						/>
-					</div> 
-				))}
+									<div>
+										<OmOssAnsatt
+											navn={ansatt.data.navn}
+											stilling={ansatt.data.stilling}
+											bio={ansatt.data.bio}
+											epost={ansatt.data.epost}
+											tlf={ansatt.data.telefon}
+											imagePath={ansatt.data.headshot}
+											altText={ansatt.data.altText}
+											utdanning={ansatt.data.utdanning}
+											tidligereErfaring={ansatt.data.tidligereErfaring}
+										/>
+									</div> 
+								))}
+			</div>
+
+				
 
 		</div>
 
