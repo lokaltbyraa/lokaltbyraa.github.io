@@ -1,0 +1,71 @@
+[
+    {
+      "id": "ffk2025",
+      "prosjektnavn": "Stimulab: Digi2030",
+      "oppdragsgiver": ["Finnmark fylkeskommune"],
+      "samarbeidspartner": ["Halogen", "Fabric+", "Capto"],
+      "årstall": 2025,
+      "tema": ["Digitalisering", "Samfunnsutvikling", "Tjenesteinnovasjon"],
+      "link": "https://www.digdir.no/innovasjon/finnmark-fylkeskommune-digi-2030-finnmark/6048"
+    },
+
+    {
+      "id": "stavanger2025",
+      "prosjektnavn": "Stimulab: Nye Veien til kommunal bosetting",
+      "oppdragsgiver": ["Stavanger kommune"],
+      "samarbeidspartner": ["Norconsult"],
+      "årstall": 2025,
+      "tema": ["Boligsosialt arbeid", "Strategi og tverrsektoriell ledelse", "Systeminnovasjon"],
+      "link": "https://www.digdir.no/innovasjon/stavanger-kommune-nye-veier-kommunal-bosetting-og-nabolagsutvikling/6049"
+    },
+
+    {
+      "id": "aal2025",
+      "prosjektnavn": "Gnist: Fra Handling til Plan",
+      "oppdragsgiver": ["Ål kommune"],
+      "samarbeidspartner": ["Ihuga", "Vigleik Vinje"],
+      "årstall": 2025,
+      "tema": ["Stedsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
+      "link": "https://www.aal.kommune.no/meny/planar-og-regulering/sentrumsutvikling/"
+    },
+
+    {
+      "id": "oyer2025",
+      "prosjektnavn": "Dybdekurs i designdrevet innovasjon",
+      "oppdragsgiver": ["Øyer kommune"],
+      "samarbeidspartner": ["Ihuga"],
+      "årstall": 2026,
+      "tema": ["Stedsutvikling"],
+      "link": ""
+    },
+
+    {
+      "id": "eidfjord2025",
+      "prosjektnavn": "Nyskapende aktivitetsanlegg",
+      "oppdragsgiver": ["Eidfjord kommune"],
+      "samarbeidspartner": ["Ihuga"],
+      "årstall": 2025,
+      "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
+      "link": ""
+    },
+
+    {
+      "id": "kbnn2025",
+      "prosjektnavn": "Perspektivmelding Ung 2025",
+      "oppdragsgiver": ["Sparebank 1 Nord-Norge"],
+      "samarbeidspartner": ["Æra Strategic Innovation"],
+      "årstall": 2025,
+      "tema": ["Kvalitative undersøkelser", "Kvantitative undersøkelser", "Ungdomsmedvirkning"],
+      "link": ""
+    },
+
+    {
+      "id": "gamvik2025",
+      "prosjektnavn": "Barnefestival på Kulturdugnaden",
+      "oppdragsgiver": ["Nordishavet Badeklubb"],
+      "samarbeidspartner": [""],
+      "årstall": 2025,
+      "tema": ["Foreldreinvolvering", "Forebygging og tidlig innsats"],
+      "link": ""
+    }
+]

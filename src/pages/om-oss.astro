@@ -1,0 +1,73 @@
+---
+
+import '../styles/reset.css';
+import '../styles/global.css';
+
+import Layout from '../layouts/Layout.astro';
+
+import ProjectsGrid from '../components/projectsGrid.astro';
+import Steder from '../components/steder.astro';
+import OrgKart from '../components/orgKart.astro';
+import Ansatte from '../components/ansatte.astro';
+import Metoder from '../components/metoder.astro';
+import Disipliner from '../components/disipliner.astro';
+// import Explainer from '../components/explainer.astro';
+
+import Prosjektarkiv from '../components/prosjektarkiv.astro';
+import OmOssAnsatt from '../components/omOssAnsatt.astro';
+
+---
+<Layout
+	title="Strategisk design for bærekraftige lokalsamfunn"
+	description='Lokalt Byrå bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.'
+	>
+
+	<div class="wrapper">
+
+		<div class="section">
+			<h1>
+				<span class="serif lokaltByraa">Lokalt Byrå</span> bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.
+			</h1>
+		</div>
+
+		<div class="section">
+
+			<OmOssAnsatt
+				navn="Tobias Mangersnes"
+				stilling="Strategisk designer og medeier"
+				brødtekst="I møtet med en endret demografi er det behov for å skape velferd på helt nye måter. Måten vi gjør ting på i dag vil ikke være bærekraftig på sikt og vi har behov for å tenke nytt om hvordan vi skaper velferd."
+				epost="tobias@lokaltbyraa.no"
+				tlf="95463368"
+				imagePath="tobias.jpg"
+				altText="Tobias Mangersnes"
+			/>
+
+			<OmOssAnsatt
+				navn="Glenn Sæstad"
+				stilling="Strategisk designer og medeier"
+				brødtekst="I møtet med en endret demografi er det behov for å skape velferd på helt nye måter. Måten vi gjør ting på i dag vil ikke være bærekraftig på sikt og vi har behov for å tenke nytt om hvordan vi skaper velferd."
+				epost="glenn@lokaltbyraa.no"
+				tlf="95463368"
+				imagePath="glenn.jpg"
+				altText="Glenn Sæstad"
+			/>
+
+			<OmOssAnsatt
+				navn="Nikolai Sabel"
+				stilling="Strategisk designer, medeier og daglig leder"
+				brødtekst="I møtet med en endret demografi er det behov for å skape velferd på helt nye måter. Måten vi gjør ting på i dag vil ikke være bærekraftig på sikt og vi har behov for å tenke nytt om hvordan vi skaper velferd."
+				epost="nikolai@lokaltbyraa.no"
+				tlf="95463368"
+				imagePath="nikolai.jpg"
+				altText="Nikolai Sabel"
+			/>
+
+		</div>
+
+		<div class="section">
+			<Prosjektarkiv />
+		</div>
+	
+	</div>
+
+</Layout>

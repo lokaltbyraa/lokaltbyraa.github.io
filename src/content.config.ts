@@ -53,8 +53,21 @@ const ansatte = defineCollection({
     }),
 });
 
+const prosjektarkiv = defineCollection({
+  loader: file("src/content/prosjektarkiv/prosjektarkiv.json"),
+  schema: z.object({
+    prosjektnavn: z.string(),
+    oppdragsgiver: z.array(z.string()),
+    samarbeidspartner: z.array(z.string()),
+    årstall: z.number(),
+    tema: z.array(z.string()),
+    link: z.string(),
+  }),
+});
+
 
 export const collections = {
   'prosjekter': projectsCollection,
   'ansatte': ansatte,
+  'prosjektarkiv': prosjektarkiv,
 };

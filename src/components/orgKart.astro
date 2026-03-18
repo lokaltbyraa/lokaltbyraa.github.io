@@ -53,7 +53,7 @@ import Arrow from '../components/arrow.astro';
 </div>
 
     <div class="tilArkiv">
-    <a href="">Se prosjektarkivet vårt <Arrow direction='right'/></a>
+    <a href="/om-oss#prosjektarkiv">Se prosjektarkivet vårt <Arrow direction='right'/></a>
 </div>
 
     <svg id="connections"></svg>
@@ -301,6 +301,7 @@ import Arrow from '../components/arrow.astro';
 </style>
 
 <script>
+    
 function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange") {
     const svg = document.getElementById("connections");
     const el1 = document.getElementById(id1);

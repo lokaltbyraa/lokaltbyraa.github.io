@@ -1,0 +1,221 @@
+---
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import Arrow from '../components/arrow.astro';
+
+const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
+  (await getCollection('prosjektarkiv'))
+    .sort((a, b) => b.data.årstall - a.data.årstall);
+---
+
+<div class="section" id="prosjektarkiv">
+    <h2>Prosjektarkiv</h2>
+
+    <div id="tableWrapper" class="closedTable">
+        <table id="myTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Oppdragsgiver</th>
+            <th onclick="sortTable(1)">Prosjekt</th>
+            <th onclick="sortTable(2)">Tema</th>
+            <th onclick="sortTable(3)">I samarbeid med</th>
+            <th onclick="sortTable(4)">År</th>
+            <!-- <th onclick="sortTable(3)" class="arrowRow"></th> -->
+            </tr>
+        </thead>
+        <tbody>
+
+            {prosjektarkiv.map(prosjekt => ( 
+                <tr>
+                    <td class="oppdragsgiver bold">{prosjekt.data.oppdragsgiver}</td>
+                    <td class="prosjektnavn">{prosjekt.data.prosjektnavn}</td>
+                    <td class="tema">{prosjekt.data.tema.join(' • ')}</td>
+                    <td class="samarbeidspartner">{prosjekt.data.samarbeidspartner.join(' • ')}</td>
+                    <td class="årstall">{prosjekt.data.årstall}</td>
+                    {/* <td class="link"><a href=""><Arrow direction='right'/></a></td> */}
+                </tr>
+                ))}
+        </tbody>
+        </table>
+    </div>
+
+<div class="buttonDiv">
+    <button id="expandBtn" onclick="expandTable()">Vis alle prosjekter</button>
+</div>
+
+</div>
+
+<style>
+
+    table{
+        width: 100%;
+        border-collapse: separate;
+        text-align: left;
+        margin: 2em 0;
+        --arrowColor: black;
+        line-height: 1.25em;
+    }
+
+    #tableWrapper{
+        position: relative;
+         height: 25em;
+        overflow: hidden;
+    }
+
+    .closedTable{
+       
+    }
+
+    .buttonDiv{
+        width: 100%;
+        text-align: center;
+    }
+
+    button:hover{
+        font-weight: bold;
+    }
+
+    /* Gradient overlay at the bottom */
+        #tableWrapper::after {
+        z-index: 2;
+        content: "";
+        position: absolute;       /* or absolute if preferred */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 7em;           /* height of gradient */
+        pointer-events: none;   /* so it doesn’t block clicks */
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 0%,   /* transparent at top */
+            var(--light) 95%                  /* same as wrapper background at bottom */
+        );
+        }
+
+    .section{
+        width: 100%;
+    }
+
+    th, td{
+    }
+
+    th{
+        border-bottom: 2.5px solid black;
+        font-size: 1.65em;
+        padding: 0 0.5rem 0.45em;
+    }
+
+    td{
+        border-bottom: 1px solid black;
+        font-size: 1em;
+        padding: 0.9em 0.5rem 0.7em;
+        max-width: 40ch;
+    }
+    
+    tr:nth-child(even) td{
+        background-color: white;
+    }
+
+    .link{
+        opacity: 0;
+        font-size: 1.25em;
+        line-height: 0;
+        padding-left: 0.5ch;
+    }
+
+    tr:hover .link{
+        opacity: 1;
+        fill: var(--blue);
+    }
+
+    .arrowRow{
+        width: 1ch;
+        opacity: 0;
+    }
+
+    /* tr:hover{
+        color: var(--red);
+        --arrowColor: var(--blueDark);
+        text-decoration: underline;
+    } */
+
+
+@media screen and (max-width: 650px) {
+    
+    #tableWrapper{
+        height: auto;
+    }
+
+    th{
+        display: none;
+    }
+
+    table tr {
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin: 0;
+      padding: 0.35em 0 1em;
+      border-bottom: 1px solid black;
+    }
+    
+    table td {
+      display: block;
+      margin-bottom: 0.15em;
+      width: 100%;
+      border: none;
+      padding: 0;
+      background: none !important;
+      max-width: none;
+    }
+
+    .oppdragsgiver{
+        grid-row: 1;
+        grid-column: 1;
+        font-size: 1.15em;
+    }
+
+    .årstall{
+        grid-row: 1;
+        grid-column: 2;
+        text-align: right;
+        justify-self: end;
+        /* font-size: 1.15em; */
+    }
+
+    .prosjektnavn{
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        font-style: italic;
+    }
+
+    .tema{
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    .samarbeidspartner{
+        grid-row: 4;
+        grid-column: 1 / span 2;
+        margin-top: 0.5em;
+        display: none !important;
+    }
+
+    /* table td:nth-child(odd){
+        width: 100%;
+        padding-right: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.1em;
+    }
+
+    table td:nth-child(even){
+        padding-bottom: 0.55em;
+    } */
+    
+  }
+
+</style>

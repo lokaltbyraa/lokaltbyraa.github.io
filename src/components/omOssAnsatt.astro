@@ -28,6 +28,16 @@ if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}
         <h1>{navn}</h1>
         <h2>{stilling}</h2>
         <p>{brødtekst}</p>
+        <h3>Utdanning</h3>
+        <ul>
+            <li>Master i strategisk design, AHO</li>
+            <li>Bachelor i tjenestedeisign, Høyskolen Kristiana</li>
+        </ul>
+        <h3>Tidligere erfaring</h3>
+        <ul>
+            <li>Designer, Asker kommune</li>
+            <li>Styremedlem, KFUM-KFUK</li>
+        </ul>
 
         <p>
             <a href={"mailto:"+epost}>{epost}</a><br>
@@ -52,10 +62,11 @@ if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}
     }
 
     .grid{
-        margin-top: 8em;
+        margin-top: 4em;
         display: grid;
         grid-template-columns: auto 1fr;
         grid-gap: 2em;
+        max-width: 100ch;
         /* align-items: center; */
     }
 
@@ -71,6 +82,20 @@ if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}
 
     p{
         font-size: 1em;
+    }
+
+
+    li{
+        margin: 0;
+        padding: 0;
+        list-style: disc;
+        list-style-position: inside;
+    }
+
+
+    .imgDiv{
+        grid-column: 1;
+        grid-row: 1;
     }
 
     @media screen and (max-width: 600px) {
