@@ -33,7 +33,7 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 
 ---
 <Layout
-	title="Strategisk design for bærekraftige lokalsamfunn"
+	title="Om oss"
 	description='Lokalt Byrå bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.'
 	>
 
@@ -41,7 +41,7 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 
 		<div class="section">
 			<h1>
-				<span class="serif lokaltByraa">Lokalt Byrå</span> bruker design til å utvikle samfunn sammen med folk fra store og små steder i hele landet. Vi mener at endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.
+				<span class="serif lokaltByraa">Lokalt Byrå</span> er en trio med spisskompetanse på samfunnsutvikling og innovasjon på tvers av offentlig, privat og frivillig sektor i små og mellomstore kommuner. Vi samarbeider med arkitekter, planleggere, teknologer og samfunnsvitere for å gi hver utfordring det teamet det fortjener.
 			</h1>
 		</div>
 
@@ -63,9 +63,30 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 									</div> 
 								))}
 			</div>
+		</div>
 
-				
+		<div class="section lister">
+			<div class="utmerkelser">
+				<h2>Utmerkelser og priser</h2>
+				<ul>
+					<li>Omtalt som inspirerende eksempel i Regjeringens distriktsmelding “Eit godt liv i heile Noreg – distriktspolitikk for framtida”</li>
+					<li>Vunnet prosjekter i DOGAs Gnist-program tre år på rad</li>
+					<li>Støttet av stiftelsen Den Gode Idé</li>
+					<li>DOGA Nykommermerke</li>
+					<li>DOGA Hedersmerke</li>
+					<li>Skift - Næringslivets Klimaledere Skiftpris</li>
+				</ul>
+			</div>
 
+			<div class="utmerkelser">
+				<h2>Foredrag og kurs vi tilbyr</h2>
+				<ul class="italic">
+					<li>Hvordan eksperimentere med og teste idéer tidlig</li>
+					<li>DOGAs dybdekurs i designdrevet innovasjon</li>
+					<li>Sabotasje i organisasjoner som innfallsvinkel til utvikling og effektivisering</li>
+				</ul>
+			</div>
+			
 		</div>
 
 		<div class="section">
@@ -75,3 +96,28 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 	</div>
 
 </Layout>
+
+<style>
+
+	.lister{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 4em;
+	}
+
+	.lister h2{
+		margin-bottom: 0.5em;
+	}
+
+	.lister li{
+		font-size: 1.5em;
+		margin: 0;
+        padding: 0;
+        margin-left: 1.5ch;
+        padding-left: .5ch;
+		margin-bottom: 0.5em;
+        list-style: disc;
+        list-style-position: outside;
+	}
+
+</style>

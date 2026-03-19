@@ -65,7 +65,7 @@ const resolvedImage = (await imageModule()).default;
         </div>
 
         <p>
-            <a href={"mailto:"+epost}>{epost}</a> • <a href={"tel:+47"+tlf}>{"+47 "+tlf}</a>
+           Kontakt: <a href={"mailto:"+epost}>{epost}</a> <span class="divider">•</span> <a href={"tel:+47"+tlf}>{"+47 "+tlf}</a>
         </p>
     </div>
 
@@ -141,8 +141,12 @@ const resolvedImage = (await imageModule()).default;
         margin-bottom: 0.35em;
     }
 
-    a{
-        margin: 0 .8ch 0 .7ch;
+    .divider{
+        margin: 0 .6ch 0 .7ch;
+    }
+
+    a:hover{
+        color: var(--red);
     }
 
     @media screen and (max-width: 600px) {
