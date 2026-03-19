@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
 
 import Prosjektarkiv from '../components/prosjektarkiv.astro';
 import OmOssAnsatt from '../components/omOssAnsatt.astro';
+import Foredrag from '../components/foredrag.astro';
 
 
 import { getCollection } from "astro:content";
@@ -91,6 +92,10 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
 
 		<div class="section">
 			<Prosjektarkiv />
+		</div>
+
+		<div class="section">
+			<Foredrag />
 		</div>
 	
 	</div>

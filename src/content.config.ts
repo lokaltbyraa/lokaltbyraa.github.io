@@ -68,9 +68,18 @@ const prosjektarkiv = defineCollection({
   }),
 });
 
+const foredrag = defineCollection({
+  loader: file("src/content/foredrag/foredrag.json"),
+  schema: z.object({
+    tittel: z.string(),
+    kunde: z.array(z.string()),
+  }),
+});
+
 
 export const collections = {
   'prosjekter': projectsCollection,
   'ansatte': ansatte,
   'prosjektarkiv': prosjektarkiv,
+  'foredrag': foredrag,
 };

@@ -1,0 +1,19 @@
+[
+    {
+      "id": "StavangerEksperimentering",
+      "tittel": "Hvordan eksperimentere og teste idéer tidlig",
+      "kunde": ["Områdesatsing i Stavanger kommune"]
+    },
+
+    {
+      "id": "AskerSabotasje",
+      "tittel": "Sabotasje i organisasjoner som innfallsvinkel til effektivisering",
+      "kunde": ["Organisasjon, stab og utvikling i Asker kommune"]
+    },
+
+    {
+      "id": "AskerInnovasjonskompass",
+      "tittel": "Verktøyet innovasjonskompasset: Nytt, nyttig, nyttiggjort",
+      "kunde": ["Senter for innovasjon og læring i Asker kommune"]
+    }
+]
