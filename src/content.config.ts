@@ -73,6 +73,9 @@ const foredrag = defineCollection({
   schema: z.object({
     tittel: z.string(),
     kunde: z.array(z.string()),
+    avdeling: z.array(z.string()),
+    bestilling: z.string(),
+    år: z.string(),
   }),
 });
 

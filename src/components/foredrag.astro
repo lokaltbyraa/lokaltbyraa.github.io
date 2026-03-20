@@ -4,10 +4,18 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 // sort by id (string)
-const foredrag: CollectionEntry<'foredrag'>[] =
-  (await getCollection('foredrag'))
+// const foredrag: CollectionEntry<'foredrag'>[] =
+//   (await getCollection('foredrag'))
+//     .slice()
+//     .sort((a, b) => a.id.localeCompare(b.id, "nb", { sensitivity: "base" }));
+
+// importing foredrag data from JSON file instead of collection
+import foredragData from '../content/foredrag/foredrag.json';
+
+// Sort by id (string)
+const foredrag = foredragData
     .slice()
-    .sort((a, b) => a.id.localeCompare(b.id, "nb", { sensitivity: "base" }));
+    .sort((a, b) => b.år - a.år);
 ---
 
 <div class="section" id="foredrag">
@@ -18,16 +26,22 @@ const foredrag: CollectionEntry<'foredrag'>[] =
         <table id="myTable">
         <thead>
             <tr>
-                <th onclick="sortTable(0)">Tittel</th>
-                <th onclick="sortTable(1)">Utviklet for</th>
+                <th onclick="sortTable(0)">Oppdragsgiver</th>
+                <th onclick="sortTable(0)">Setting</th>
+                <th onclick="sortTable(1)">Bestilling</th>
+                <th onclick="sortTable(2)">Tittel på foredrag</th>
+                <th onclick="sortTable(3)">År</th>
             </tr>
         </thead>
         <tbody>
 
             {foredrag.map(foredrag => ( 
                 <tr>
-                    <td class="tittel">{foredrag.data.tittel}</td>
-                    <td class="kunde">{foredrag.data.kunde}</td>
+                    <td class="kunde bold">{foredrag.kunde}</td>
+                    <td class="avdeling">{foredrag.avdeling}</td>
+                    <td class="bestilling">{foredrag.bestilling}</td>
+                    <td class="tittel">{foredrag.tittel}</td>
+                    <td class="år">{foredrag.år}</td>
                 </tr>
                 ))}
         </tbody>
@@ -103,10 +117,10 @@ const foredrag: CollectionEntry<'foredrag'>[] =
     td{
         border-bottom: 1px solid black;
         font-size: 1em;
-        padding: 0.9em 0.5rem 0.7em;
+        padding: 0.7em 0.5rem 0.5em;
         max-width: 40ch;
-        font-size: 1.25em;
-        line-height: 1.25em;
+        /* font-size: 1.25em;
+        line-height: 1.25em; */
     }
     
     tr:nth-child(even) td{
@@ -123,6 +137,11 @@ const foredrag: CollectionEntry<'foredrag'>[] =
     tr:hover .link{
         opacity: 1;
         fill: var(--blue);
+        text-wrap: balance;
+    }
+
+    .kunde, .avdeling{
+        max-width: 20ch;
     }
 
     .arrowRow{

@@ -2,78 +2,117 @@
     {
       "id": "StavangerEksperimentering",
       "tittel": "Hvordan eksperimentere og teste idéer tidlig",
-      "kunde": ["Områdesatsing i Stavanger kommune"]
+      "kunde": ["Stavanger kommune"],
+      "avdeling": ["Prosjektnettverk for områdesatsing Hillevåg"],
+      "bestilling": "Inspirasjon og praktiske tips til hvordan å jobbe med utgangspunkt i nabolag og hvordan å utforske løsnigner på en systematisk måte",
+      "år": "2026"
     },
 
     {
       "id": "AskerSabotasje",
-      "tittel": "Sabotasje i organisasjoner som innfallsvinkel til effektivisering",
-      "kunde": ["Organisasjon, stab og utvikling i Asker kommune"]
+      "tittel": "Asker 2000 og sabotasje i organisasjoner som innfallsvinkel til effektivisering",
+      "kunde": ["Asker kommune"],
+      "avdeling": ["Sommersammling for kommunalområde Organisasjon, stab og utvikling"],
+      "bestilling": "Lettbeint og annerledes, men faglig halvdagsopplegg om effektivisering og organisasjonsutvikling",
+      "år": "2025"
     },
 
     {
       "id": "AskerInnovasjonskompass",
       "tittel": "Verktøyet innovasjonskompasset: Nytt, nyttig, nyttiggjort",
-      "kunde": ["Senter for innovasjon og læring i Asker kommune"]
+      "kunde": ["Asker kommune"],
+      "avdeling": ["Senter for innovasjon og læring"],
+      "bestilling": "Inspirasjon til å se på egen praksis med kritisk, men vennlig blikk.",
+      "år": "2025"
     },
 
     {
       "id": "DogaKreativitet",
-      "tittel": "Metode som metode: Om mangel på kreativitet i design for offentlig sektor",
-      "kunde": ["Utdeling av DOGA-merket hos Design og Arkitektur Norge 2023"]
+      "tittel": "Metode som metode: Designerlig utredning om kreativitet i design for offentlig sektor",
+      "kunde": ["Design og Arkitektur Norge"],
+      "avdeling": ["Utdeling av DOGA-merket 2024"],
+      "bestilling": "Humoristisk foredrag med refleksjoner om hvorfor mye designarbeid i offentlig sektor ser ut til å være veldig dogmatisk og metodisk, og lite kreativt.",
+      "år": "2024"
     },
 
     {
       "id": "AhoUtenforskap",
       "tittel": "Design og innovasjon i møte med ungt utenforskap",
-      "kunde": ["Studiekurs Introduksjon til systemorientert design ved Arkitektur- og Designhøgskolen i Oslo"]
+      "kunde": ["Arkitektur- og Designhøgskolen i Oslo"],
+      "avdeling": ["Studiokurs Introduksjon til systemorientert design"],
+      "bestilling": "Forelesning om innsiktsstudien Perspektivmelding Ung 2025, og andre prosejekterfaringer med å jobbe med ungdom og utenforskap",
+      "år": "2024"
     },
 
     {
       "id": "KristianiaSpekulasjon",
       "tittel": "Spekulativ design og fremtidsscenarier",
-      "kunde": ["Studiekurs Fremtidsscenarier ved Høyskolen Kristiania"]
+      "kunde": ["Høyskolen Kristiania"],
+      "avdeling": ["Studie-emne Fremtidsscenarier"],
+      "bestilling": "Teori og eksempler på bruk av spekulativ design og fremtidsscenarier.",
+      "år": "2024"
     },
 
     {
       "id": "UisSamskaping",
       "tittel": "Samskaping og fasilitering i praksis",
-      "kunde": ["Etter- og videreutdanning i tjenesteinnovasjon og designmetodikk ved Universitetet i Stavanger"]
+      "kunde": ["Universitetet i Stavanger"],
+      "avdeling": ["Etter- og videreutdanning i tjenesteinnovasjon og designmetodikk"],
+      "bestilling": "Foredrag om erfaringer med samskaping og fasilitering prosjekter i offentlig sektor, og praktiske tips til hvordan å jobbe med dette.",
+      "år": "2024"
     },
 
     {
       "id": "GnistKompetanse",
       "tittel": "Forberedt på innovasjon? Råd til nysgjerrige kommuner",
-      "kunde": ["Gnist kompetanseprogram ved Design og Arkitektur Norge"]
+      "kunde": ["Design og Arkitektur Norge"],
+      "avdeling": ["Gnist kompetanse webinarserie"],
+      "bestilling": "Oppsumme hva som gjør at noen kommuner lykkes med innovasjon og stedsutvikling, og hva andre kommuner bør tenke på før de setter i gang.",
+      "år": "2024"
     },
 
     {
       "id": "DogaMedvirkningssirkuset",
       "tittel": "Hvordan bruke lokalt engasjement som drivkraft i prosjektutvikling?",
-      "kunde": ["Konferansen Medvirkningssirkuset hos Design og Arkitektur Norge"]
+      "kunde": ["Design og Arkitektur Norge"],
+      "avdeling": ["Konferansen Medvirkningssirkuset"],
+      "bestilling": "Faglig innlegg om hvordan medvirkning kan gi energi, fremdrift og nye muligheter i offentlige innovasjonsprosjekter.",
+      "år": "2024"
     },
 
     {
       "id": "FnfFormidling",
       "tittel": "Krasjkurs i formidling og presentasjonsteknikk",
-      "kunde": ["Forum for Natur og Friluftsliv Troms"]
+      "kunde": ["Forum for Natur og Friluftsliv Troms"],
+      "avdeling": ["Medlemskveld"],
+      "bestilling": "Hvordan kan miljøengasjerte bli bedre på å formidle og presentere sine saker?",
+      "år": "2024"
     },
 
     {
       "id": "StorfjordMedvirkning",
       "tittel": "Om gode og dårlige medvirkningsprosesser innen kraftutbygging",
-      "kunde": ["Folkemøte om vindkraft i Storfjord kommune"]
+      "kunde": ["Naturvernere i Storfjord"],
+      "avdeling": ["Folkemøte om vindkraft i Storfjord kommune"],
+      "bestilling": "Hvordan kan vi skape gode medvirkningsprosesser innen kraftutbygging",
+      "år": "2024"
     },
 
     {
       "id": "HaltiTjenestedesing",
       "tittel": "Hva er tjenestedesign og hvordan kan det brukes?",
-      "kunde": ["Halti Næringshage"]
+      "kunde": ["Halti Næringshage"],
+      "avdeling": ["Ansatte og medlemsbedrifter"],
+      "bestilling": "Hva er tjenestedesign og hvordan kan det brukes?",
+      "år": "2024"
     },
 
     {
       "id": "FobyNabolag ",
       "tittel": "Nabolag som platform for innovasjon",
-      "kunde": ["Forum for arktisk byutvikling i Tromsø (FOBY)"]
+      "kunde": ["Forum for arktisk byutvikling i Tromsø og Nordnorsk design- og arkitektursenter"],
+      "avdeling": ["Seminar: Det gode hverdagsliv i bydelene"],
+      "bestilling": "Hvordan kan vi bruke nabolag som platform for innovasjon",
+      "år": "2024"
     }
 ]
