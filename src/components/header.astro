@@ -13,13 +13,28 @@ export interface Props {
 const { homeButton = false } = Astro.props as Props;
 
 // const hidden = "hidden";
+
+// Determine active link based on current path
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath.startsWith('/#');
+const isOmOss = currentPath === '/om-oss';
+const isStudenter = currentPath === '/studenter';
+
 ---
 
 <header>
-  <a href="/#prosjekter" class={`text ${homeButton && 'show'}`}>
-    <span class=""> <Arrow direction='left'/> Hjem</span>
+  <div class="links">
+    <!-- <a href="/#prosjekter" class={`text ${homeButton && 'show'}`}><span class="">
+      <Arrow direction='left'/>
+      Hjem</span></a> -->
 
-  </a>
+    <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span class="">
+      <!-- <Arrow direction='left'/> -->
+      Hjem</span></a>
+    <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span class="">Om oss</span></a>
+    <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span class="">For studenter</span></a>
+  </div>
+  
     <a href="/" aria-label="Hjem">
         <LbLogo rotation={true}/>
         <!-- <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo" width={300}/> -->
@@ -29,25 +44,33 @@ const { homeButton = false } = Astro.props as Props;
 
 <style>
     header{
-    width: 100%;
+    max-width: 1600px;
+    margin-left:  var(--edgeWhiteSpace);
+    /* margin-right:  var(--edgeWhiteSpace); */
     display: flex;
     justify-content: space-between;
 }
 
+.links{
+    display: flex;
+    gap: 2em;
+    align-items: start;
+    margin-top: 1em;
+}
 a{
   text-decoration: none;
 }
 
 .text span{
-  color: white;
-  --arrowColor: white;
+  color: black;
+  --arrowColor: black;
   text-decoration: none;
   margin-bottom: 0.5em;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   padding-bottom: 0.1em;
   display: none;
-  margin: 2rem 2rem;
-  font-size: 1.5rem;
+  margin: 2rem 0;
+  font-size: 1.35rem;
   text-shadow: 0px var(--shadowOffset) 0.3em rgba(0, 0, 0, 0.4);
 }
 
@@ -59,9 +82,20 @@ a{
 }
 
 .text span:hover{
-  color: var(--yellow);
-  --arrowColor: var(--yellow);
-  border-color: var(--yellow);
+  color: var(--red);
+  --arrowColor: var(--red);
+  border-color: var(--red);
+}
+
+.active span{
+  font-weight: bold;
+  border-bottom: 2.5px solid black;
+}
+
+.active span:hover{
+  color: black;
+  --arrowColor: black;
+  border-color: black;
 }
 
 /* .logo{
