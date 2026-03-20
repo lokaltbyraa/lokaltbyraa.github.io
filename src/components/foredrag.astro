@@ -22,8 +22,8 @@ const foredrag = foredragData
     <h2>Foredrag</h2>
     <p>Vi holder gjerne foredrag om våre prosjekter og metodikk tilpasset din kontekst og dine behov. Her er opplegg og foredrag vi har laget på bestilling for andre.</p>
 
-    <div id="tableWrapper" class="closedTable">
-        <table id="myTable">
+    <div id="tableWrapperForedrag" class="closedTable">
+        <table id="myTableForedrag">
         <thead>
             <tr>
                 <th onclick="sortTable(0)">Oppdragsgiver</th>
@@ -48,9 +48,17 @@ const foredrag = foredragData
         </table>
     </div>
 
+    <div class="buttonDiv">
+    <button id="expandBtnForedrag" onclick="toggleTableForedrag()">Vis alle foredrag</button>
+    </div>
+
 </div>
 
 <style>
+
+    div{
+        transition: max-height 0.3s ease-in-out;
+    }
 
     p{
         font-size: 1.5em;
@@ -65,41 +73,58 @@ const foredrag = foredragData
         margin: 3em 0;
         --arrowColor: black;
         line-height: 1.25em;
-    }
-
-    #tableWrapper{
         position: relative;
     }
 
+       #tableWrapperForedragr{
+        position: relative;
+        height: auto;
+    }
+
     .closedTable{
-       
+       max-height: 25em;
+       overflow: hidden;
+       position: relative;
+    }
+
+    .expandedTable {
+        max-height: 1000px;  /* set a large enough value */
     }
 
     .buttonDiv{
         width: 100%;
         text-align: center;
+        margin-top: 2em;
+        z-index: 3;
     }
 
     button:hover{
         font-weight: bold;
     }
+    #tableWrapperForedrag::after {
+    z-index: 2;
+    content: "";
+    position: absolute;     
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7em;        
+    pointer-events: none; 
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%, 
+        var(--light) 95%               
+    );
+    }
 
-    /* Gradient overlay at the bottom */
-        /* #tableWrapper::after {
-        z-index: 2;
-        content: "";
-        position: absolute;     
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 7em;        
-        pointer-events: none; 
-        background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0) 0%, 
-            var(--light) 95%               
-        );
-        } */
+    #tableWrapperForedrag.closedTable::after {
+    display: block;
+    }
+
+    /* when expanded, hide overlay */
+    #tableWrapperForedrag.expandedTable::after {
+        display: none;
+    }
 
     .section{
         width: 100%;
@@ -233,3 +258,18 @@ const foredrag = foredragData
   }
 
 </style>
+
+<script>
+  function toggleTableForedrag() {
+    const w = document.getElementById('tableWrapperForedrag');
+    const b = document.getElementById('expandBtnForedrag');
+    if (!w || !b) return;
+
+    const closed = w.classList.contains('closedTable');
+    w.classList.toggle('closedTable', !closed);
+    w.classList.toggle('expandedTable', closed);
+    b.textContent = closed ? 'Skjul alle foredrag' : 'Vis alle foredrag';
+  }
+
+  window.toggleTableForedrag = toggleTableForedrag;
+</script>
