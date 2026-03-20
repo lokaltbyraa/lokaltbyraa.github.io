@@ -48,6 +48,16 @@ const kontaktpersonData = prosjekt.data.kontaktperson
   ? await getEntry(prosjekt.data.kontaktperson.collection, prosjekt.data.kontaktperson.id)
   : null;
 
+// Import and resolve the headshot image if kontaktpersonData exists
+let resolvedHeadshot = null;
+if (kontaktpersonData) {
+  const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
+  const imagePath = kontaktpersonData.data.headshot;
+  const imageModule = images[`/src/content/ansatte/${imagePath}`];
+  if (!imageModule) throw new Error(`Image not found: ${imagePath}`);
+  resolvedHeadshot = (await imageModule()).default;
+}
+
 // Importing project images from subfolder in images folder
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif}');
 if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImage}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif}"`);
@@ -130,7 +140,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
                     <p id="epost"><a href={"mailto:"+kontaktpersonData.data.epost}>{kontaktpersonData.data.epost}</a></p>
                 </div>
             </div>
-            <Image src={kontaktpersonData.data.headshot} alt={"Bilde av "+kontaktpersonData.data.altText} width={250} quality={80}/>
+             <Image src={resolvedHeadshot} alt={"Bilde av "+kontaktpersonData.data.altText} width={250} quality={80}/>
         </div>
             )}
 
