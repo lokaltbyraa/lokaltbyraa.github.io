@@ -41,8 +41,8 @@ const resolvedImage = (await imageModule()).default;
 
 <div class="grid">
     <div class="txtDiv">
-        <h1>{navn}</h1>
-        <h2>{stilling}</h2>
+        <h2>{navn}</h2>
+        <h3>{stilling}</h3>
         <p>{bio}</p>
         <div class="txtGrid">
             <div>
@@ -95,10 +95,11 @@ const resolvedImage = (await imageModule()).default;
         /* max-width: 100ch; */
         justify-content: center;
         justify-items: baseline;
+        font-size: 1.1em;
     }
 
     .txtDiv{
-        max-width: 70ch;
+        max-width: 80ch;
     }
 
     .txtGrid{
@@ -107,19 +108,24 @@ const resolvedImage = (await imageModule()).default;
         gap: 1em;
     }
 
-    h1{
+    h2{
         font-size: 2.5em;
         margin: 0;
         line-height: 1.15;
     }
 
-    h2{
+    h3{
         font-size: 1.5em;
-        margin-top: 0.25em;
+        margin-top: 0.5em;
+    }
+
+    h4{
+        margin: 0;
     }
 
     p{
-        font-size: 1.1em;
+        margin: 0.75em 0;
+        font-size: 1.2em;
     }
 
 
@@ -130,15 +136,14 @@ const resolvedImage = (await imageModule()).default;
         padding-left: .5ch;
         list-style: disc;
         list-style-position: outside;
+        font-size: 1.1em;
+        line-height: 1.25em;
+        margin-bottom: 0.5em;
     }
 
     .imgDiv{
         grid-column: 1;
         grid-row: 1;
-    }
-
-    h3{
-        margin-bottom: 0.35em;
     }
 
     .divider{
