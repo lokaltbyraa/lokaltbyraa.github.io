@@ -3,12 +3,16 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
+// sort by id (string)
 const foredrag: CollectionEntry<'foredrag'>[] =
-  (await getCollection('foredrag'));
+  (await getCollection('foredrag'))
+    .slice()
+    .sort((a, b) => a.id.localeCompare(b.id, "nb", { sensitivity: "base" }));
 ---
 
 <div class="section" id="foredrag">
     <h2>Foredrag</h2>
+    <p>Vi holder gjerne foredrag om våre prosjekter og metodikk tilpasset din kontekst og dine behov. Her er opplegg og foredrag vi har laget på bestilling for andre.</p>
 
     <div id="tableWrapper" class="closedTable">
         <table id="myTable">
@@ -34,19 +38,23 @@ const foredrag: CollectionEntry<'foredrag'>[] =
 
 <style>
 
+    p{
+        font-size: 1.5em;
+        max-width: 70ch;
+        text-wrap: balance;
+    }
+
     table{
         width: 100%;
         border-collapse: separate;
         text-align: left;
-        margin: 2em 0;
+        margin: 3em 0;
         --arrowColor: black;
         line-height: 1.25em;
     }
 
     #tableWrapper{
         position: relative;
-         height: 25em;
-        overflow: hidden;
     }
 
     .closedTable{
@@ -63,21 +71,21 @@ const foredrag: CollectionEntry<'foredrag'>[] =
     }
 
     /* Gradient overlay at the bottom */
-        #tableWrapper::after {
+        /* #tableWrapper::after {
         z-index: 2;
         content: "";
-        position: absolute;       /* or absolute if preferred */
+        position: absolute;     
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 7em;           /* height of gradient */
-        pointer-events: none;   /* so it doesn’t block clicks */
+        height: 7em;        
+        pointer-events: none; 
         background: linear-gradient(
             to bottom,
-            rgba(255, 255, 255, 0) 0%,   /* transparent at top */
-            var(--light) 95%                  /* same as wrapper background at bottom */
+            rgba(255, 255, 255, 0) 0%, 
+            var(--light) 95%               
         );
-        }
+        } */
 
     .section{
         width: 100%;
@@ -97,6 +105,8 @@ const foredrag: CollectionEntry<'foredrag'>[] =
         font-size: 1em;
         padding: 0.9em 0.5rem 0.7em;
         max-width: 40ch;
+        font-size: 1.25em;
+        line-height: 1.25em;
     }
     
     tr:nth-child(even) td{

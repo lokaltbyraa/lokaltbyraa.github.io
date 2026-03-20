@@ -15,5 +15,65 @@
       "id": "AskerInnovasjonskompass",
       "tittel": "Verktøyet innovasjonskompasset: Nytt, nyttig, nyttiggjort",
       "kunde": ["Senter for innovasjon og læring i Asker kommune"]
+    },
+
+    {
+      "id": "DogaKreativitet",
+      "tittel": "Metode som metode: Om mangel på kreativitet i design for offentlig sektor",
+      "kunde": ["Utdeling av DOGA-merket hos Design og Arkitektur Norge 2023"]
+    },
+
+    {
+      "id": "AhoUtenforskap",
+      "tittel": "Design og innovasjon i møte med ungt utenforskap",
+      "kunde": ["Studiekurs Introduksjon til systemorientert design ved Arkitektur- og Designhøgskolen i Oslo"]
+    },
+
+    {
+      "id": "KristianiaSpekulasjon",
+      "tittel": "Spekulativ design og fremtidsscenarier",
+      "kunde": ["Studiekurs Fremtidsscenarier ved Høyskolen Kristiania"]
+    },
+
+    {
+      "id": "UisSamskaping",
+      "tittel": "Samskaping og fasilitering i praksis",
+      "kunde": ["Etter- og videreutdanning i tjenesteinnovasjon og designmetodikk ved Universitetet i Stavanger"]
+    },
+
+    {
+      "id": "GnistKompetanse",
+      "tittel": "Forberedt på innovasjon? Råd til nysgjerrige kommuner",
+      "kunde": ["Gnist kompetanseprogram ved Design og Arkitektur Norge"]
+    },
+
+    {
+      "id": "DogaMedvirkningssirkuset",
+      "tittel": "Hvordan bruke lokalt engasjement som drivkraft i prosjektutvikling?",
+      "kunde": ["Konferansen Medvirkningssirkuset hos Design og Arkitektur Norge"]
+    },
+
+    {
+      "id": "FnfFormidling",
+      "tittel": "Krasjkurs i formidling og presentasjonsteknikk",
+      "kunde": ["Forum for Natur og Friluftsliv Troms"]
+    },
+
+    {
+      "id": "StorfjordMedvirkning",
+      "tittel": "Om gode og dårlige medvirkningsprosesser innen kraftutbygging",
+      "kunde": ["Folkemøte om vindkraft i Storfjord kommune"]
+    },
+
+    {
+      "id": "HaltiTjenestedesing",
+      "tittel": "Hva er tjenestedesign og hvordan kan det brukes?",
+      "kunde": ["Halti Næringshage"]
+    },
+
+    {
+      "id": "FobyNabolag ",
+      "tittel": "Nabolag som platform for innovasjon",
+      "kunde": ["Forum for arktisk byutvikling i Tromsø (FOBY)"]
     }
 ]
