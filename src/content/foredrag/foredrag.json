@@ -5,7 +5,7 @@
       "kunde": ["Stavanger kommune"],
       "avdeling": ["Prosjektnettverk for områdesatsing Hillevåg"],
       "bestilling": "Inspirasjon og praktiske tips til hvordan å jobbe med utgangspunkt i nabolag og hvordan å utforske løsnigner på en systematisk måte",
-      "år": "2026"
+      "år": 2026
     },
 
     {
@@ -14,7 +14,7 @@
       "kunde": ["Asker kommune"],
       "avdeling": ["Sommersammling for kommunalområde Organisasjon, stab og utvikling"],
       "bestilling": "Lettbeint og annerledes, men faglig halvdagsopplegg om effektivisering og organisasjonsutvikling",
-      "år": "2025"
+      "år": 2025
     },
 
     {
@@ -23,7 +23,7 @@
       "kunde": ["Asker kommune"],
       "avdeling": ["Senter for innovasjon og læring"],
       "bestilling": "Inspirasjon til å se på egen praksis med kritisk, men vennlig blikk.",
-      "år": "2025"
+      "år": 2025
     },
 
     {
@@ -32,7 +32,7 @@
       "kunde": ["Design og Arkitektur Norge"],
       "avdeling": ["Utdeling av DOGA-merket 2024"],
       "bestilling": "Humoristisk foredrag med refleksjoner om hvorfor mye designarbeid i offentlig sektor ser ut til å være veldig dogmatisk og metodisk, og lite kreativt.",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -41,7 +41,7 @@
       "kunde": ["Arkitektur- og Designhøgskolen i Oslo"],
       "avdeling": ["Studiokurs Introduksjon til systemorientert design"],
       "bestilling": "Forelesning om innsiktsstudien Perspektivmelding Ung 2025, og andre prosejekterfaringer med å jobbe med ungdom og utenforskap",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -50,7 +50,7 @@
       "kunde": ["Høyskolen Kristiania"],
       "avdeling": ["Studie-emne Fremtidsscenarier"],
       "bestilling": "Teori og eksempler på bruk av spekulativ design og fremtidsscenarier.",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -59,7 +59,7 @@
       "kunde": ["Universitetet i Stavanger"],
       "avdeling": ["Etter- og videreutdanning i tjenesteinnovasjon og designmetodikk"],
       "bestilling": "Foredrag om erfaringer med samskaping og fasilitering prosjekter i offentlig sektor, og praktiske tips til hvordan å jobbe med dette.",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -68,7 +68,7 @@
       "kunde": ["Design og Arkitektur Norge"],
       "avdeling": ["Gnist kompetanse webinarserie"],
       "bestilling": "Oppsumme hva som gjør at noen kommuner lykkes med innovasjon og stedsutvikling, og hva andre kommuner bør tenke på før de setter i gang.",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -77,7 +77,7 @@
       "kunde": ["Design og Arkitektur Norge"],
       "avdeling": ["Konferansen Medvirkningssirkuset"],
       "bestilling": "Faglig innlegg om hvordan medvirkning kan gi energi, fremdrift og nye muligheter i offentlige innovasjonsprosjekter.",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -86,7 +86,7 @@
       "kunde": ["Forum for Natur og Friluftsliv Troms"],
       "avdeling": ["Medlemskveld"],
       "bestilling": "Hvordan kan miljøengasjerte bli bedre på å formidle og presentere sine saker?",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -95,7 +95,7 @@
       "kunde": ["Naturvernere i Storfjord"],
       "avdeling": ["Folkemøte om vindkraft i Storfjord kommune"],
       "bestilling": "Hvordan kan vi skape gode medvirkningsprosesser innen kraftutbygging",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -104,7 +104,7 @@
       "kunde": ["Halti Næringshage"],
       "avdeling": ["Ansatte og medlemsbedrifter"],
       "bestilling": "Hva er tjenestedesign og hvordan kan det brukes?",
-      "år": "2024"
+      "år": 2024
     },
 
     {
@@ -113,6 +113,6 @@
       "kunde": ["Forum for arktisk byutvikling i Tromsø og Nordnorsk design- og arkitektursenter"],
       "avdeling": ["Seminar: Det gode hverdagsliv i bydelene"],
       "bestilling": "Hvordan kan vi bruke nabolag som platform for innovasjon",
-      "år": "2024"
+      "år": 2024
     }
 ]

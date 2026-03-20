@@ -75,7 +75,7 @@ const foredrag = defineCollection({
     kunde: z.array(z.string()),
     avdeling: z.array(z.string()),
     bestilling: z.string(),
-    år: z.string(),
+    år: z.number(),
   }),
 });
 
