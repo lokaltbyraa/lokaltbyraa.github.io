@@ -256,7 +256,7 @@ const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
     const closed = w.classList.contains('closedTable');
     w.classList.toggle('closedTable', !closed);
     w.classList.toggle('expandedTable', closed);
-    b.textContent = closed ? 'Skjul alle prosjekter' : 'Vis alle prosjekter';
+    b.textContent = closed ? 'Skjul prosjekter' : 'Vis alle prosjekter';
   }
 
   // if using onclick="expandTable()", assign globally:
