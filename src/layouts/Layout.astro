@@ -9,10 +9,10 @@ import Footer from '../components/footer.astro';
 export interface Props{
 	title: string;
   description: string;
-  homeButton?: boolean;
+  color: string;
 }
 
-const { title = 'Lokalt Byrå', homeButton, description } = Astro.props as Props;
+const { title = 'Lokalt Byrå', color, description } = Astro.props as Props;
 
 ---
 
@@ -62,7 +62,7 @@ const { title = 'Lokalt Byrå', homeButton, description } = Astro.props as Props
   </head>
 
   <body>
-		<Header homeButton={ homeButton }/>
+		<Header color={ color }/>
 		<slot />
 		<Footer />
   </body>

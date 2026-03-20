@@ -7,10 +7,10 @@ import LbLogo from '../components/lbLogo.astro';
 import '../styles/headerLogoPlacement.css';
 
 export interface Props {
-  homeButton?: boolean;
+  color?: string;
 }
 
-const { homeButton = false } = Astro.props as Props;
+const { color = "black" } = Astro.props as Props;
 
 // const hidden = "hidden";
 
@@ -35,19 +35,21 @@ const isStudenter = currentPath === '/studenter';
     <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span class="">For studenter</span></a>
   </div>
   
-    <a href="/" aria-label="Hjem">
+    <a href="/" aria-label="Hjem" class="logoLink">
         <LbLogo rotation={true}/>
         <!-- <Image src={LokaltByraaLogo} alt="Lokalt Byrå sin logo" id="logo" width={300}/> -->
     </a>
 
 </header>
 
-<style>
+<style define:vars={{ textColor: color }}>
     header{
+      width: 100%;
     max-width: 1600px;
     margin-left:  var(--edgeWhiteSpace);
     /* margin-right:  var(--edgeWhiteSpace); */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
 }
 
@@ -61,12 +63,16 @@ a{
   text-decoration: none;
 }
 
+.logoLink{
+  justify-self: end;
+  margin-right:  var(--edgeWhiteSpace);
+}
 .text span{
-  color: black;
-  --arrowColor: black;
+  color: var(--textColor);
+  --arrowColor: var(--textColor);
   text-decoration: none;
   margin-bottom: 0.5em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--textColor);
   padding-bottom: 0.1em;
   display: none;
   margin: 2rem 0;
@@ -89,7 +95,8 @@ a{
 
 .active span{
   font-weight: bold;
-  border-bottom: 2.5px solid black;
+  border-bottom: 2.5px solid var(--textColor);
+  margin-right: -.2ch;
 }
 
 .active span:hover{
@@ -97,12 +104,6 @@ a{
   --arrowColor: black;
   border-color: black;
 }
-
-/* .logo{
-    width: 10em;
-    height: auto;
-    margin: 2em 2em;
-} */
 
 @media (width <= 1050px ) {
   .text span{

@@ -14,8 +14,12 @@ body{
 
 header {
    /* background-color: red !important; */
-   position: fixed;
+   position: absolute;
    z-index: 10;
+}
+
+.logoLink{
+    position: fixed;
 }
 
 .heroSection, .heroSection img {
