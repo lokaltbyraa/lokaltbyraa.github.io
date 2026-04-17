@@ -1,71 +1,208 @@
 [
-    {
-      "id": "ffk2025",
-      "prosjektnavn": "Stimulab: Digi2030",
-      "oppdragsgiver": ["Finnmark fylkeskommune"],
-      "samarbeidspartner": ["Halogen", "Fabric+", "Capto"],
-      "årstall": 2025,
-      "tema": ["Digitalisering", "Samfunnsutvikling", "Tjenesteinnovasjon"],
-      "link": "https://www.digdir.no/innovasjon/finnmark-fylkeskommune-digi-2030-finnmark/6048"
-    },
+   {
+     "id": "ffk2025",
+     "prosjektnavn": "Stimulab: Digi2030",
+     "oppdragsgiver": ["Finnmark fylkeskommune"],
+     "samarbeidspartner": ["Halogen", "Fabric+", "Capto"],
+     "årstall": 2025,
+     "tema": ["Digitalisering", "Samfunnsutvikling", "Tjenesteinnovasjon"],
+     "link": "https://www.digdir.no/innovasjon/finnmark-fylkeskommune-digi-2030-finnmark/6048"
+   },
 
-    {
-      "id": "stavanger2025",
-      "prosjektnavn": "Stimulab: Nye Veien til kommunal bosetting",
-      "oppdragsgiver": ["Stavanger kommune"],
-      "samarbeidspartner": ["Norconsult"],
-      "årstall": 2025,
-      "tema": ["Boligsosialt arbeid", "Strategi og tverrsektoriell ledelse", "Systeminnovasjon"],
-      "link": "https://www.digdir.no/innovasjon/stavanger-kommune-nye-veier-kommunal-bosetting-og-nabolagsutvikling/6049"
-    },
 
-    {
-      "id": "aal2025",
-      "prosjektnavn": "Gnist: Fra Handling til Plan",
-      "oppdragsgiver": ["Ål kommune"],
-      "samarbeidspartner": ["Ihuga", "Vigleik Vinje"],
-      "årstall": 2025,
-      "tema": ["Stedsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
-      "link": "https://www.aal.kommune.no/meny/planar-og-regulering/sentrumsutvikling/"
-    },
+   {
+     "id": "stavanger2025",
+     "prosjektnavn": "Stimulab: Nye Veien til kommunal bosetting",
+     "oppdragsgiver": ["Stavanger kommune"],
+     "samarbeidspartner": ["Norconsult"],
+     "årstall": 2025,
+     "tema": ["Boligsosialt arbeid", "Strategi og tverrsektoriell ledelse", "Systeminnovasjon"],
+     "link": "https://www.digdir.no/innovasjon/stavanger-kommune-nye-veier-kommunal-bosetting-og-nabolagsutvikling/6049"
+   },
 
-    {
-      "id": "oyer2025",
-      "prosjektnavn": "Dybdekurs i designdrevet innovasjon",
-      "oppdragsgiver": ["Øyer kommune"],
-      "samarbeidspartner": ["Ihuga"],
-      "årstall": 2026,
-      "tema": ["Stedsutvikling"],
-      "link": ""
-    },
 
-    {
-      "id": "eidfjord2025",
-      "prosjektnavn": "Nyskapende aktivitetsanlegg",
-      "oppdragsgiver": ["Eidfjord kommune"],
-      "samarbeidspartner": ["Ihuga"],
-      "årstall": 2025,
-      "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
-      "link": ""
-    },
+   {
+     "id": "aal2025",
+     "prosjektnavn": "Gnist: Fra Handling til Plan",
+     "oppdragsgiver": ["Ål kommune"],
+     "samarbeidspartner": ["Ihuga", "Vigleik Vinje"],
+     "årstall": 2025,
+     "tema": ["Stedsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
+     "link": "https://www.aal.kommune.no/meny/planar-og-regulering/sentrumsutvikling/"
+   },
 
-    {
-      "id": "kbnn2025",
-      "prosjektnavn": "Perspektivmelding Ung 2025",
-      "oppdragsgiver": ["Sparebank 1 Nord-Norge"],
-      "samarbeidspartner": ["Æra Strategic Innovation"],
-      "årstall": 2025,
-      "tema": ["Kvalitative undersøkelser", "Kvantitative undersøkelser", "Ungdomsmedvirkning"],
-      "link": ""
-    },
 
-    {
-      "id": "gamvik2025",
-      "prosjektnavn": "Barnefestival på Kulturdugnaden",
-      "oppdragsgiver": ["Nordishavet Badeklubb"],
-      "samarbeidspartner": [""],
-      "årstall": 2025,
-      "tema": ["Foreldreinvolvering", "Forebygging og tidlig innsats"],
-      "link": ""
-    }
+   {
+     "id": "oyer2025",
+     "prosjektnavn": "Dybdekurs i designdrevet innovasjon",
+     "oppdragsgiver": ["Øyer kommune"],
+     "samarbeidspartner": ["Ihuga"],
+     "årstall": 2026,
+     "tema": ["Stedsutvikling"],
+     "link": ""
+   },
+
+
+   {
+     "id": "eidfjord2025",
+     "prosjektnavn": "Nyskapende aktivitetsanlegg",
+     "oppdragsgiver": ["Eidfjord kommune"],
+     "samarbeidspartner": ["Ihuga"],
+     "årstall": 2025,
+     "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
+     "link": ""
+   },
+
+
+   {
+     "id": "kbnn2025",
+     "prosjektnavn": "Perspektivmelding Ung 2025",
+     "oppdragsgiver": ["Sparebank 1 Nord-Norge"],
+     "samarbeidspartner": ["Æra Strategic Innovation"],
+     "årstall": 2025,
+     "tema": ["Kvalitative undersøkelser", "Kvantitative undersøkelser", "Ungdomsmedvirkning"],
+     "link": ""
+   },
+
+
+   {
+     "id": "gamvik2025",
+     "prosjektnavn": "Barnefestival på Kulturdugnaden",
+     "oppdragsgiver": ["Nordishavet Badeklubb"],
+     "samarbeidspartner": [""],
+     "årstall": 2025,
+     "tema": ["Foreldreinvolvering", "Forebygging og tidlig innsats"],
+     "link": ""
+   },
+   
+   {
+     "id": "vekst2023",
+     "prosjektnavn": "Veksthuset",
+     "oppdragsgiver": ["Halti Næringshage"],
+     "samarbeidspartner": [""],
+     "årstall": 2023,
+     "tema": ["Idéarbeid", "Samfunnsutvikling", "Konferanse"],
+     "link": ""
+   },
+
+
+
+   {
+     "id": "kragero2023",
+     "prosjektnavn": "Gnist: Fra utbyggerstyrt til innbyggerstyrt kommune",
+     "oppdragsgiver": ["Kragerø kommune"],
+     "samarbeidspartner": ["Vigleik Winje"],
+     "årstall": 2024,
+     "tema": ["Medvirkning", "Samfunnsutvikling", "Stedsutvikling"],
+     "link": ""
+   },
+
+
+
+
+   {
+     "id": "kvitsoy2024",
+     "prosjektnavn": "Kultursentrum Grøningen",
+     "oppdragsgiver": ["Kvitsøy kommune"],
+     "samarbeidspartner": [""],
+     "årstall": 2024,
+     "tema": ["Medvirkning", "Stedsutvikling", "Rådgivning"],
+     "link": ""
+   },
+
+
+
+
+   {
+     "id": "oygarden2024",
+     "prosjektnavn": "Nyskapende aktivitetsanlegg",
+     "oppdragsgiver": ["Øygarden kommune"],
+     "samarbeidspartner": ["Ihuga"],
+     "årstall": 2024,
+     "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
+     "link": ""
+   },
+
+
+
+
+   {
+     "id": "Oksnes2024",
+     "prosjektnavn": "Effektiv byggesakstjenester",
+     "oppdragsgiver": ["Øksnes kommune"],
+     "samarbeidspartner": [""],
+     "årstall": 2024,
+     "tema": ["Byggesak", "Tjenestedesign", "Effektivisering"],
+     "link": ""
+   },
+
+
+  {
+     "id": "Larvik2024",
+     "prosjektnavn": "Områdesatsning Torstrand",
+     "oppdragsgiver": ["Larvik kommune"],
+     "samarbeidspartner": ["Ihuga", "Vigleik Winje"],
+     "årstall": 2024,
+     "tema": ["Innsikt", "Designdrevet innovasjon", "Stedsutvikling"],
+     "link": ""
+   },
+
+
+   {
+     "id": "Hverdagsreisen2025",
+     "prosjektnavn": "Hverdagsreisen Numedal",
+     "oppdragsgiver": ["Rollag kommune", "Flesberg kommune", "Nore og uvdal kommune"],
+     "samarbeidspartner": ["Ihuga"],
+     "årstall": 2025,
+     "tema": ["Innsikt", "Folkehelse", "Stedsutvikling"],
+     "link": ""
+   },
+
+
+   {
+     "id": "fnf2025",
+     "prosjektnavn": "Vann og vassdragskonferanse",
+     "oppdragsgiver": ["Forum for natur og friluftsliv Troms"],
+     "samarbeidspartner": [""],
+     "årstall": 2025,
+     "tema": ["Arbeidsverksted", "Fasilitering"],
+     "link": ""
+   },
+
+
+   {
+     "id": "pws2025",
+     "prosjektnavn": "Marienlundveien 4-6",
+     "oppdragsgiver": ["PWS eiendom"],
+     "samarbeidspartner": [""],
+     "årstall": 2025,
+     "tema": ["Medvirkning", "Boligprosjekt" ],
+     "link": ""
+   },
+
+
+   {
+     "id": "erasmus2025",
+     "prosjektnavn": "Design for Tomorrow",
+     "oppdragsgiver": ["EU Erasmus+ Ungdom", "Larvik kommune"],
+     "samarbeidspartner": ["Cirka CPH"],
+     "årstall": 2025,
+     "tema": ["Stedsutvikling", "Klimatilpasning", "Ungdomsmedvirkning"],
+     "link": ""
+   },
+
+
+   {
+     "id": "bibliotek2025",
+     "prosjektnavn": "Bibliotekstjenester for pendlerungdom",
+     "oppdragsgiver": ["Lyngen kommune", "Storfjord kommune"],
+     "samarbeidspartner": ["Gina Mugaas"],
+     "årstall": 2025,
+     "tema": ["Tjenestedesign", "Stedsutvikling", "Ungdomsmedvirkning"],
+     "link": ""
+   }
+
+
 ]
+
+
