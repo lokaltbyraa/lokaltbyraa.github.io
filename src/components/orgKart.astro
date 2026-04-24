@@ -16,41 +16,44 @@ import Arrow from '../components/arrow.astro';
     <div class="lineVertical"></div>
 
    <div class="branch utvikling">
-  <div class="sektor"><h4>Utvikling og samfunn</h4></div>
-  <ul>
+    <div class="sektor"><h4>Utvikling og samfunn</h4></div>
+    <ul>
+    <li><span id="strategi">Strategi og tverrsektoriell ledelse</span></li>   
     <li><span id="folkehelse">Folkehelse</span></li>
-    <li><span id="strategi">Strategi og tverrsektoriell ledelse</span></li>
     <li><span id="plan">Plan og byggesak</span></li>
     <li><span id="naering">Næringsutvikling</span></li>
     <li><span id="digitalisering">Digitalisering</span></li>
     <li><span id="stedsutvikling">Stedsutvikling og bolyst</span></li>
     <li><span id="klimatilpasning">Klimatilpasning</span></li>
-  </ul>
-</div>
+    </ul>
+    </div>
 
-<div class="branch helse">
-  <div class="sektor"><h4>Helse og velferd</h4></div>
-  <ul>
+
+    <div class="branch helse">
+    <div class="sektor"><h4>Helse og velferd</h4></div>
+    <ul>
     <li><span id="boligsosialt">Boligsosialt arbeid</span></li>
     <li><span id="helsebygg">Helsebygg</span></li>
     <li><span id="tjenesteinnovasjon">Tjenesteinnovasjon</span></li>
     <li><span id="forebygging">Forebygging og tidlig innsats</span></li>
+    <li><span id="ungtutenforskap">Ungt utenforskap</span></li>
     <li><span id="omradesatsing">Områdesatsing</span></li>
-  </ul>
-</div>
+    </ul>
+    </div>
 
-<div class="branch kultur">
-  <div class="sektor"><h4>Kultur og oppvekst</h4></div>
-  <ul>
+
+    <div class="branch kultur">
+    <div class="sektor"><h4>Kultur og oppvekst</h4></div>
+    <ul>
     <li><span id="aktivitetshus">Aktivitetshus- og anlegg</span></li>
     <li><span id="kulturhus">Kulturhus og bibliotek</span></li>
     <li><span id="motesteder">Møtesteder</span></li>
-    <li><span id="frivillighet">Frivillighet og samskaping</span></li>
     <li><span id="integrering">Integrering</span></li>
-    <li><span id="ungdom">Ungdomsmedvirkning</span></li>
+    <li><span id="frivillighet">Frivillighet og samskaping</span></li>
     <li><span id="foreldre">Foreldreinnvolvering</span></li>
-  </ul>
-</div>
+    <li><span id="ungdom">Ungdomsmedvirkning</span></li>
+    </ul>
+    </div>
 
     <div class="tilArkiv">
     <a href="/om-oss#prosjektarkiv">Se prosjektarkivet vårt <Arrow direction='right'/></a>
@@ -317,8 +320,8 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
         .trim() || '#999';
 
     // --- CURVE SETTINGS ---
-    const curveStrength = 0.3;
-    const minOffset = 300;
+    const curveStrength = 0.1;
+    const minOffset = 150;
     const emToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
     const gap = 1 * emToPx; // gap between span and line when connecting left
     // -----------------------
@@ -406,9 +409,10 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", `M ${p1.x} ${p1.y} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${p2.x} ${p2.y}`);
     path.setAttribute("stroke", color);
-    path.setAttribute("stroke-width", "2.5");
+    path.setAttribute("stroke-width", "2");
     path.setAttribute("fill", "none");
-    path.setAttribute("opacity", "0.15");
+    path.setAttribute("opacity", "0.2");
+     path.setAttribute("id", `${id1}–>${id2}`);
 
     svg.appendChild(path);
 }
@@ -417,10 +421,21 @@ function drawConnections() {
     const svg = document.getElementById("connections");
     svg.innerHTML = "";
 
-    connect("folkehelse", "digitalisering", "right", "right", "--orange");
-    connect("helsebygg", "motesteder", "right", "left", "--orange");
     connect("strategi", "boligsosialt", "right", "left", "--orange");
-    connect("plan", "kulturhus", "right", "left", "--orange");
+    connect("tjenesteinnovasjon", "kulturhus", "right", "left", "--orange");
+    connect("folkehelse", "tjenesteinnovasjon", "right", "left", "--orange");
+    connect("plan", "tjenesteinnovasjon", "right", "left", "--orange");
+    connect("naering", "stedsutvikling", "right", "right", "--orange");
+    connect("naering", "motesteder", "right", "left", "--orange");
+    connect("digitalisering", "integrering", "right", "left", "--orange");
+    connect("stedsutvikling", "strategi", "right", "right", "--orange");
+    connect("stedsutvikling", "ungdom", "right", "left", "--orange");
+    connect("klimatilpasning", "ungtutenforskap", "right", "left", "--orange");
+    connect("omradesatsing", "tjenesteinnovasjon", "right", "right", "--orange");
+    connect("forebygging", "frivillighet", "right", "left", "--orange");
+    connect("ungtutenforskap", "ungdom", "right", "left", "--orange");
+    connect("aktivitetshus", "forebygging", "left", "right", "--orange");
+    connect("helsebygg", "stedsutvikling", "left", "right", "--orange");
 }
 
 window.addEventListener("load", drawConnections);
