@@ -21,32 +21,36 @@ const isStudenter = currentPath === '/studenter';
 ---
 
 <header>
-  <!-- Hamburger button only visible on mobile -->
-  <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="wrapper">
+    <div class="section gridHeader">
+        <!-- Hamburger button only visible on mobile -->
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <!-- Desktop Links -->
-  <nav class="links">
-    <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span class="">Hjem</span></a>
-    <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span class="">Om oss</span></a>
-    <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span class="">For studenter</span></a>
-  </nav>
+        <!-- Desktop Links -->
+        <nav class="links">
+          <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span class="">Hjem</span></a>
+          <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span class="">Om oss</span></a>
+          <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span class="">For studenter</span></a>
+        </nav>
 
-  <!-- Full-screen overlay for mobile menu -->
-  <div id="mobile-overlay" class="mobile-overlay">
-    <div class="overlay-content">
-      <a href="/" class={`overlay-link ${isHome ? 'active' : ''}`}>Hjem</a>
-      <a href="/om-oss" class={`overlay-link ${isOmOss ? 'active' : ''}`}>Om oss</a>
-      <a href="/studenter" class={`overlay-link ${isStudenter ? 'active' : ''}`}>For studenter</a>
+        <!-- Full-screen overlay for mobile menu -->
+        <div id="mobile-overlay" class="mobile-overlay">
+          <div class="overlay-content">
+            <a href="/" class={`overlay-link ${isHome ? 'active' : ''}`}>Hjem</a>
+            <a href="/om-oss" class={`overlay-link ${isOmOss ? 'active' : ''}`}>Om oss</a>
+            <a href="/studenter" class={`overlay-link ${isStudenter ? 'active' : ''}`}>For studenter</a>
+          </div>
+        </div>
+  
+        <a href="/" aria-label="Hjem" class="logoLink">
+            <LbLogo rotation={true}/>
+        </a>
     </div>
   </div>
-  
-    <a href="/" aria-label="Hjem" class="logoLink">
-        <LbLogo rotation={true}/>
-    </a>
 
 </header>
 
@@ -73,14 +77,16 @@ const isStudenter = currentPath === '/studenter';
 </script>
 
 <style define:vars={{ textColor: color }}>
-    header{
-      width: 100%;
-    max-width: 1600px;
-    margin-left:  var(--edgeWhiteSpace);
+    .gridHeader{
+    /* width: 100%; */
+    /* max-width: 1600px;
+    margin: 0 auto;
+    padding-left: var(--edgeWhiteSpace); */
     /* margin-right:  var(--edgeWhiteSpace); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    margin-bottom: 0;
 }
 
 .links{
@@ -96,7 +102,7 @@ a{
 
 .logoLink{
   justify-self: end;
-  margin-right:  var(--edgeWhiteSpace);
+  /* margin-right:  var(--edgeWhiteSpace); */
 }
 .text span{
   color: var(--textColor);

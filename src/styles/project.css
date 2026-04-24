@@ -16,6 +16,7 @@ header {
    /* background-color: red !important; */
    position: absolute;
    z-index: 10;
+   width: 100%;
 }
 
 .logoLink{
