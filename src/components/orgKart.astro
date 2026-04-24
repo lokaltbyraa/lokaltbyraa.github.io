@@ -406,9 +406,9 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", `M ${p1.x} ${p1.y} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${p2.x} ${p2.y}`);
     path.setAttribute("stroke", color);
-    path.setAttribute("stroke-width", "2");
+    path.setAttribute("stroke-width", "2.5");
     path.setAttribute("fill", "none");
-    path.setAttribute("opacity", "0.7");
+    path.setAttribute("opacity", "0.15");
 
     svg.appendChild(path);
 }
