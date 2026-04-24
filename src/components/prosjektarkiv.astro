@@ -3,8 +3,6 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-import Arrow from '../components/arrow.astro';
-
 const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
   (await getCollection('prosjektarkiv'))
     .sort((a, b) => b.data.årstall - a.data.årstall);
@@ -81,7 +79,7 @@ const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
     }
 
         .expandedTable {
-        max-height: 1000px;  /* set a large enough value */
+        max-height: 50000px;  /* set a large enough value */
     }
 
     .buttonDiv{
