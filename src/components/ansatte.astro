@@ -21,7 +21,7 @@ const resolvedAnsatte = await Promise.all(
     const formattedPhone = formatPhoneNumber(ansatt.data.telefon);
 
     // Resolve the image
-    const images = import.meta.glob('/src/content/ansatte/*.{jpg,jpeg,png,gif}');
+    const images = import.meta.glob<{ default: any }>('/src/content/ansatte/*.{jpg,jpeg,png,gif}');
     const imagePath = ansatt.data.headshot.replace(/^\.\/|^\//, ''); // remove ./ if present
     const imageModule = images[`/src/content/ansatte/${imagePath}`];
     if (!imageModule) throw new Error(`Image not found: ${imagePath}`);
