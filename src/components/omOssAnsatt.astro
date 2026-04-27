@@ -11,7 +11,7 @@ interface Props {
     bio: string;
     epost: string;
     tlf: number;
-    imagePath: ImageMetadata;
+    imagePath: string;
     altText: string;
     utdanning: string[];
     tidligereErfaring: string[];
@@ -31,11 +31,11 @@ const {
 
 // const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
 // if (!images["/src/content/ansatte/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/content/ansatte/*.{jpeg,jpg,png,gif}"`);
-const images = import.meta.glob('/src/content/ansatte/*.{jpg,jpeg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpg,jpeg,png,gif}');
 const imageModule = images[`/src/content/ansatte/${imagePath}`];
 if (!imageModule) throw new Error(`Image not found: ${imagePath}`);
 
-const resolvedImage = (await imageModule()).default;
+const resolvedImage = (await imageModule() as { default: ImageMetadata }).default;
 
 ---
 

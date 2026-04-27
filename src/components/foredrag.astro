@@ -278,6 +278,12 @@ const foredrag = foredragData
 </style>
 
 <script>
+    declare global {
+    interface Window {
+      toggleTableForedrag: () => void;
+    }
+    }
+
   function toggleTableForedrag() {
     const w = document.getElementById('tableWrapperForedrag');
     const b = document.getElementById('expandBtnForedrag');

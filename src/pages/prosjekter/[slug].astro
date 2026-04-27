@@ -15,6 +15,7 @@ import Image from 'astro/components/Image.astro';
 import { getCollection, type CollectionEntry } from "astro:content";
 import { getEntry, render } from 'astro:content';
 
+import type { ImageMetadata } from 'astro';
 
 // Accessing data from projects content collection and creating routes to project pages based on slug in markdown files
 export async function getStaticPaths() {
@@ -49,7 +50,8 @@ const kontaktpersonData = prosjekt.data.kontaktperson
   : null;
 
 // Import and resolve the headshot image if kontaktpersonData exists
-let resolvedHeadshot = null;
+let resolvedHeadshot: ImageMetadata | undefined;
+
 if (kontaktpersonData) {
   const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/ansatte/*.{jpeg,jpg,png,gif}');
   const imagePath = kontaktpersonData.data.headshot;
@@ -130,7 +132,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
         <Content/>
         </div>
 
-        {kontaktpersonData && (
+        {kontaktpersonData && resolvedHeadshot &&(
             <div class="kontaktperson">
             <div class="kontakt">
                 <h2>Vil du høre mer?<br/>Send meg en epost, da vel!</h2>
@@ -140,7 +142,7 @@ if (!images[prosjekt.data.mainImage]) throw new Error(`"${prosjekt.data.mainImag
                     <p id="epost"><a href={"mailto:"+kontaktpersonData.data.epost}>{kontaktpersonData.data.epost}</a></p>
                 </div>
             </div>
-             <Image src={resolvedHeadshot} alt={"Bilde av "+kontaktpersonData.data.altText} width={250} quality={80}/>
+             <Image src={resolvedHeadshot} alt={"Bilde av " + kontaktpersonData.data.altText} width={250} quality={80}/>
         </div>
             )}
 

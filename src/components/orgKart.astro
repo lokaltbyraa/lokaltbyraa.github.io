@@ -305,10 +305,12 @@ import Arrow from '../components/arrow.astro';
 
 <script>
     
-function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange") {
-    const svg = document.getElementById("connections");
-    const el1 = document.getElementById(id1);
-    const el2 = document.getElementById(id2);
+function connect(id1: string, id2: string, side1: string = "right", side2: string = "left", cssVar: string = "--orange") {
+    const svg = document.getElementById("connections") as SVGElement | null;
+    const el1 = document.getElementById(id1) as HTMLElement | null;
+    const el2 = document.getElementById(id2) as HTMLElement | null;
+
+    if (!svg || !el1 || !el2 || !svg.parentElement) return;
 
     const r1 = el1.getBoundingClientRect();
     const r2 = el2.getBoundingClientRect();
@@ -326,7 +328,7 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
     const gap = 1 * emToPx; // gap between span and line when connecting left
     // -----------------------
 
-    function getPoint(rect, side) {
+    function getPoint(rect: DOMRect, side: string) {
         let x, y;
         switch (side) {
             case "left":
@@ -418,7 +420,8 @@ function connect(id1, id2, side1 = "right", side2 = "left", cssVar = "--orange")
 }
 
 function drawConnections() {
-    const svg = document.getElementById("connections");
+    const svg = document.getElementById("connections") as SVGElement | null;
+    if (!svg) return;
     svg.innerHTML = "";
 
     connect("strategi", "boligsosialt", "right", "left", "--orange");
