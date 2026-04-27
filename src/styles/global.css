@@ -163,7 +163,7 @@ body{
 
 @media (width <= 450px ) {
 
-    .wrapper{
+    .wrapper:not(header .wrapper){
         margin-top: 4em;
     }
     
