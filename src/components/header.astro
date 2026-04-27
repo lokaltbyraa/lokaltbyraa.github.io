@@ -35,6 +35,7 @@ const isStudenter = currentPath === '/studenter';
           <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span class="">Hjem</span></a>
           <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span class="">Om oss</span></a>
           <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span class="">For studenter</span></a>
+          <a href="#kontakt" class={`text show`}><span class="">Kontakt</span></a>
         </nav>
 
         <!-- Full-screen overlay for mobile menu -->
@@ -43,6 +44,7 @@ const isStudenter = currentPath === '/studenter';
             <a href="/" class={`overlay-link ${isHome ? 'active' : ''}`}>Hjem</a>
             <a href="/om-oss" class={`overlay-link ${isOmOss ? 'active' : ''}`}>Om oss</a>
             <a href="/studenter" class={`overlay-link ${isStudenter ? 'active' : ''}`}>For studenter</a>
+            <a href="#kontakt" class={`overlay-link`}>Kontakt</a>
           </div>
         </div>
   
