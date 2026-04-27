@@ -29,7 +29,12 @@ const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
 
             {prosjektarkiv.map(prosjekt => ( 
                 <tr>
-                    <td class="oppdragsgiver bold">{prosjekt.data.oppdragsgiver}</td>
+                    <td class="oppdragsgiver bold">
+                    {prosjekt.data.oppdragsgiver.length > 1
+                        ? `${prosjekt.data.oppdragsgiver.slice(0, -1).join(', ')} og ${prosjekt.data.oppdragsgiver.slice(-1)}`
+                        : prosjekt.data.oppdragsgiver[0]
+                    }
+                    </td>
                     <td class="prosjektnavn">{prosjekt.data.prosjektnavn}</td>
                     <td class="tema">{prosjekt.data.tema.join(' • ')}</td>
                     <td class="samarbeidspartner">{prosjekt.data.samarbeidspartner.join(' • ')}</td>
@@ -183,13 +188,17 @@ const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
 
     table tr {
       display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto min-content;
+        gap: 0 2em;
       width: 100%;
       margin: 0;
       padding: 0.35em 0 1em;
       border-bottom: 1px solid black;
     }
     
+    table *{
+        text-wrap: balance;
+    }
     table td {
       display: block;
       margin-bottom: 0.15em;
@@ -248,32 +257,6 @@ const prosjektarkiv: CollectionEntry<'prosjektarkiv'>[] =
   }
 
 </style>
-
-<!-- <script lang="ts">
-    export {};
-declare global {
-  interface Window {
-    toggleTable: () => void;
-    expandTable: () => void;
-  }
-}
-
-function toggleTable() {
-  const w = document.getElementById('tableWrapper');
-  const b = document.getElementById('expandBtn');
-  if (!w || !b) return;
-
-  const closed = w.classList.contains('closedTable');
-  w.classList.toggle('closedTable', !closed);
-  w.classList.toggle('expandedTable', closed);
-  b.textContent = closed ? 'Skjul prosjekter' : 'Vis alle prosjekter';
-}
-
-function expandTable() { toggleTable(); }
-
-window.expandTable = expandTable;
-window.toggleTable = toggleTable;
-</script> -->
 
 <script>
   declare global {
