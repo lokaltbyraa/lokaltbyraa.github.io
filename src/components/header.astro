@@ -9,9 +9,9 @@ export interface Props {
 
 const { color = "black", currentPath = "/" } = Astro.props as Props;
 
-const isHome = currentPath === '/';
-const isOmOss = currentPath === '/om-oss';
-const isStudenter = currentPath === '/studenter';
+const isHome = currentPath === '/' || currentPath === '/index.html';
+const isOmOss = currentPath === '/om-oss' || currentPath === '/om-oss/';
+const isStudenter = currentPath === '/studenter' || currentPath === '/studenter/';
 ---
 
 <header>
