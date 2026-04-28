@@ -22,23 +22,6 @@ const projectsCollection = defineCollection({
   })
 });
 
-// const ansatte = defineCollection({
-//     loader: glob({ pattern: '**/[^_]*.{yaml}', base: "./src/content/ansatte" }),
-//   schema: ({ image }) =>
-//     z.object({
-//       navn: z.string(),
-//       stilling: z.string(),
-//       epost: z.string(),
-//       telefon: z.number(),
-//       rekkefølge: z.number(),
-
-//       headshot: z.object({
-//       src: image(),
-//       altText: z.string(),
-//       }),
-// })
-// });
-
 const ansatte = defineCollection({
   loader: file("src/content/ansatte/ansatte.json"),
   schema: z.object({
