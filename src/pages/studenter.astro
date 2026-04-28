@@ -16,17 +16,20 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="section">
 			<h1>
-				<span class="serif lokaltByraa">Lokalt Byrå</span> samarbeider gjerne med studenter om bachelor- og masteroppgaver innen temaer knyttet til steds- og samfunnsutvikling, digitalisering og innovasjon i offentlig sektor. <br><br>Vi liker å være sparringspartnere og veiledere rundt problemstillinger som ligger nært våre fagområder, og kan bidra med både kunnskap, fagstoff, erfaringer fra praksis, case-studier og tanker om hva vi mener vil være verdifulle bidrag til feltet.
-			</h1>
+				<span class="serif lokaltByraa">Lokalt Byrå</span> samarbeider gjerne med studenter om bachelor- og masteroppgaver innen temaer knyttet til steds- og samfunnsutvikling, digitalisering og innovasjon i offentlig sektor.
+			<p>
+				Vi liker å være sparringspartnere og veiledere rundt problemstillinger som ligger nært våre fagområder, og kan bidra med både kunnskap, fagstoff, erfaringer fra praksis, case-studier og tanker om hva vi mener vil være verdifulle bidrag til feltet.
+			</p>
 		</div>
 
 		<div class="section">
 			<h2>Her er noen tema vi selv tror kunne blitt til spennende studentoppgaver:</h2>
 			<ul>
+				<li>Hvordan kan gater, plasser og utemøbler designes for å raskt og enkelt kunne gjøres om til bilfrie gater på en dag?</li>
 				<li>Hvordan skal kommuner og fylkeskommuner forholde seg til at KI og språkmodeller kan overvelde systemet for høringssvar og innsynsbegjæringer?</li>
 				<li>Hvordan kan små kommuner med liten lokal erfaring med stedsutvikling få bedre kunnskapsgrunnlag for å lykkes med sentrumsutvikling?</li>
 				<li>Hvilke verdier og logikk bygger kommunale data dashboards på i dag, og hvordan ville det sett ut med andre verdier og logikker?</li>
-				<li>Mange unge og voksne opplever at de har liten mulighet til å påvirke lokale saker, selv om Norge er ett av verdens beste land innen mulighet for vanlige folk å påvirke. Hvordan kan vi snu denne opplevelsen og mangelen på involvering?</li>
+				<li>Mange unge og voksne opplever at de har liten mulighet til å påvirke lokale saker. Samtidig er Norge ett av verdens beste land innen mulighet for vanlige folk å påvirke. Hvordan kan vi snu denne opplevelsen og mangelen på involvering?</li>
 				<li>Innen politikken og velferdsstaten er samfunnsutfordringen ungt utenforskap målt og forstått som å handle om å stå utenfor jobb, skole og utdanning. Men unge selv forstår utenforskap som å være utenfor sosiale fellesskap. Hvordan kan disse to ulike forståelsene knyttes sammen for bedre samarbeid mellom voksne ledere og unge?</li>
 			</ul>
 		</div>
@@ -48,5 +51,19 @@ import Layout from '../layouts/Layout.astro';
         list-style-position: outside;
 		max-width: 55ch;
 	}
+
+	@media screen and (max-width: 650px) {
+
+		p{
+			margin-top: 2em;
+			font-size: 1.25rem;
+		}
+
+		li{
+			font-size: 1.25rem;
+		}
+
+	}
+
 
 </style>
