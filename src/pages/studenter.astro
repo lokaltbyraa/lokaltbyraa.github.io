@@ -33,6 +33,10 @@ import Layout from '../layouts/Layout.astro';
 				<li>Innen politikken og velferdsstaten er samfunnsutfordringen ungt utenforskap målt og forstått som å handle om å stå utenfor jobb, skole og utdanning. Men unge selv forstår utenforskap som å være utenfor sosiale fellesskap. Hvordan kan disse to ulike forståelsene knyttes sammen for bedre samarbeid mellom voksne ledere og unge?</li>
 			</ul>
 		</div>
+
+		<div class="section">
+			<h2 class="mail"><a href="mailto:hei@lokaltbyraa.no?subject=Sparring%20om%20studentprosjekt!&body=Hei!%0D%0A%0D%0AJeg%20heter%20...%20og%20studerer%20...%20p%C3%A5%20%C3%A5r%20...%20ved%20...%0D%0A%0D%0AJeg%20jobber%20med%20en%20oppgave%20i%20faget%20...%20hvor%20jeg%20utforsker%20...%0D%0A%0D%0AKort%20forklart%20er%20jeg%20interessert%20i%20dette%20tema%20fordi%20...%0D%0A%0D%0A%0D%0AOppgaven%20starter%20...%20og%20skal%20v%C3%A6re%20ferdig%20til%20...%0D%0A%0D%0AJeg%20tar%20kontakt%20med%20dere%20i%20Lokalt%20Byr%C3%A5%20fordi%20jeg%20er%20nysgjerrig%20p%C3%A5%20...%0D%0A%0D%0A%0D%0AAlt%20godt!%0D%0A%5BNavn%5D%0D%0A%5BTelefon%20nummer%5D">Klikk her for å ta kontakt om studentsamarbeid.</a></h2>
+		</div>
 	
 	</div>
 
@@ -50,6 +54,14 @@ import Layout from '../layouts/Layout.astro';
         list-style: disc;
         list-style-position: outside;
 		max-width: 55ch;
+	}
+
+	.mail{
+		font-size: 1.75em;
+	}
+
+	.mail a:hover{
+		color: var(--red);
 	}
 
 	@media screen and (max-width: 650px) {
