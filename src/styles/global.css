@@ -171,6 +171,7 @@ body{
         font-size: 1.75em;
         line-height: 1.25em;
         max-width: 60ch;
+        text-wrap: initial;
     }
 
     h3{
