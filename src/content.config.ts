@@ -41,19 +41,18 @@ const projectsCollection = defineCollection({
 
 const ansatte = defineCollection({
   loader: file("src/content/ansatte/ansatte.json"),
-  schema: ({ image }) =>
-    z.object({
-      navn: z.string(),
-      stilling: z.string(),
-      epost: z.string(),
-      telefon: z.number(),
-      rekkefølge: z.number(),
-      headshot: z.string(),
-      altText: z.string(),
-      bio: z.string(),
-      utdanning: z.array(z.string()),
-      tidligereErfaring: z.array(z.string()),
-    }),
+  schema: z.object({
+    navn: z.string(),
+    stilling: z.string(),
+    epost: z.string().email(),
+    telefon: z.string(),
+    rekkefølge: z.number(),
+    headshot: z.string(),
+    altText: z.string(),
+    bio: z.string(),
+    utdanning: z.array(z.string()),
+    tidligereErfaring: z.array(z.string()),
+  }),
 });
 
 const prosjektarkiv = defineCollection({
