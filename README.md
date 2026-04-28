@@ -1,5 +1,5 @@
 # About
-Home page for Lokalt Byrå
+Home page for [Lokalt Byrå](https://lokaltbyraa.no/)
 
 ## To-dos
 - Add a picture in Gamvik Case copy.
