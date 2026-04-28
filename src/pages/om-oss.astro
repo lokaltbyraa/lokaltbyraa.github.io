@@ -18,9 +18,11 @@ import type { CollectionEntry } from "astro:content";
 const alleAnsatte: CollectionEntry<'ansatte'>[] = (await getCollection('ansatte')).sort((a:CollectionEntry<'ansatte'>, b:CollectionEntry<'ansatte'>) => a.data.rekkefølge.valueOf() - b.data.rekkefølge.valueOf());
 
 const formatPhoneNumber = (phone: number) => {
-  // Format phone number as "123   45   67" with larger spaces
-  const largeSpace = '\u2003'; // Em space (visually larger than a regular space)
-  return phone.toString().replace(/(\d{3})(\d{2})(\d{2})/, `$1${largeSpace}$2${largeSpace}$3`);
+  // Format phone number as "123 45 67" with normal spaces
+  const space = ' '; 
+  return phone
+    .toString()
+    .replace(/(\d{3})(\d{2})(\d{2})/, `$1${space}$2${space}$3`);
 };
 
 // Preprocess the data to include formatted phone numbers
@@ -56,7 +58,7 @@ const ansatteWithFormattedPhone = alleAnsatte.map((ansatt) => ({
                             stilling={ansatt.data.stilling}
                             bio={ansatt.data.bio}
                             epost={ansatt.data.epost}
-                            tlf={ansatt.data.telefon}
+                            tlf={ansatt.data.formattedPhone}
                             imagePath={ansatt.data.headshot}
                             altText={ansatt.data.altText}
                             utdanning={ansatt.data.utdanning}
