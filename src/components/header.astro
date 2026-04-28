@@ -45,17 +45,18 @@ const { color = "black" } = Astro.props as Props;
 </header>
 
 <script>
-  // Set active link based on current path
-  const path = window.location.pathname;
+  document.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname;
 
- document.querySelectorAll('a.overlay-link, nav.links a').forEach((link) => {
-  const el = link as HTMLAnchorElement;
-  if (el.getAttribute('href')?.startsWith('#')) return;
-  const linkPath = new URL(el.href).pathname;
-  if (linkPath === path) {
-    el.classList.add('active');
-  }
-});
+    document.querySelectorAll('a.overlay-link, nav.links a').forEach((link) => {
+      const el = link as HTMLAnchorElement;
+      if (el.getAttribute('href')?.startsWith('#')) return;
+      const linkPath = new URL(el.href).pathname;
+      if (linkPath === path) {
+        el.classList.add('active');
+      }
+    });
+  });
 
   // Hamburger toggle
   const hamburger = document.getElementById('hamburger') as HTMLButtonElement | null;
