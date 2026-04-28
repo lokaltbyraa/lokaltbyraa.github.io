@@ -10,7 +10,7 @@ interface Props {
     stilling: string;
     bio: string;
     epost: string;
-    tlf: number;
+    tlf: string;
     imagePath: string;
     altText: string;
     utdanning: string[];
@@ -125,6 +125,14 @@ const resolvedImage = (await imageModule() as { default: ImageMetadata }).defaul
         grid-row: 4;
     }
 
+    li{
+        margin-left: 1.5ch;
+        padding-left: .5ch;
+		margin-top: 0.75em;
+        list-style: disc;
+        list-style-position: outside;
+	}
+
      @media screen and (max-width: 1050px) {
 
     h2{
@@ -166,30 +174,6 @@ const resolvedImage = (await imageModule() as { default: ImageMetadata }).defaul
     a:hover{
         color: var(--red);
     }
-
-    /* @media screen and (max-width: 600px) {
-    
-    .grid{
-        grid-template-columns: 1fr;
-    }
-
-    .txtDiv{
-        grid-row: 2;
-    }
-
-    .imgDiv{
-        grid-row: 1;
-        justify-self: center;
-    }
-
-    img{
-        width: 100%;
-        max-width: 45ch;
-        aspect-ratio: 1/1;
-        object-position: center;
-    }
-
-    } */
 
     @media screen and (max-width: 1050px) {
     
@@ -251,6 +235,18 @@ const resolvedImage = (await imageModule() as { default: ImageMetadata }).defaul
             grid-row: 2;
         }
 
+        h2{
+            font-size: 1.75em;
+        }
+
+        h3{
+            font-size: 1.25em;
+        }
+
+         p, li{
+            font-size: 1em;
+        }
+
         .bioDiv{
             grid-column: 1;
             grid-row: 3;
@@ -269,6 +265,7 @@ const resolvedImage = (await imageModule() as { default: ImageMetadata }).defaul
 
         .kontakt p a{
             display: block;
+            margin-top: .25em;
         }
 
         .kontakt .divider{
