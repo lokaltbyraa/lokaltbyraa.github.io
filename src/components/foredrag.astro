@@ -1,14 +1,5 @@
 ---
 
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-
-// sort by id (string)
-// const foredrag: CollectionEntry<'foredrag'>[] =
-//   (await getCollection('foredrag'))
-//     .slice()
-//     .sort((a, b) => a.id.localeCompare(b.id, "nb", { sensitivity: "base" }));
-
 // importing foredrag data from JSON file instead of collection
 import foredragData from '../content/foredrag/foredrag.json';
 
