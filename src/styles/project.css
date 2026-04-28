@@ -16,11 +16,12 @@ header {
    /* background-color: red !important; */
    position: absolute;
    z-index: 10;
-   width: 100%;
+   /* width: 100%; */
 }
 
 .logoLink{
     position: fixed;
+    right: 0;
 }
 
 .heroSection, .heroSection img {
@@ -231,8 +232,8 @@ hr{
     }
 
     .logo{
-        width: 6.5rem !important;
-        height: 6.5rem !important;
+        width: 5.5rem !important;
+        height: 5.5rem !important;
     }
 
 }  
