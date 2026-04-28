@@ -38,7 +38,7 @@ const foredrag = foredragData
             {foredrag.map(foredrag => ( 
                 <tr>
                     <td class="kunde bold">{foredrag.kunde}</td>
-                    <td class="avdeling">{foredrag.avdeling}</td>
+                    <td class="setting">{foredrag.avdeling}</td>
                     <td class="bestilling"><span class="forklaring">Bestilling: </span>{foredrag.bestilling}</td>
                     <td class="tittel"><span class="forklaring">Tittel: </span>{foredrag.tittel}</td>
                     <td class="år">{foredrag.år}</td>
@@ -165,8 +165,12 @@ const foredrag = foredragData
         text-wrap: balance;
     }
 
-    .kunde, .avdeling{
+    .kunde{
         max-width: 20ch;
+    }
+
+    .setting, .tittel{
+        max-width: 30ch;
     }
 
     .arrowRow{
@@ -240,7 +244,7 @@ const foredrag = foredragData
         /* font-size: 1.15em; */
     }
 
-    .avdeling{
+    .setting{
         grid-row: 2;
         grid-column: 1 / span 2;
         font-style: italic;
