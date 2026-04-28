@@ -23,7 +23,7 @@
     "id": "aal2025",
     "prosjektnavn": "Gnist: Fra Handling til Plan",
     "oppdragsgiver": ["Ål kommune"],
-    "samarbeidspartner": ["Ihuga", "Vigleik Vinje"],
+    "samarbeidspartner": ["Ihuga", "Vigleik Winje"],
     "årstall": 2025,
     "tema": ["Stedsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
     "link": "https://www.aal.kommune.no/meny/planar-og-regulering/sentrumsutvikling/"
@@ -111,7 +111,7 @@
 
   {
     "id": "Oksnes2024",
-    "prosjektnavn": "Effektiv byggesakstjenester",
+    "prosjektnavn": "Effektiv byggesakstjeneste",
     "oppdragsgiver": ["Øksnes kommune"],
     "samarbeidspartner": [""],
     "årstall": 2024,
@@ -241,8 +241,8 @@
 
   {
     "id": "Gnist2022",
-    "prosjektnavn": "Bærekraftig Bygdeturisme",
-    "oppdragsgiver": ["Kommunene Sogndal, Luster og Aurland", "Doga"],
+    "prosjektnavn": "Fremtidens brekraftige bygdeturisme",
+    "oppdragsgiver": ["Kommunene Sogndal, Luster og Aurland", "Design og Arkitektur Norge"],
     "samarbeidspartner": ["Æra Strategic Innovation"],
     "årstall": 2022,
     "tema": ["Strategisk design", "Prototyping", "Stedsutvikling"],

@@ -12,8 +12,8 @@
       "id": "AskerSabotasje",
       "tittel": "Asker 2000 og sabotasje i organisasjoner som innfallsvinkel til effektivisering",
       "kunde": ["Asker kommune"],
-      "avdeling": ["Sommersammling for kommunalområde Organisasjon, stab og utvikling"],
-      "bestilling": "Lettbeint og annerledes, men faglig halvdagsopplegg om effektivisering og organisasjonsutvikling",
+      "avdeling": ["Sommersamling for kommunalområde Organisasjon, stab og utvikling"],
+      "bestilling": "Lettbeint og annerledes, men faglig halvdagsopplegg om effektivisering og organisasjonsutvikling. Inspirasjon til å se på egen praksis med kritisk, men vennlig blikk.",
       "år": 2025
     },
 
@@ -22,7 +22,7 @@
       "tittel": "Verktøyet innovasjonskompasset: Nytt, nyttig, nyttiggjort",
       "kunde": ["Asker kommune"],
       "avdeling": ["Senter for innovasjon og læring"],
-      "bestilling": "Inspirasjon til å se på egen praksis med kritisk, men vennlig blikk.",
+      "bestilling": "Introduksjon til eksperimentering med eksempler og praktiske øvelser",
       "år": 2025
     },
 
@@ -41,15 +41,15 @@
       "kunde": ["Arkitektur- og Designhøgskolen i Oslo"],
       "avdeling": ["Studiokurs Introduksjon til systemorientert design"],
       "bestilling": "Forelesning om innsiktsstudien Perspektivmelding Ung 2025, og andre prosejekterfaringer med å jobbe med ungdom og utenforskap",
-      "år": 2024
+      "år": 2026
     },
 
     {
       "id": "KristianiaSpekulasjon",
       "tittel": "Spekulativ design og fremtidsscenarier",
       "kunde": ["Høyskolen Kristiania"],
-      "avdeling": ["Studie-emne Fremtidsscenarier"],
-      "bestilling": "Teori og eksempler på bruk av spekulativ design og fremtidsscenarier.",
+      "avdeling": ["Studie-emne Scenarioutvikling og fremtidsanalyse"],
+      "bestilling": "Teori og eksempler på bruk av spekulativ design og fremtidsscenarier. Også holdt i 2023 og 2024.",
       "år": 2024
     },
 
