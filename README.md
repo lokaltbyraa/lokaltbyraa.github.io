@@ -1,10 +1,7 @@
-# Hello!
-
-## About
+# About
+Home page for Lokalt Byrå
 
 ## To-dos
-
-### Tobias
 - Add a picture in Gamvik Case copy.
     - Drawing of building
     - Model
@@ -21,6 +18,7 @@
     - transition out only?
     - fix centering for  large screens
         - Set Abbr as relative
+- Fix warning ts(6133): 'index' is declared but its value is never read.
         
 ### Medium term
 - Estimated reading time for projects on home page project grid
@@ -29,8 +27,6 @@
 - Go through projects and evaluate if frontloading text might make it more understandable and engaging.
 
 ### Long term
-- Student page
-    - Could this be combined with a bit about "larger conversations", i.e. metode for metode, partnerskap for kjedelig innovasjon and so on? Could be nice to feature some of that on the page as well.
 - More projects
     - Karmøy
     - Stavanger
@@ -39,7 +35,6 @@
     - Hjemmebane
     - Oslo Living Lab
     - DSP for SDG
-- Fix warning ts(6133): 'index' is declared but its value is never read.
 -  Expand color system with shades and tints
 
 ### Recently completed
@@ -66,7 +61,7 @@ General markdown: https://www.markdownguide.org/basic-syntax/
 Some best practices: https://www.ssw.com.au/rules/best-practices-for-frontmatter-in-markdown/
 
 <details>
-  <summary>## Markdown cheat sheet</summary>
+  <summary>Markdown cheat sheet</summary>
 
   ```
 
@@ -126,3 +121,7 @@ Slik lager du en unummerert liste:
 ```
 
 </details>
+
+## Credits
+
+Many thanks to student interns Julian Kristiansen and Niksan Dhakal from Elvebakken VGS for code, help, inspiration and discussions for the pages 'Om oss', 'For studenter' and header navigation.
