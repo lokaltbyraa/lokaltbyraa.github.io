@@ -4,9 +4,14 @@ import '../styles/headerLogoPlacement.css';
 
 export interface Props {
   color?: string;
+  currentPath?: string;
 }
 
-const { color = "black" } = Astro.props as Props;
+const { color = "black", currentPath = "/" } = Astro.props as Props;
+
+const isHome = currentPath === '/';
+const isOmOss = currentPath === '/om-oss';
+const isStudenter = currentPath === '/studenter';
 ---
 
 <header>
@@ -21,18 +26,18 @@ const { color = "black" } = Astro.props as Props;
 
       <!-- Desktop Links -->
       <nav class="links">
-        <a href="/" class="text show"><span>Hjem</span></a>
-        <a href="/om-oss" class="text show"><span>Om oss</span></a>
-        <a href="/studenter" class="text show"><span>For studenter</span></a>
+        <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span>Hjem</span></a>
+        <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span>Om oss</span></a>
+        <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span>For studenter</span></a>
         <a href="#kontakt" class="text show"><span>Kontakt</span></a>
       </nav>
 
       <!-- Full-screen overlay for mobile menu -->
       <div id="mobile-overlay" class="mobile-overlay">
         <div class="overlay-content">
-          <a href="/" class="overlay-link">Hjem</a>
-          <a href="/om-oss" class="overlay-link">Om oss</a>
-          <a href="/studenter" class="overlay-link">For studenter</a>
+          <a href="/" class={`overlay-link ${isHome ? 'active' : ''}`}>Hjem</a>
+          <a href="/om-oss" class={`overlay-link ${isOmOss ? 'active' : ''}`}>Om oss</a>
+          <a href="/studenter" class={`overlay-link ${isStudenter ? 'active' : ''}`}>For studenter</a>
           <a href="#kontakt" class="overlay-link">Kontakt</a>
         </div>
       </div>
@@ -45,18 +50,6 @@ const { color = "black" } = Astro.props as Props;
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname;
-
-    document.querySelectorAll('a.overlay-link, nav.links a').forEach((link) => {
-      const el = link as HTMLAnchorElement;
-      if (el.getAttribute('href')?.startsWith('#')) return;
-      const linkPath = new URL(el.href).pathname;
-      if (linkPath === path) {
-        el.classList.add('active');
-      }
-    });
-  });
 
   // Hamburger toggle
   const hamburger = document.getElementById('hamburger') as HTMLButtonElement | null;

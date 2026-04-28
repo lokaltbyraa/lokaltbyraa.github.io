@@ -62,7 +62,10 @@ const { title = 'Lokalt Byrå', color, description } = Astro.props as Props;
   </head>
 
   <body>
-		<Header color={ color }/>
+		<Header
+      color={ color }
+      currentPath={Astro.url.pathname}
+      />
 		<slot />
 		<Footer />
   </body>
