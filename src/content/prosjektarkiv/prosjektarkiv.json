@@ -21,11 +21,11 @@
 
   {
     "id": "aal2025",
-    "prosjektnavn": "Gnist: Fra Handling til Plan",
+    "prosjektnavn": "Gnist: Fra handling til plan",
     "oppdragsgiver": ["Ål kommune"],
     "samarbeidspartner": ["Ihuga", "Vigleik Winje"],
     "årstall": 2025,
-    "tema": ["Stedsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
+    "tema": ["Sentrumsutvikling", "Strategi og tverrsektoriell ledelse", "Medvirkning"],
     "link": "https://www.aal.kommune.no/meny/planar-og-regulering/sentrumsutvikling/"
   },
 
@@ -35,14 +35,14 @@
     "oppdragsgiver": ["Øyer kommune"],
     "samarbeidspartner": ["Ihuga"],
     "årstall": 2026,
-    "tema": ["Stedsutvikling"],
+    "tema": ["Sentrumsutvikling", "Bolyst", "Kompetanseheving"],
     "link": ""
   },
 
   {
     "id": "eidfjord2025",
-    "prosjektnavn": "Nyskapende aktivitetsanlegg",
-    "oppdragsgiver": ["Eidfjord kommune"],
+    "prosjektnavn": "Nyskapende aktivitetsanlegg: Lægreid skule uteområde",
+    "oppdragsgiver": ["Eidfjord kommune", "Vestland fylkeskommune"],
     "samarbeidspartner": ["Ihuga"],
     "årstall": 2025,
     "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
@@ -52,8 +52,8 @@
   {
     "id": "kbnn2025",
     "prosjektnavn": "Perspektivmelding Ung 2025",
-    "oppdragsgiver": ["Sparebank 1 Nord-Norge"],
-    "samarbeidspartner": ["Æra Strategic Innovation"],
+    "oppdragsgiver": ["Sparebank 1 Nord-Norge Kunnskapsbanken"],
+    "samarbeidspartner": ["Æra Strategic Innovation", "Respons Analyse"],
     "årstall": 2025,
     "tema": ["Kvalitative undersøkelser", "Kvantitative undersøkelser", "Ungdomsmedvirkning"],
     "link": ""
@@ -71,11 +71,11 @@
  
   {
     "id": "vekst2023",
-    "prosjektnavn": "Veksthuset",
+    "prosjektnavn": "Vekstkonferansen 2023: Veksthuset workshop",
     "oppdragsgiver": ["Halti Næringshage"],
     "samarbeidspartner": [""],
     "årstall": 2023,
-    "tema": ["Idéarbeid", "Samfunnsutvikling", "Konferanse"],
+    "tema": ["Idéverksted", "Samfunnsutvikling", "Bo- og blilyst"],
     "link": ""
   },
 
@@ -101,9 +101,9 @@
 
   {
     "id": "oygarden2024",
-    "prosjektnavn": "Nyskapende aktivitetsanlegg",
-    "oppdragsgiver": ["Øygarden kommune"],
-    "samarbeidspartner": ["Ihuga"],
+    "prosjektnavn": "Nyskapende aktivitetsanlegg: Ågotnes aktivitetshus",
+    "oppdragsgiver": ["Øygarden kommune", "Vestland fylkeskommune"],
+    "samarbeidspartner": ["Ihuga", "Erlend Eggen"],
     "årstall": 2024,
     "tema": ["Aktivitetsanlegg", "Stedsutvikling", "Ungdomsmedvirkning"],
     "link": ""
@@ -132,7 +132,7 @@
   {
     "id": "Hverdagsreisen2025",
     "prosjektnavn": "Hverdagsreisen Numedal",
-    "oppdragsgiver": ["Rollag kommune", "Flesberg kommune", "Nore og uvdal kommune"],
+    "oppdragsgiver": ["Rollag kommune", "Flesberg kommune", "Nore og uvdal kommune", "Design og Arkitektur Norge", "Fremsam"],
     "samarbeidspartner": ["Ihuga"],
     "årstall": 2025,
     "tema": ["Innsikt", "Folkehelse", "Stedsutvikling"],
@@ -140,19 +140,29 @@
   },
 
   {
-    "id": "fnf2025",
-    "prosjektnavn": "Vann og vassdragskonferanse",
+    "id": "fnf2024",
+    "prosjektnavn": "Natur i nord konferanse og workshop: Vassdrag og- elvedelta",
     "oppdragsgiver": ["Forum for natur og friluftsliv Troms"],
     "samarbeidspartner": [""],
-    "årstall": 2025,
-    "tema": ["Arbeidsverksted", "Fasilitering"],
+    "årstall": 2024,
+    "tema": ["Tverrsektoriell workshop", "Fasilitering", "Regional vannforvaltning"],
+    "link": ""
+  },
+
+  {
+    "id": "fnf2026",
+    "prosjektnavn": "Natur i nord konferanse og workshop: Reiseliv og natur",
+    "oppdragsgiver": ["Forum for natur og friluftsliv Troms"],
+    "samarbeidspartner": [""],
+    "årstall": 2026,
+    "tema": ["Tverrsektoriell workshop", "Fasilitering", "Reiseliv"],
     "link": ""
   },
 
   {
     "id": "pws2025",
     "prosjektnavn": "Marienlundveien 4-6",
-    "oppdragsgiver": ["PWS eiendom"],
+    "oppdragsgiver": ["PWS Eiendom"],
     "samarbeidspartner": [""],
     "årstall": 2025,
     "tema": ["Medvirkning", "Boligprosjekt" ],
@@ -175,13 +185,13 @@
     "oppdragsgiver": ["Lyngen kommune", "Storfjord kommune"],
     "samarbeidspartner": ["Gina Mugaas"],
     "årstall": 2025,
-    "tema": ["Tjenestedesign", "Stedsutvikling", "Ungdomsmedvirkning"],
+    "tema": ["Tjenestedesign", "Ungdomsmedvirkning", "Biblioteksutvikling"],
     "link": ""
   },
 
   {
     "id": "Himmelhamn2024",
-    "prosjektnavn": "Vinyl for Himmelhamn",
+    "prosjektnavn": "Vinylutgivelse Himmelhamn",
     "oppdragsgiver": ["Himmelhamn"],
     "samarbeidspartner": [],
     "årstall": 2024,
@@ -193,9 +203,9 @@
     "id": "Strandvegen2024",
     "prosjektnavn": "Tidligfase folkeverksted for Strandvegen 8",
     "oppdragsgiver": ["Strandvegen 8 AS"],
-    "samarbeidspartner": ["NODA", "LPO Arkitekter", "Polarnatt media" ],
+    "samarbeidspartner": ["Nordnorsk Design- og Arkitektursenter", "LPO Arkitekter", "Polarnatt media" ],
     "årstall": 2024,
-    "tema": ["Medvirkning", "Stedsutvikling", "Tidligfase"],
+    "tema": ["Medvirkning", "Stedsutvikling", "Reguleringsprosess"],
     "link": ""
   },
 
@@ -205,27 +215,27 @@
     "oppdragsgiver": ["Campus Nord-Troms"],
     "samarbeidspartner": [ ],
     "årstall": 2023,
-    "tema": ["Tjenestedesign", "Stedsutvikling", "Prototyping"],
+    "tema": ["Tjenestedesign", "Biblioteksutvikling", "Prototyping"],
     "link": ""
   },
 
   {
     "id": "Aurland2023",
-    "prosjektnavn": "Folkeverksted for Arealplan",
+    "prosjektnavn": "Folkeverksted for kommuneplanens arealdel",
     "oppdragsgiver": ["Aurland kommune"],
     "samarbeidspartner": [ ],
     "årstall": 2023,
-    "tema": ["Tjenestedesign", "Stedsutvikling", "Medvirkning"],
+    "tema": ["Planprosess", "Stedsutvikling", "Medvirkning"],
     "link": ""
   },
 
  {
     "id": "NOW2022",
-    "prosjektnavn": "Oslo Løa",
+    "prosjektnavn": "Oslo Løa pilot",
     "oppdragsgiver": ["Nordic Ocean Watch"],
-    "samarbeidspartner": ["Arkitektur- og Designhøgskolen i Oslo", "Bymiljøetaten i Oslo", "Dipl.-Ing. Florian Kosche"],
+    "samarbeidspartner": ["Arkitektur- og Designhøgskolen i Oslo", "Dipl.-Ing. Florian Kosche", "Bymiljøetaten i Oslo"],
     "årstall": 2022,
-    "tema": ["Strategisk design", "Prototyping", "Tjenestedesign"],
+    "tema": ["Strategisk design", "Pilotering", "Tjenestedesign"],
     "link": ""
   },
 
@@ -245,7 +255,7 @@
     "oppdragsgiver": ["Kommunene Sogndal, Luster og Aurland", "Design og Arkitektur Norge"],
     "samarbeidspartner": ["Æra Strategic Innovation"],
     "årstall": 2022,
-    "tema": ["Strategisk design", "Prototyping", "Stedsutvikling"],
+    "tema": ["Strategisk design", "Prototyping", "Stedsutvikling", "Reiseliv"],
     "link": ""
   }
 
