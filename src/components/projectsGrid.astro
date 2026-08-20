@@ -40,8 +40,8 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[]
 <style>
     .prosjekterGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5em 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5em 1em;
     margin-top: 1em;
     }   
 
@@ -59,11 +59,15 @@ const alleProsjekter: CollectionEntry<'prosjekter'>[]
     }
 
     .prosjekterGrid a:nth-child(3){
-        background-color: var(--red)
+        background-color: var(--red);
     }
 
     .prosjekterGrid a:nth-child(4){
-        background-color: var(--blue)
+        background-color: var(--blue);
+    }
+
+    .prosjekterGrid a:nth-child(5){
+        background-color: white;
     }
 
     .prosjekterGrid a img{
