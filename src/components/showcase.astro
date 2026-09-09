@@ -1,0 +1,71 @@
+---
+import '../styles/reset.css';
+import '../styles/global.css';
+
+---
+
+<div class="showcase">
+    <img src="../src/images/projects/krageroAksjon.jpg" alt="">
+    <div class="showcaseText">
+        <p>Vi hjalp Kragerø kommune med metodikk og kultur for å involvere innbyggere på en engasjerende måte.</p>
+    </div>
+</div>
+
+
+<style>
+    .showcase{
+        background-color: white;
+        aspect-ratio: 1/1;
+        max-height: 82vh;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 0;
+        box-shadow: 0 0 1em rgba(0,0,0,0.2);
+    }
+
+    .showcase img{
+        object-fit: cover;
+        height: 100%;
+        grid-area: 1/1;
+    }
+
+    .showcaseText{
+        background-color: none;
+        grid-area: 1/1;
+        padding: 3em 1em 1em;
+        align-self: end;
+        color: white;
+        background: #000000;
+        background: linear-gradient(0deg,rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    p{
+        font-size: 1.15rem;
+        max-width: 50ch;
+    }
+
+    /* .showcase{
+        background-color: white;
+        aspect-ratio: 5/6;
+        max-height: 70vh;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 0;
+        box-shadow: 0 0 1em rgba(0,0,0,0.1);
+    }
+
+    .showcase img{
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .showcaseText{
+        background-color: white;
+        padding: 0em 1em 1em;
+    }
+
+    p{
+        font-size: 1.15rem;
+    } */
+
+</style>

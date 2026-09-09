@@ -129,7 +129,7 @@ body{
     margin: 0 auto;
     max-width: 1600px;
     padding: 0 var(--edgeWhiteSpace);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section{

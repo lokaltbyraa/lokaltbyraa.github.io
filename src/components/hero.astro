@@ -1,0 +1,62 @@
+---
+import '../styles/reset.css';
+import '../styles/global.css';
+
+import Showcase from '../components/showcase.astro';
+---
+<div class="grid">
+    <div class="text">
+        <h1><span class="serif lokaltByraa">Lokalt Byrå</span> bruker designmetodikk til å hjelpe deg utvikle mer <span class="highlight">inkluderende samfunn</span>, <span class="highlight">effektive tjenester</span>, <span class="highlight">levende steder</span> og <span class="highlight">innovativ organisasjon</span>. 
+        <br><br>   
+        Vi mener endring og nye løsninger må ta utgangspunkt i lokale forhold og behov, fra grenda til fylket og nasjonalt.
+        </h1>
+    </div>
+    
+    <div class="showcase">
+        <Showcase/>
+    </div>
+
+</div>
+
+
+
+<style>
+    .grid{
+        /* background-color: var(--yellow); */
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 1em;
+        min-height: 70vh;
+        align-items: center;
+        margin-top: -6em;
+    }
+
+    .showcase{
+        height: 100%;
+        justify-self: center;
+    }
+
+    .highlight{
+        /* border-bottom: 0.1em solid var(--yellow); */
+        /* background-color: var(--yellow); */
+        background: #F6CA38;
+        background: linear-gradient(0deg,rgba(246, 202, 56, 0) 8%, rgba(246, 202, 56, .95) 9%, rgba(246, 202, 56, .95) 68%, rgba(246, 202, 56, 0) 69%);
+        padding: 0 0.15ch;
+    }
+
+    /* .highlight:nth-of-type(2){
+        border-color: var(--red);
+    }
+
+    .highlight:nth-of-type(3){
+        border-color: var(--blue);
+    }
+
+    .highlight:nth-of-type(4){
+        border-color: var(--yellow);
+    }
+
+    .highlight:nth-of-type(5){
+        border-color: var(--green);
+    } */
+</style>
