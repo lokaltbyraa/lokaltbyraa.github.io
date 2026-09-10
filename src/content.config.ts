@@ -63,10 +63,21 @@ const foredrag = defineCollection({
   }),
 });
 
+const showcase = defineCollection({
+  loader: file('./src/content/showcase/showcase.yaml'),
+
+  schema: z.object({
+    oppdragsgiver: z.array(z.string()),
+    bildetekst: z.string(),
+    tags: z.array(z.string()),
+    image: z.string(),
+  }),
+});
 
 export const collections = {
   'prosjekter': projectsCollection,
   'ansatte': ansatte,
   'prosjektarkiv': prosjektarkiv,
   'foredrag': foredrag,
+  'showcase': showcase,
 };

@@ -12,7 +12,7 @@ import Showcase from '../components/showcase.astro';
         </h1>
     </div>
     
-    <div class="showcase">
+    <div class="showcaseContainer">
         <Showcase/>
     </div>
 
@@ -24,15 +24,16 @@ import Showcase from '../components/showcase.astro';
     .grid{
         /* background-color: var(--yellow); */
         display: grid;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 2.1fr 2fr;
         gap: 1em;
-        min-height: 70vh;
+        min-height: 75vh;
         align-items: center;
-        margin-top: -6em;
+        margin-top: -7em;
     }
 
-    .showcase{
-        height: 100%;
+    .showcaseContainer {
+        width: 100%;
+        max-height: 85vh;
         justify-self: center;
     }
 

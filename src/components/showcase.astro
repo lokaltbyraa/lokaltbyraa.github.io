@@ -2,70 +2,128 @@
 import '../styles/reset.css';
 import '../styles/global.css';
 
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+const projects = await getCollection('showcase');
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/images/projects/*.{jpeg,jpg,png,gif}',
+  { eager: true }
+);
 ---
 
-<div class="showcase">
-    <img src="../src/images/projects/krageroAksjon.jpg" alt="">
-    <div class="showcaseText">
-        <p>Vi hjalp Kragerø kommune med metodikk og kultur for å involvere innbyggere på en engasjerende måte.</p>
-    </div>
+<div class="showcase" data-showcase>
+  {projects.map((project, index) => {
+    const image = images[project.data.image]?.default;
+
+    if (!image) {
+      throw new Error(
+        `"${project.data.image}" does not exist in the project image glob`
+      );
+    }
+
+    return (
+      <div class:list={['showcaseSlide', { active: index === 0 }]} data-slide>
+        <Image src={image} alt="" />
+        <div class="showcaseText"> <p>{project.data.bildetekst}</p> </div>
+      </div>
+    );
+  })}
 </div>
 
+<script>
+  const showcase = document.querySelector('[data-showcase]');
+
+  if (showcase) {
+    const slides = Array.from(
+      showcase.querySelectorAll<HTMLElement>('[data-slide]')
+    );
+
+    if (slides.length > 1) {
+      for (let i = slides.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [slides[i], slides[j]] = [slides[j], slides[i]];
+      }
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === 0);
+        showcase.appendChild(slide);
+      });
+
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 7500);
+    }
+  }
+</script>
 
 <style>
-    .showcase{
-        background-color: white;
-        aspect-ratio: 1/1;
-        max-height: 82vh;
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 0;
-        box-shadow: 0 0 1em rgba(0,0,0,0.2);
+  .showcase {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    box-shadow: 0 0 1em rgba(0,0,0,0.2);
+    overflow: visible;
+  }
+
+  .showcaseSlide {
+    grid-area: 1 / 1;
+    display: grid;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity .75s ease;
+  }
+
+  .showcaseSlide.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  .showcaseSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1;
+  }
+
+  .showcaseText {
+    grid-area: 1 / 1;
+    align-self: end;
+    padding: 2em 2em .5em .75em;
+    color: white;
+    background: linear-gradient(0deg,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0) 100%);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.99);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+  }
+
+  .showcaseSlide.active .showcaseText {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .showcaseText p {
+    font-size: 1.15rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .showcaseSlide,.showcaseText {
+      transition: none;
     }
 
-    .showcase img{
-        object-fit: cover;
-        height: 100%;
-        grid-area: 1/1;
+    .showcaseText {
+      transform: none;
     }
-
-    .showcaseText{
-        background-color: none;
-        grid-area: 1/1;
-        padding: 3em 1em 1em;
-        align-self: end;
-        color: white;
-        background: #000000;
-        background: linear-gradient(0deg,rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
-    }
-
-    p{
-        font-size: 1.15rem;
-        max-width: 50ch;
-    }
-
-    /* .showcase{
-        background-color: white;
-        aspect-ratio: 5/6;
-        max-height: 70vh;
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 0;
-        box-shadow: 0 0 1em rgba(0,0,0,0.1);
-    }
-
-    .showcase img{
-        object-fit: cover;
-        height: 100%;
-    }
-
-    .showcaseText{
-        background-color: white;
-        padding: 0em 1em 1em;
-    }
-
-    p{
-        font-size: 1.15rem;
-    } */
-
+  }
 </style>
