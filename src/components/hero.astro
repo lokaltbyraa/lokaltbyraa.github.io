@@ -60,4 +60,17 @@ import Showcase from '../components/showcase.astro';
     .highlight:nth-of-type(5){
         border-color: var(--green);
     } */
+
+      @media (width <= 850px ) {
+        .grid{
+            grid-template-columns: 1fr;
+            gap: 2em;
+            margin-top: -5em;
+        }
+
+        .text{
+            grid-row: 2;
+        }
+    }
+
 </style>

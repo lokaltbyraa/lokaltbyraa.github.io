@@ -15,12 +15,3 @@
     - Ungdomsmedvirkning
     - Utenforskap
   image: "/src/images/projects/aktivitetsanleggMain.jpg"
-
-- id: halti
-  oppdragsgiver:
-    - Halti Næringshage
-  bildetekst: Vi hjalp Halti Næringshage involvere unge voksne i å diskutere hva et attraktivt næringsliv betyr for dem
-  tags:
-    - Medvirkning
-    - Idéutvikling
-  image: "/src/images/projects/veksthusetMain.jpg"
