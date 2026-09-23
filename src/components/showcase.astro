@@ -9,7 +9,7 @@ import type { ImageMetadata } from 'astro';
 const projects = await getCollection('showcase');
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/images/projects/*.{jpeg,jpg,png,gif}',
+  '/src/images/showcase/*.{jpeg,jpg,png,gif}',
   { eager: true }
 );
 ---
@@ -26,7 +26,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
     return (
       <div class:list={['showcaseSlide', { active: index === 0 }]} data-slide>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" height={800} quality={60}/>
         <div class="showcaseText"> <p>{project.data.bildetekst}</p> </div>
       </div>
     );
@@ -126,4 +126,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       transform: none;
     }
   }
+
+
 </style>

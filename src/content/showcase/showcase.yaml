@@ -1,17 +1,313 @@
-- id: kragero
+- id: kragero1
   oppdragsgiver:
-    - Kragerø kommune
+   - Kragerø kommune
   bildetekst: Vi hjalp Kragerø kommune med metodikk og kultur for å involvere innbyggere på en engasjerende måte.
   tags:
-    - Medvirkning
-    - Planstrategi
-  image: "/src/images/projects/krageroAksjon.jpg"
+   - Medvirkning
+   - Planstrategi
+  image: "/src/images/showcase/krageroAksjon.jpg"
 
-- id: oygarden
+- id: al1
   oppdragsgiver:
-    - Øygarden kommune
-  bildetekst: Vi hjalp Øygarden kommune utforske hvordan et aktivitetshus kan motvirke ungt utenforskap.
+   - Ål kommune
+  bildetekst: Vi lagde capser for å identifisere roller i sentrumsutviklingen i Ål.
   tags:
-    - Ungdomsmedvirkning
-    - Utenforskap
-  image: "/src/images/projects/aktivitetsanleggMain.jpg"
+   - Sentrumsutvikling
+   - Planarbeid
+  image: "/src/images/showcase/Al_smie.jpg"
+
+
+- id: al2
+  oppdragsgiver:
+   - Ål kommune
+  bildetekst: Sammen med lokale arkitekter samlet vi innspill til områder som kan forbedres på Sundre.
+  tags:
+   - Sentrumsutvikling
+   - Planarbeid
+  image: "/src/images/showcase/Al_smie2.jpg"
+
+
+- id: al3
+  oppdragsgiver:
+   - Ål kommune
+  bildetekst: Vi hjalp ansatte i Ål kommune å se hvordan ulike tjenester og avdelinger kan spille på lag med sentrum, og få drahjelp fra et godt utformet sentrum.
+  tags:
+   - Sentrumsutvikling
+   - Planarbeid
+  image: "/src/images/showcase/Al_smie3.jpg"
+
+
+- id: kbnn1
+  oppdragsgiver:
+   - Kunnskapsbanken Nord-Norge
+  bildetekst: Vi hjalp unge dele sine idéer for et bedre hverdagsliv med Kongen, politikere og beslutningstagere i Finnmark.
+  tags:
+   - Sentrumsutvikling
+   - Planarbeid
+  image: "/src/images/showcase/Anonym_SIKT.jpg"
+
+
+- id: kbnn2
+  oppdragsgiver:
+   - Kunnskapsbanken Nord-Norge
+  bildetekst: Vi hjalp studenter utvikle nye idéer for et mer sosialt og samfunnsengasjert studentliv i Tromsø.
+  tags:
+   - Sentrumsutvikling
+   - Planarbeid
+  image: "/src/images/showcase/Anonym_TrueVoice.jpg"
+
+
+- id: erasmus1
+  oppdragsgiver:
+   - Erasmus +
+  bildetekst: Vi bygde eksempler på sosial og trivelig klimatilpasning med unge fra Larvik og København.
+  tags:
+   - Klimatilpasning
+   - Ungdomsmedvirkning
+  image: "/src/images/showcase/Erasmus_bygge.jpg"
+
+- id: erasmus2
+  oppdragsgiver:
+   - Erasmus +
+  bildetekst: Vi bygde eksempler på sosial og trivelig klimatilpasning med unge fra Larvik og København.
+  tags:
+   - Klimatilpasning
+   - Ungdomsmedvirkning
+  image: "/src/images/showcase/Erasmus_bygge2.jpg"
+
+- id: hverdagsreise
+  oppdragsgiver:
+   - Flesberg kommune
+  bildetekst: Tobias på skiskyttertrening for barn og ungdom for å kartlegge hverdagsreiser i Flesberg.
+  tags:
+   - Folkehelse
+   - Tjenestedesign
+  image: "/src/images/showcase/Flesberg_felt.jpg"
+
+
+- id: fnf
+  oppdragsgiver:
+   - FNF Troms
+  bildetekst: Glenn kartlegger systemiske årsaker og ringvirkninger av lysforurensing i naturen i Troms.
+  tags:
+   - Friluftsliv
+   - Systemorientert design
+  image: "/src/images/showcase/FNF_Kartlegging.jpg"
+
+
+- id: gamvik1
+  oppdragsgiver:
+   - Nordishavet Badeklubb
+  bildetekst: Vi arrangerte fotokurs i Gamvik for å styrke relasjonen mellom foreldre og barna i bygda.
+  tags:
+   - Engasjerende opplevelser
+   - Tjenestedesign
+  image: "/src/images/showcase/Gamvik_barnefestival.jpg"
+
+
+- id: gamvik2
+  oppdragsgiver:
+   - Nordishavet Badeklubb
+  bildetekst: Vi arrangerte fotokurs og utstilling i Gamvik for å styrke relasjonen mellom foreldre og barna i bygda.
+  tags:
+   - Engasjerende opplevelser
+   - Tjenestedesign
+  image: "/src/images/showcase/Gamvik_barnefestival2.jpg"
+
+
+- id: gamvik3
+  oppdragsgiver:
+   - Nordishavet Badeklubb
+  bildetekst: Glenn DJer på familiedisko i Gamvik for å styrke relasjonen mellom foreldre og barna i bygda.
+  tags:
+   - Engasjerende opplevelser
+   - Tjenestedesign
+  image: "/src/images/showcase/Gamvik_barnefestival3.jpg"
+
+
+- id: halti
+  oppdragsgiver:
+   - Halti Næringshage
+  bildetekst: Vi kurset ansatte i Halti Næringshage i tjenestedesign.
+  tags:
+   - Kurs
+   - Tjenestedesign
+  image: "/src/images/showcase/HaltiTD.jpg"
+
+
+- id: halti2
+  oppdragsgiver:
+   - Halti Næringshage
+  bildetekst: Vi kurset ansatte i Halti Næringshage i tjenestedesign.
+  tags:
+   - Kurs
+   - Tjenestedesign
+  image: "/src/images/showcase/HaltiTD2.jpg"
+
+
+- id: ilag1
+  oppdragsgiver:
+   - Trøndelag Fylkeskommune
+  bildetekst: Vi hjalp utviklingsprosjekter i Trøndelag til å fortelle om arbeidet sitt på engasjerende måter.
+  tags:
+   - Historiefortelling
+   - Tjenestedesign
+  image: "/src/images/showcase/Ilag_historie.jpg"
+
+- id: ilag2
+  oppdragsgiver:
+   - Trøndelag Fylkeskommune
+  bildetekst: I dag skal kommuner løse mange komplekse utfordringer samtidig. Det er krevende over hele landet.
+  tags:
+   - Historiefortelling
+   - Tjenestedesign
+  image: "/src/images/showcase/Ilag_historie2.jpg"
+
+
+- id: kragero2
+  oppdragsgiver:
+   - Kragerø Kommune
+  bildetekst: Vi bygde en ny bydel i Kragerø på 2 dager sammen med 90 ungdommer for å undersøke stedsutvikling på unge premisser.
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Kragero_bygge.jpg"
+
+
+- id: kragero3
+  oppdragsgiver:
+   - Kragerø Kommune
+  bildetekst: Vi bygde en ny bydel i Kragerø på 2 dager sammen med 90 ungdommer for å undersøke stedsutvikling på unge premisser.
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Kragero_bygge2.jpg"
+
+
+- id: larvik1
+  oppdragsgiver:
+   - Larvik Kommune
+  bildetekst: Vi kurset ansatte i Larvik kommune i designdrevet innovasjon.
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Larvik_kurs.jpg"
+
+
+- id: larvik2
+  oppdragsgiver:
+   - Larvik Kommune
+  bildetekst: Tobias holder kurs i designdrevet innovasjon for ansatte i Larvik kommune.
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Larvik_kurs2.jpg"
+
+
+- id: lokverk1
+  oppdragsgiver:
+   - Gamvik Handel
+  bildetekst: Vi arrangerte familiedisko i nærbutikken i Gamvik for å undersøke hvordan den kunne ha flere familievennlige kulturtilbud.
+  tags:
+   - Tjenestedesign
+   - Medvirkning
+  image: "/src/images/showcase/LokVerk_Danse.jpg"
+
+
+- id: lokverk2
+  oppdragsgiver:
+   - Gamvik Handel
+  bildetekst: Nikolai bidrar på fikse-verksted for å undersøke hvordan nærbutikken kan bidra til reparasjon av stort og smått.
+  tags:
+   - Tjenestedesign
+   - Medvirkning
+  image: "/src/images/showcase/LokVerk_Fikse.jpg"
+
+
+- id: lokverk3
+  oppdragsgiver:
+   - Gamvik Handel
+  bildetekst: Vi arrangerte middag sammen med ildsjeler i Gamvik for å undersøke hvordan nærbutikken kan bli en møteplass for flere.
+  tags:
+   - Tjenestedesign
+   - Medvirkning
+  image: "/src/images/showcase/LokVerk_Kalas.jpg"
+
+
+- id: oksnes1
+  oppdragsgiver:
+   - Øksnes Kommune
+  bildetekst: Vi hjalp Øksnes utvikle og forbedre byggesakstjenestene sine.
+  tags:
+   - Tjenestedesign
+   - Medvirkning
+  image: "/src/images/showcase/Oksnes_Byggesak.jpg"
+
+
+- id: oygarden2
+  oppdragsgiver:
+   - Øygarden Kommune
+  bildetekst: Vi utforsket hvordan et aktivitetsanlegg kan motvirke ungt utenforskap på Ågotnes sammen med unge.
+  tags:
+   - Tjenestedesign
+   - Medvirkning
+  image: "/src/images/showcase/Oygarden_aktivitet.jpg"
+
+
+- id: rollag
+  oppdragsgiver:
+   - Rollag Kommune
+  bildetekst: Tobias og en gjeng trivelige pensjonister kartlegger hvordan hverdagsreiser kan bli sunnere og mer sosiale på Veggli. 
+  tags:
+   - Folkehelse
+   - Medvirkning
+  image: "/src/images/showcase/Rollag_felt.jpg"
+
+- id: sv8-1
+  oppdragsgiver:
+   - Strandvegen 8
+  bildetekst: Vi arrangerte folkeverksted for utviklingsprosjektet Strandvegen 8 i Tromsø. 
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Tromso_folkemote.jpg"
+
+
+- id: sv8-2
+  oppdragsgiver:
+   - Strandvegen 8
+  bildetekst: Vi arrangerte folkeverksted for utviklingsprosjektet Strandvegen 8 i Tromsø. 
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Tromso_folkemote2.jpg"
+
+
+- id: sv8-3
+  oppdragsgiver:
+   - Strandvegen 8
+  bildetekst: Lokal klasse med barn på folkeverksted for utviklingsprosjektet Strandvegen 8 i Tromsø. 
+  tags:
+   - Sentrumsutvikling
+   - Medvirkning
+  image: "/src/images/showcase/Tromso_folkemote3.jpg"
+
+
+- id: veksthuset1
+  oppdragsgiver:
+   - Halti Næringshage
+  bildetekst: Tobias samler idéer fra politisk aktiv ungdom om hva som kan styrke næringslivet i Nord-Troms. 
+  tags:
+   - Næringsliv
+   - Medvirkning
+  image: "/src/images/showcase/veksthusetUnge-3.jpg"
+
+
+- id: veksthuset2
+  oppdragsgiver:
+   - Halti Næringshage
+  bildetekst: Vi hjalp unge voksne Trainees i Nord-Troms komme opp med idéer til et mer bærekraftig, attraktivt og sosialt næringsliv. 
+  tags:
+   - Næringsliv
+   - Medvirkning
+  image: "/src/images/showcase/veksthusetUnge-5.jpg"
