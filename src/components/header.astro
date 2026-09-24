@@ -10,7 +10,6 @@ const { color = "black", currentPath = "/" } = Astro.props as Props;
 
 const isHome = currentPath === '/' || currentPath === '/index.html';
 const isOmOss = currentPath === '/om-oss' || currentPath === '/om-oss/';
-const isReisebrev = currentPath === '/reisebrev' || currentPath === '/reisebrev/';
 const isStudenter = currentPath === '/studenter' || currentPath === '/studenter/';
 ---
 
@@ -28,7 +27,7 @@ const isStudenter = currentPath === '/studenter' || currentPath === '/studenter/
       <nav class="links">
         <a href="/" class={`text show ${isHome ? 'active' : ''}`}><span>Hjem</span></a>
         <a href="/om-oss" class={`text show ${isOmOss ? 'active' : ''}`}><span>Om oss</span></a>
-        <a href="/reisebrev" class={`text show ${isReisebrev ? 'active' : ''}`}><span>Reisebrev</span></a>
+  
         <a href="/studenter" class={`text show ${isStudenter ? 'active' : ''}`}><span>For studenter</span></a>
         <a href="#kontakt" class="text show"><span>Kontakt</span></a>
       </nav>
