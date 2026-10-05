@@ -13,6 +13,7 @@ const steder = [
     'Kåfjord',
     'Storfjord',
     'Øksnes',
+    'Trøndelag fylkeskommune',
     'Sogndal',
     'Luster',
     'Øyer',
@@ -46,11 +47,17 @@ const kontorData = [
         <h2 class="viHar">Vi har jobba over hele landet <em>– fra nord til sør!</em></h2>
 
         <ul class="kunder">
-            {steder.map((sted, i) => (
+            {steder.map((sted) => (
                 <li>
-                    {i === 0 ? <>
-                        {sted.split(' ')[0]}<br id="ffkBreak"/> {sted.split(' ').slice(1).join(' ')}
-                    </> : sted}
+                    {sted.endsWith('fylkeskommune') ? (
+                        <>
+                            {sted.replace(' fylkeskommune', '')}
+                            <br />
+                            fylkeskommune
+                        </>
+                    ) : (
+                        sted
+                    )}
                 </li>
             ))}
         </ul>
