@@ -1,4 +1,15 @@
 [
+
+    {
+    "id": "dogaSystemkus",
+    "prosjektnavn": "Pilotering av kurs i systeminnovasjon for offentlig sektor",
+    "oppdragsgiver": ["Design og Arkitektur Norge"],
+    "samarbeidspartner": [""],
+    "årstall": 2026,
+    "tema": ["Systeminnovasjon", "Kursutvikling", "Tverrsektorielt samarbeid"],
+    "link": ""
+  },
+
   {
     "id": "ffk2025",
     "prosjektnavn": "Stimulab: Digi2030",

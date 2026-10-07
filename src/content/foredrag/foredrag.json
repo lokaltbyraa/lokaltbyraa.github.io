@@ -1,5 +1,14 @@
 [
     {
+      "id": "ByggAllianser",
+      "tittel": "Bygge allianser i samfunnsutvikling",
+      "kunde": ["Design og Arkitektur Norge"],
+      "avdeling": ["DOGAs kommunekonferanse 2026"],
+      "bestilling": "Foredrag og workshop på 1,5 time for 60 kommunalt ansatte om hvordan å bygge allianser mellom mennesker i egen og andre organisasjoner for å få til samfunnsutvikling.",
+      "år": 2026
+    },
+
+    {
       "id": "StavangerEksperimentering",
       "tittel": "Hvordan eksperimentere og teste idéer tidlig",
       "kunde": ["Stavanger kommune"],
