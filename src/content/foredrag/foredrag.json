@@ -1,5 +1,32 @@
 [
     {
+      "id": "GnistKompetanse2",
+      "tittel": "Bygg allianser! Innblikk i Lokalt Byrå sin tilnærming i samfunnsutvikling og innovasjon.",
+      "kunde": ["Design og Arkitektur Norge"],
+      "avdeling": ["Gnist kompetanse webinarserie"],
+      "bestilling": "Inspirasjon og teori for kommuneplanleggere om hvordan å bygge allianser mellom mennesker i egen og andre organisasjoner, med eksempler fra Lokalt Byrå sitt Gnist-prosjekt i Ål kommune.",
+      "år": 2026
+    },
+
+    {
+      "id": "KarmøyBygdeutvikling",
+      "tittel": "Intro til design – Om designmetodikk som arbeidsform i utvikling av tjenester og systemer",
+      "kunde": ["Karmøy kommune"],
+      "avdeling": ["Internseminar ifm. ny temaplan for samskaping"],
+      "bestilling": "En enkel introduksjon for kommunalt ansatte til design som fag og metodikk, tjenestedesign og system-orientert design, med eksempler på relevans til kommunal sektor.",
+      "år": 2026
+    },
+
+    {
+      "id": "KarmøyDesign",
+      "tittel": "Bygdeutvikling i praksis – Om bygdenes rolle i en tid hvor norske kommuner er under press.",
+      "kunde": ["Karmøy kommune"],
+      "avdeling": ["Byutviklingskonferanse ifm. revidering av kommuneplanens arealdel"],
+      "bestilling": "Fremgangsmåte og inspirasjon for hvordan å utvikle aktive og levende bygder samtidig som kommunen må omstille og sentralisere tjenestetilbudet.",
+      "år": 2026
+    },
+
+    {
       "id": "ByggAllianser",
       "tittel": "Bygge allianser i samfunnsutvikling",
       "kunde": ["Design og Arkitektur Norge"],
